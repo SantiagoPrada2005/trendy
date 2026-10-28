@@ -1,0 +1,16 @@
+[
+    {
+        "fileName":  "snapshot_2026-10-19_2347_base.json",
+        "scanId":  "2026-10-19_2347",
+        "timestamp":  "2026-10-19T23:47:41-05:00",
+        "note":  "Snapshot base inicial (Trendy 19 Oct 2026)",
+        "itemsCount":  334
+    },
+    {
+        "fileName":  "snapshot_2026-10-28_0104.json",
+        "scanId":  "2026-10-28_0104",
+        "timestamp":  "2026-10-28T01:04:01-05:00",
+        "note":  "Escaneo automatico Trendy + Bloomshell",
+        "itemsCount":  555
+    }
+]

@@ -1,0 +1,2505 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Centro de Inteligencia de Mercado & Catálogo Mayorista — Trendy + Bloomshell</title>
+  <style>
+    :root {
+      --primary: #e11d74;
+      --primary-hover: #be1260;
+      --primary-soft: #fdf2f8;
+      --primary-border: #fbcfe8;
+      --bloom: #7c3aed;
+      --bloom-soft: #f5f3ff;
+      --bloom-border: #ddd6fe;
+      --bg: #f1f5f9;
+      --surface: #ffffff;
+      --text: #0f172a;
+      --text-muted: #64748b;
+      --border: #e2e8f0;
+      --success: #059669;
+      --success-bg: #ecfdf5;
+      --success-border: #a7f3d0;
+      --warning: #d97706;
+      --warning-bg: #fffbeb;
+      --danger: #dc2626;
+      --danger-bg: #fef2f2;
+      --radius: 14px;
+      --shadow-sm: 0 1px 3px rgba(15, 23, 42, 0.06);
+      --shadow-md: 0 8px 24px -4px rgba(15, 23, 42, 0.08);
+      --shadow-lg: 0 20px 40px -8px rgba(15, 23, 42, 0.18);
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: 'Segoe UI', system-ui, -apple-system, BlinkMacSystemFont, Roboto, sans-serif;
+      background-color: var(--bg);
+      color: var(--text);
+      line-height: 1.5;
+      min-height: 100vh;
+    }
+
+    /* Top Header */
+    .top-header {
+      background: linear-gradient(135deg, #9d174d 0%, #e11d74 45%, #6d28d9 100%);
+      color: #fff;
+      padding: 1rem 1.5rem 0;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      box-shadow: 0 4px 20px rgba(15, 23, 42, 0.18);
+    }
+
+    .header-inner {
+      max-width: 1680px;
+      margin: 0 auto;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+      padding-bottom: 0.85rem;
+    }
+
+    .brand-title {
+      display: flex;
+      align-items: center;
+      gap: 0.85rem;
+    }
+
+    .brand-logo {
+      width: 46px;
+      height: 46px;
+      border-radius: 12px;
+      background: rgba(255, 255, 255, 0.2);
+      backdrop-filter: blur(6px);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 900;
+      font-size: 1.25rem;
+      border: 1px solid rgba(255, 255, 255, 0.35);
+    }
+
+    .brand-title h1 {
+      font-size: 1.28rem;
+      font-weight: 800;
+      letter-spacing: -0.3px;
+    }
+
+    .brand-title p {
+      font-size: 0.8rem;
+      opacity: 0.92;
+    }
+
+    .stats-bar {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      align-items: center;
+    }
+
+    .stat-pill {
+      background: rgba(255, 255, 255, 0.15);
+      border: 1px solid rgba(255, 255, 255, 0.28);
+      padding: 0.35rem 0.8rem;
+      border-radius: 999px;
+      font-size: 0.78rem;
+      display: flex;
+      align-items: center;
+      gap: 0.35rem;
+    }
+
+    .stat-pill strong { font-size: 0.9rem; font-weight: 800; }
+
+    /* Navigation Tabs */
+    .nav-tabs-bar {
+      max-width: 1680px;
+      margin: 0 auto;
+      display: flex;
+      gap: 0.35rem;
+      overflow-x: auto;
+      padding-top: 0.25rem;
+    }
+
+    .nav-tab {
+      background: rgba(255, 255, 255, 0.12);
+      color: rgba(255, 255, 255, 0.9);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      border-bottom: none;
+      padding: 0.65rem 1.15rem;
+      border-radius: 10px 10px 0 0;
+      font-size: 0.86rem;
+      font-weight: 700;
+      cursor: pointer;
+      white-space: nowrap;
+      display: flex;
+      align-items: center;
+      gap: 0.45rem;
+      transition: all 0.15s;
+      text-decoration: none;
+    }
+
+    .nav-tab:hover { background: rgba(255, 255, 255, 0.24); color: #fff; }
+    .nav-tab.active {
+      background: var(--bg);
+      color: var(--primary);
+      border-color: var(--bg);
+      box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.08);
+    }
+
+    .tab-badge {
+      background: rgba(255, 255, 255, 0.25);
+      color: inherit;
+      padding: 0.08rem 0.45rem;
+      border-radius: 99px;
+      font-size: 0.72rem;
+      font-weight: 800;
+    }
+    .nav-tab.active .tab-badge {
+      background: var(--primary);
+      color: #fff;
+    }
+
+    /* Views Container */
+    .view-panel {
+      display: none;
+      max-width: 1680px;
+      margin: 1.25rem auto;
+      padding: 0 1.25rem 3.5rem;
+    }
+    .view-panel.active { display: block; }
+
+    /* KPI Summary Grid */
+    .kpi-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+      gap: 1rem;
+      margin-bottom: 1.25rem;
+    }
+
+    .kpi-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 1rem 1.15rem;
+      box-shadow: var(--shadow-sm);
+      display: flex;
+      flex-direction: column;
+      gap: 0.25rem;
+      cursor: pointer;
+      transition: transform 0.15s, border-color 0.15s;
+    }
+    .kpi-card:hover {
+      transform: translateY(-2px);
+      border-color: var(--primary);
+    }
+    .kpi-card .kpi-label {
+      font-size: 0.76rem;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+      color: var(--text-muted);
+      font-weight: 700;
+    }
+    .kpi-card .kpi-value {
+      font-size: 1.55rem;
+      font-weight: 900;
+      color: var(--text);
+    }
+    .kpi-card .kpi-sub {
+      font-size: 0.78rem;
+      color: var(--text-muted);
+    }
+
+    /* Main Layout with Sidebar */
+    .explorer-layout {
+      display: grid;
+      grid-template-columns: 300px 1fr;
+      gap: 1.35rem;
+      align-items: start;
+    }
+    @media (max-width: 1080px) {
+      .explorer-layout { grid-template-columns: 1fr; }
+    }
+
+    .sidebar {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 1.15rem;
+      box-shadow: var(--shadow-sm);
+      position: sticky;
+      top: 120px;
+      max-height: calc(100vh - 135px);
+      overflow-y: auto;
+    }
+
+    .sidebar-section {
+      margin-bottom: 1.1rem;
+      padding-bottom: 1rem;
+      border-bottom: 1px solid var(--border);
+    }
+    .sidebar-section:last-child { margin-bottom: 0; padding-bottom: 0; border-bottom: none; }
+
+    .sidebar-title {
+      font-size: 0.78rem;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      color: var(--text-muted);
+      font-weight: 800;
+      margin-bottom: 0.55rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .filter-select, .filter-input {
+      width: 100%;
+      padding: 0.5rem 0.7rem;
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      font-size: 0.85rem;
+      color: var(--text);
+      background: #fff;
+      outline: none;
+    }
+    .filter-select:focus, .filter-input:focus {
+      border-color: var(--primary);
+      box-shadow: 0 0 0 3px rgba(225, 29, 116, 0.12);
+    }
+
+    .supplier-pills {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 0.4rem;
+    }
+    .sup-btn {
+      padding: 0.45rem 0.4rem;
+      border: 1px solid var(--border);
+      background: #f8fafc;
+      border-radius: 8px;
+      font-size: 0.8rem;
+      font-weight: 700;
+      cursor: pointer;
+      text-align: center;
+    }
+    .sup-btn.active {
+      background: var(--primary);
+      color: #fff;
+      border-color: var(--primary);
+    }
+
+    .category-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 0.2rem;
+      max-height: 290px;
+      overflow-y: auto;
+    }
+    .cat-btn {
+      width: 100%;
+      text-align: left;
+      background: transparent;
+      border: none;
+      padding: 0.4rem 0.6rem;
+      border-radius: 7px;
+      font-size: 0.82rem;
+      color: var(--text);
+      cursor: pointer;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .cat-btn:hover { background: var(--primary-soft); color: var(--primary); }
+    .cat-btn.active { background: var(--primary); color: #fff; font-weight: 700; }
+    .cat-count {
+      font-size: 0.72rem;
+      padding: 0.08rem 0.42rem;
+      border-radius: 99px;
+      background: rgba(100, 116, 139, 0.14);
+    }
+    .cat-btn.active .cat-count { background: rgba(255, 255, 255, 0.25); color: #fff; }
+
+    .checkbox-label {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-size: 0.84rem;
+      cursor: pointer;
+      margin-bottom: 0.4rem;
+      user-select: none;
+    }
+
+    /* Toolbar */
+    .toolbar {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 0.85rem 1.1rem;
+      margin-bottom: 1.1rem;
+      box-shadow: var(--shadow-sm);
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.75rem;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .search-box {
+      position: relative;
+      flex: 1;
+      min-width: 260px;
+    }
+    .search-box input {
+      width: 100%;
+      padding: 0.58rem 2.2rem 0.58rem 2.2rem;
+      border: 1px solid var(--border);
+      border-radius: 9px;
+      font-size: 0.88rem;
+      outline: none;
+    }
+    .search-box input:focus { border-color: var(--primary); }
+    .search-icon {
+      position: absolute;
+      left: 0.75rem;
+      top: 50%;
+      transform: translateY(-50%);
+      font-size: 0.9rem;
+    }
+
+    .toolbar-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      align-items: center;
+    }
+
+    /* Buttons */
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.4rem;
+      padding: 0.52rem 0.9rem;
+      border-radius: 8px;
+      font-size: 0.83rem;
+      font-weight: 700;
+      cursor: pointer;
+      border: 1px solid transparent;
+      transition: all 0.15s;
+      text-decoration: none;
+    }
+    .btn-sm { padding: 0.36rem 0.65rem; font-size: 0.76rem; }
+    .btn-primary { background: var(--primary); color: #fff; }
+    .btn-primary:hover { background: var(--primary-hover); }
+    .btn-bloom { background: var(--bloom); color: #fff; }
+    .btn-bloom:hover { background: #6d28d9; }
+    .btn-success { background: var(--success); color: #fff; }
+    .btn-success:hover { background: #047857; }
+    .btn-outline { background: #fff; border-color: var(--border); color: var(--text); }
+    .btn-outline:hover { border-color: var(--primary); color: var(--primary); background: var(--primary-soft); }
+    .btn-active-cat { background: var(--success-bg); border-color: var(--success); color: var(--success); }
+
+    /* Product Cards Grid */
+    .products-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(295px, 1fr));
+      gap: 1.15rem;
+    }
+
+    .product-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      overflow: hidden;
+      box-shadow: var(--shadow-sm);
+      display: flex;
+      flex-direction: column;
+      transition: transform 0.18s ease, box-shadow 0.18s ease, border-color 0.18s ease;
+    }
+    .product-card:hover {
+      transform: translateY(-3px);
+      box-shadow: var(--shadow-md);
+      border-color: var(--primary-border);
+    }
+    .product-card.in-my-catalog {
+      border: 2px solid var(--success);
+    }
+
+    .card-media {
+      position: relative;
+      width: 100%;
+      aspect-ratio: 1 / 1;
+      background: #f8fafc;
+      overflow: hidden;
+      cursor: pointer;
+      border-bottom: 1px solid var(--border);
+    }
+    .card-media img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.3s ease;
+    }
+    .product-card:hover .card-media img { transform: scale(1.04); }
+
+    .card-badges-top {
+      position: absolute;
+      top: 0.55rem;
+      left: 0.55rem;
+      right: 0.55rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: 0.35rem;
+      pointer-events: none;
+    }
+    .badge-col {
+      display: flex;
+      flex-direction: column;
+      gap: 0.28rem;
+      align-items: flex-start;
+    }
+
+    .badge {
+      padding: 0.2rem 0.55rem;
+      border-radius: 999px;
+      font-size: 0.7rem;
+      font-weight: 800;
+      letter-spacing: 0.02em;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.12);
+    }
+    .badge-trendy { background: #e11d74; color: #fff; }
+    .badge-bloom { background: #7c3aed; color: #fff; }
+    .badge-rank { background: #0f172a; color: #fbbf24; }
+    .badge-score { background: #ffffff; color: #0f172a; border: 1px solid #cbd5e1; font-weight: 900; }
+    .badge-stock { background: #10b981; color: #fff; }
+    .badge-out { background: #ef4444; color: #fff; }
+
+    .rec-banner {
+      padding: 0.32rem 0.75rem;
+      font-size: 0.73rem;
+      font-weight: 800;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .rec-COMPRA_OBLIGATORIA { background: #fef2f2; color: #b91c1c; border-bottom: 1px solid #fecaca; }
+    .rec-VACA_LECHERA { background: #ecfdf5; color: #047857; border-bottom: 1px solid #a7f3d0; }
+    .rec-LANZAMIENTO_TENDENCIA { background: #f5f3ff; color: #6d28d9; border-bottom: 1px solid #ddd6fe; }
+    .rec-COMPLEMENTO { background: #f8fafc; color: #475569; border-bottom: 1px solid #e2e8f0; }
+    .rec-RIESGO_CAPITAL { background: #fffbeb; color: #b45309; border-bottom: 1px solid #fde68a; }
+    .rec-AGOTADO { background: #f1f5f9; color: #64748b; border-bottom: 1px solid #e2e8f0; }
+
+    .card-body {
+      padding: 0.85rem;
+      display: flex;
+      flex-direction: column;
+      gap: 0.55rem;
+      flex: 1;
+    }
+
+    .card-meta {
+      display: flex;
+      justify-content: space-between;
+      font-size: 0.72rem;
+      color: var(--text-muted);
+      gap: 0.4rem;
+    }
+    .card-ref {
+      font-family: monospace;
+      font-weight: 700;
+      color: #334155;
+      background: #f1f5f9;
+      padding: 0.05rem 0.38rem;
+      border-radius: 4px;
+    }
+
+    .card-title {
+      font-size: 0.94rem;
+      font-weight: 800;
+      color: var(--text);
+      line-height: 1.3;
+      cursor: pointer;
+      display: -webkit-box;
+      -webkit-line-clamp: 2;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+    }
+    .card-title:hover { color: var(--primary); }
+
+    /* Financial Box inside Card */
+    .finance-box {
+      background: #f8fafc;
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 0.55rem 0.65rem;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 0.4rem;
+      font-size: 0.76rem;
+    }
+    .fin-item { display: flex; flex-direction: column; }
+    .fin-label { font-size: 0.68rem; color: var(--text-muted); text-transform: uppercase; font-weight: 700; }
+    .fin-val { font-size: 0.9rem; font-weight: 800; color: var(--text); }
+    .fin-val.wholesale { color: var(--bloom); }
+    .fin-val.retail { color: var(--primary); }
+    .fin-val.profit { color: var(--success); }
+
+    .local-fit-list {
+      font-size: 0.73rem;
+      color: #334155;
+      background: #fffbeb;
+      border: 1px solid #fde68a;
+      border-radius: 8px;
+      padding: 0.4rem 0.55rem;
+      line-height: 1.35;
+    }
+
+    .card-actions {
+      margin-top: auto;
+      padding-top: 0.55rem;
+      border-top: 1px solid var(--border);
+      display: grid;
+      grid-template-columns: 1fr auto auto;
+      gap: 0.35rem;
+    }
+
+    /* Tables */
+    .table-wrapper {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      overflow-x: auto;
+      box-shadow: var(--shadow-sm);
+    }
+    .data-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.83rem;
+    }
+    .data-table th {
+      background: #f8fafc;
+      text-align: left;
+      padding: 0.75rem 0.85rem;
+      font-weight: 800;
+      color: var(--text-muted);
+      border-bottom: 1px solid var(--border);
+      white-space: nowrap;
+    }
+    .data-table td {
+      padding: 0.65rem 0.85rem;
+      border-bottom: 1px solid var(--border);
+      vertical-align: middle;
+    }
+    .data-table tr:hover td { background: var(--primary-soft); }
+
+    /* Gap Matrix Cards */
+    .gap-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(380px, 1fr));
+      gap: 1.1rem;
+    }
+    .gap-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 1.1rem;
+      box-shadow: var(--shadow-sm);
+      display: flex;
+      flex-direction: column;
+      gap: 0.75rem;
+    }
+    .gap-card.critical { border-left: 5px solid var(--danger); }
+    .gap-card.warning { border-left: 5px solid var(--warning); }
+    .gap-card.covered { border-left: 5px solid var(--success); }
+
+    /* Order Simulator Progress */
+    .budget-panel {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 1.25rem;
+      box-shadow: var(--shadow-sm);
+      margin-bottom: 1.25rem;
+    }
+    .progress-track {
+      width: 100%;
+      height: 14px;
+      background: #e2e8f0;
+      border-radius: 999px;
+      overflow: hidden;
+      margin: 0.5rem 0;
+    }
+    .progress-fill {
+      height: 100%;
+      background: linear-gradient(90deg, var(--primary), var(--bloom));
+      transition: width 0.3s ease;
+    }
+
+    /* Modal */
+    .modal-backdrop {
+      position: fixed;
+      inset: 0;
+      background: rgba(15, 23, 42, 0.65);
+      backdrop-filter: blur(4px);
+      z-index: 1000;
+      display: none;
+      align-items: center;
+      justify-content: center;
+      padding: 1.25rem;
+    }
+    .modal-backdrop.open { display: flex; }
+    .modal-dialog {
+      background: var(--surface);
+      width: 100%;
+      max-width: 1180px;
+      max-height: 92vh;
+      border-radius: 18px;
+      box-shadow: var(--shadow-lg);
+      display: flex;
+      flex-direction: column;
+      overflow: hidden;
+    }
+    .modal-header {
+      padding: 1rem 1.4rem;
+      border-bottom: 1px solid var(--border);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background: #f8fafc;
+    }
+    .modal-body {
+      padding: 1.4rem;
+      overflow-y: auto;
+      display: grid;
+      grid-template-columns: 430px 1fr;
+      gap: 1.75rem;
+    }
+    @media (max-width: 900px) { .modal-body { grid-template-columns: 1fr; } }
+
+    .main-image-frame {
+      width: 100%;
+      aspect-ratio: 1 / 1;
+      background: #f8fafc;
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+    }
+    .main-image-frame img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+    .thumbs-strip {
+      display: flex;
+      gap: 0.45rem;
+      overflow-x: auto;
+      padding: 0.5rem 0;
+    }
+    .thumb-item {
+      width: 62px;
+      height: 62px;
+      border-radius: 8px;
+      border: 2px solid var(--border);
+      overflow: hidden;
+      cursor: pointer;
+      flex-shrink: 0;
+    }
+    .thumb-item.active { border-color: var(--primary); }
+    .thumb-item img { width: 100%; height: 100%; object-fit: cover; }
+
+    /* Pagination */
+    .pagination-bar {
+      margin-top: 1.4rem;
+      display: flex;
+      justify-content: center;
+      gap: 0.35rem;
+      flex-wrap: wrap;
+    }
+    .page-btn {
+      min-width: 36px;
+      height: 36px;
+      padding: 0 0.6rem;
+      border-radius: 8px;
+      border: 1px solid var(--border);
+      background: #fff;
+      font-size: 0.84rem;
+      font-weight: 700;
+      cursor: pointer;
+    }
+    .page-btn.active { background: var(--primary); color: #fff; border-color: var(--primary); }
+
+    /* Toast */
+    .toast-container {
+      position: fixed;
+      bottom: 1.25rem;
+      right: 1.25rem;
+      z-index: 2000;
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+    }
+    .toast {
+      background: #0f172a;
+      color: #fff;
+      padding: 0.75rem 1.1rem;
+      border-radius: 10px;
+      font-size: 0.85rem;
+      box-shadow: var(--shadow-lg);
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="top-header">
+    <div class="header-inner">
+      <div class="brand-title">
+        <div class="brand-logo">TB</div>
+        <div>
+          <h1>Inteligencia de Mercado &amp; Surtido Mayorista — Trendy + Bloomshell</h1>
+          <p id="headerSubText">Foco Regional: Roldanillo, Cartago y Valle del Cauca (Clima Cálido) • Metas: $400.000 Trendy | $700.000 Bloomshell</p>
+        </div>
+      </div>
+      <div class="stats-bar">
+        <div class="stat-pill">Total Catálogos: <strong id="statTotalAll">0</strong></div>
+        <div class="stat-pill">Trendy: <strong id="statTrendyCount">0</strong></div>
+        <div class="stat-pill">Bloomshell: <strong id="statBloomCount">0</strong></div>
+        <div class="stat-pill">En Mi Catálogo: <strong id="statMyCatalogCount">0</strong></div>
+        <div class="stat-pill">Último Escaneo: <strong id="statScanDate">—</strong></div>
+      </div>
+    </div>
+
+    <nav class="nav-tabs-bar">
+      <button class="nav-tab active" data-tab="view-market">
+        🎯 1. Estudio de Mercado y «Qué Comprar» <span class="tab-badge" id="badgeTopPicks">0</span>
+      </button>
+      <button class="nav-tab" data-tab="view-gaps">
+        🧩 2. Brechas de Mi Catálogo (Valle del Cauca) <span class="tab-badge" id="badgeGaps">17</span>
+      </button>
+      <button class="nav-tab" data-tab="view-radar">
+        📡 3. Escaneo Paulatino y Novedades <span class="tab-badge" id="badgeChanges">0</span>
+      </button>
+      <button class="nav-tab" data-tab="view-compare">
+        ⚖️ 4. Comparativa Trendy vs. Bloomshell
+      </button>
+      <button class="nav-tab" data-tab="view-simulator">
+        🛒 5. Simulador de Pedido Mayorista ($400k / $700k) <span class="tab-badge" id="badgeCartCount">0</span>
+      </button>
+      <a class="nav-tab" href="catalogo_trendy.html" title="Ir al visor clásico exclusivo de Trendy">
+        📂 Visor Clásico Trendy
+      </a>
+    </nav>
+  </header>
+
+  <!-- ===================================================================== -->
+  <!-- VISTA 1: ESTUDIO DE MERCADO Y EXPLORADOR UNIFICADO DE SURTIDO         -->
+  <!-- ===================================================================== -->
+  <section class="view-panel active" id="view-market">
+    <div class="kpi-grid">
+      <div class="kpi-card" id="kpiQuickMustBuy">
+        <span class="kpi-label">🔥 Compra Obligatoria (Valle Cálido)</span>
+        <span class="kpi-value" id="kpiMustBuyCount" style="color:#dc2626;">0</span>
+        <span class="kpi-sub">Top Ventas + Alto Margen + Clima Cálido</span>
+      </div>
+      <div class="kpi-card" id="kpiQuickCashCow">
+        <span class="kpi-label">💎 Vacas Lecheras (ROI &gt; 75%)</span>
+        <span class="kpi-value" id="kpiCashCowCount" style="color:#059669;">0</span>
+        <span class="kpi-sub">Bajo costo de entrada y rápida salida</span>
+      </div>
+      <div class="kpi-card" id="kpiQuickNewTrend">
+        <span class="kpi-label">🚀 Lanzamientos en Tendencia</span>
+        <span class="kpi-value" id="kpiNewTrendCount" style="color:#7c3aed;">0</span>
+        <span class="kpi-sub">Nuevas colecciones y productos recientes</span>
+      </div>
+      <div class="kpi-card" id="kpiQuickMissingWinners">
+        <span class="kpi-label">❗ Faltantes Ganadores en Tu Tienda</span>
+        <span class="kpi-value" id="kpiMissingWinnersCount" style="color:#d97706;">0</span>
+        <span class="kpi-sub">Éxitos de venta que aún no tienes marcados</span>
+      </div>
+    </div>
+
+    <div class="explorer-layout">
+      <!-- Sidebar -->
+      <aside class="sidebar">
+        <div class="sidebar-section">
+          <div class="sidebar-title">Proveedor Mayorista</div>
+          <div class="supplier-pills">
+            <button class="sup-btn active" data-sup="">Ambos</button>
+            <button class="sup-btn" data-sup="Trendy">Trendy</button>
+            <button class="sup-btn" data-sup="Bloomshell">Bloomshell</button>
+          </div>
+        </div>
+
+        <div class="sidebar-section">
+          <div class="sidebar-title">Recomendación de Estudio</div>
+          <select id="filterRecCode" class="filter-select">
+            <option value="">Todas las clasificaciones</option>
+            <option value="TOP_WINNERS">🌟 Solo Ganadores (Obligatoria + Vaca Lechera + Tendencia)</option>
+            <option value="COMPRA_OBLIGATORIA">🔥 Compra Obligatoria (Top Ventas + Clima Cálido)</option>
+            <option value="VACA_LECHERA">💎 Vaca Lechera (Alto ROI &gt; 75% + Bajo Ticket)</option>
+            <option value="LANZAMIENTO_TENDENCIA">🚀 Lanzamiento en Tendencia / Nueva Colección</option>
+            <option value="COMPLEMENTO">✅ Complemento de Surtido</option>
+            <option value="RIESGO_CAPITAL">⚠️ Display Costoso (Alto Capital Mínimo)</option>
+            <option value="AGOTADO">⛔ Agotado en Proveedor</option>
+          </select>
+        </div>
+
+        <div class="sidebar-section">
+          <div class="sidebar-title">Estado en Mi Catálogo</div>
+          <select id="filterMyCatalog" class="filter-select">
+            <option value="">Todos los productos</option>
+            <option value="MISSING">❗ Faltantes (No los tengo en mi catálogo)</option>
+            <option value="OWNED">📦 Ya los tengo en Mi Catálogo</option>
+            <option value="IN_CART">🛒 En mi Simulador de Pedido actual</option>
+          </select>
+        </div>
+
+        <div class="sidebar-section">
+          <div class="sidebar-title">Categoría de Mercado Unificada</div>
+          <ul class="category-list" id="unifiedCategoryList"></ul>
+        </div>
+
+        <div class="sidebar-section">
+          <div class="sidebar-title">Filtros Rápidos Valle del Cauca</div>
+          <label class="checkbox-label">
+            <input type="checkbox" id="chkOnlyStock" checked />
+            Solo disponibles en bodega
+          </label>
+          <label class="checkbox-label">
+            <input type="checkbox" id="chkWarmClimate" />
+            ☀️ Especial Clima Cálido (Roldanillo/Cartago)
+          </label>
+          <label class="checkbox-label">
+            <input type="checkbox" id="chkTop50Rank" />
+            🏆 Solo Top 50 Más Vendidos del Proveedor
+          </label>
+          <label class="checkbox-label">
+            <input type="checkbox" id="chkLowMinInvest" />
+            💰 Baja inversión mínima (&le; $45.000 COP)
+          </label>
+        </div>
+
+        <div class="sidebar-section">
+          <div class="sidebar-title">Precio Venta Detal (COP)</div>
+          <div style="display:grid; grid-template-columns:1fr 1fr; gap:0.4rem;">
+            <input type="number" id="priceMin" class="filter-input" placeholder="Mín $" step="1000" />
+            <input type="number" id="priceMax" class="filter-input" placeholder="Máx $" step="1000" />
+          </div>
+        </div>
+
+        <button class="btn btn-outline" id="btnResetFilters" style="width:100%;">Limpiar todos los filtros</button>
+      </aside>
+
+      <!-- Main Catalog & Recommendations -->
+      <main>
+        <div class="toolbar">
+          <div class="search-box">
+            <span class="search-icon">🔍</span>
+            <input type="text" id="searchInput" placeholder="Buscar producto, SKU (ej. MRM2730, BL-BDC0083), fijador, cejas, tinta, rubor, polvo..." />
+          </div>
+
+          <div class="toolbar-actions">
+            <select id="sortSelect" class="filter-select" style="width:auto;">
+              <option value="score_desc">🎯 Mayor Puntaje de Oportunidad (Recomendado)</option>
+              <option value="rank_asc">🏆 Ranking #1 Más Vendidos en Proveedor</option>
+              <option value="roi_desc">💎 Mayor % Ganancia / ROI Mayorista</option>
+              <option value="profit_desc">💵 Mayor Ganancia en $ por Unidad</option>
+              <option value="rotation_asc">🔥 Mayor Rotación / Caída de Stock en Bodega</option>
+              <option value="min_inv_asc">🪙 Menor Inversión Mínima por Referencia</option>
+              <option value="price_asc">Precio Detal (Menor a Mayor)</option>
+              <option value="recent_desc">Más Recientes / Nuevos</option>
+            </select>
+
+            <button class="btn btn-outline" id="btnToggleView">📋 Vista Tabla</button>
+            <button class="btn btn-success" id="btnExportMarketCsv">📊 Exportar Excel Estudio</button>
+          </div>
+        </div>
+
+        <div style="margin-bottom:0.75rem; display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:0.5rem;">
+          <div style="font-size:0.85rem; color:var(--text-muted);">
+            Mostrando <strong id="lblFilteredCount" style="color:var(--text);">0</strong> productos analizados
+          </div>
+          <div style="display:flex; gap:0.45rem; flex-wrap:wrap;">
+            <button class="btn btn-sm btn-primary" id="btnAutoFillTrendyQuick">✨ Auto-Armar Pedido Trendy ($400.000)</button>
+            <button class="btn btn-sm btn-bloom" id="btnAutoFillBloomQuick">✨ Auto-Armar Pedido Bloomshell ($700.000)</button>
+          </div>
+        </div>
+
+        <div id="marketCatalogContainer"></div>
+        <div class="pagination-bar" id="marketPagination"></div>
+      </main>
+    </div>
+  </section>
+
+  <!-- ===================================================================== -->
+  <!-- VISTA 2: BRECHAS DE MI CATALOGO vs DEMANDA LOCAL (VALLE DEL CAUCA)    -->
+  <!-- ===================================================================== -->
+  <section class="view-panel" id="view-gaps">
+    <div class="budget-panel" style="display:flex; flex-wrap:wrap; justify-content:space-between; align-items:center; gap:1rem;">
+      <div>
+        <h2 style="font-size:1.25rem; font-weight:800;">🧩 Diagnóstico de Brechas de Tu Catálogo — Roldanillo, Cartago y Valle del Cauca</h2>
+        <p style="font-size:0.86rem; color:var(--text-muted);">
+          Marca con el botón <strong>«📦 Tengo en Mi Catálogo»</strong> los productos que ya manejas. El sistema detecta automáticamente qué líneas de alta rotación en clima cálido te faltan y qué productos exactos de Trendy y Bloomshell debes traer para cubrirlas.
+        </p>
+      </div>
+      <div style="display:flex; gap:0.5rem; flex-wrap:wrap;">
+        <button class="btn btn-outline" id="btnExportMyCatalog">💾 Guardar Mi Catálogo (.JSON)</button>
+        <label class="btn btn-outline" style="cursor:pointer;">
+          📂 Cargar Mi Catálogo (.JSON)
+          <input type="file" id="inputImportMyCatalog" accept=".json" style="display:none;" />
+        </label>
+      </div>
+    </div>
+
+    <div class="gap-grid" id="gapMatrixContainer"></div>
+  </section>
+
+  <!-- ===================================================================== -->
+  <!-- VISTA 3: ESCANEO PAULATINO, HISTORIAL Y RADAR DE MOVIMIENTOS          -->
+  <!-- ===================================================================== -->
+  <section class="view-panel" id="view-radar">
+    <div class="budget-panel">
+      <div style="display:flex; flex-wrap:wrap; justify-content:space-between; align-items:center; gap:1rem; margin-bottom:1rem;">
+        <div>
+          <h2 style="font-size:1.25rem; font-weight:800;">📡 Radar de Escaneo Paulatino e Historial de Proveedores</h2>
+          <p style="font-size:0.86rem; color:var(--text-muted);">
+            Cada vez que ejecutas <code>actualizar_estudio_mercado.bat</code> o <code>escanear_mercado_proveedores.ps1</code>, el sistema guarda una foto histórica y detecta productos nuevos, agotamientos rápidos en bodega (lo que más se está vendiendo) y reabastecimientos.
+          </p>
+        </div>
+        <div style="display:flex; gap:0.5rem; flex-wrap:wrap;">
+          <select id="radarFilterType" class="filter-select" style="width:auto;">
+            <option value="">Todos los movimientos detectados</option>
+            <option value="Nuevo">🚀 Nuevos Lanzamientos</option>
+            <option value="Alta Rotacion">🔥 Alta Rotación (Caída rápida de stock en bodega)</option>
+            <option value="Reabastecido">🔄 Reabastecidos (Volvieron a stock)</option>
+            <option value="Agotado">⛔ Agotados Recientemente</option>
+            <option value="Ingreso">📈 Ingreso fuerte de inventario</option>
+          </select>
+        </div>
+      </div>
+
+      <div id="scanHistoryPills" style="display:flex; gap:0.6rem; flex-wrap:wrap; margin-bottom:1rem;"></div>
+
+      <div class="table-wrapper">
+        <table class="data-table" id="radarChangesTable">
+          <thead>
+            <tr>
+              <th>Proveedor</th>
+              <th>Movimiento / Alerta</th>
+              <th>Ref / SKU</th>
+              <th>Producto</th>
+              <th>Categoría</th>
+              <th>Stock Anterior</th>
+              <th>Stock Actual</th>
+              <th>Variación Stock</th>
+              <th>Precio Detal</th>
+              <th>Acción</th>
+            </tr>
+          </thead>
+          <tbody></tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================================================================== -->
+  <!-- VISTA 4: COMPARADOR CARA A CARA TRENDY vs BLOOMSHELL                  -->
+  <!-- ===================================================================== -->
+  <section class="view-panel" id="view-compare">
+    <div class="budget-panel">
+      <h2 style="font-size:1.25rem; font-weight:800; margin-bottom:0.35rem;">⚖️ Estudio Comparativo por Categoría: Trendy ($400.000) vs. Bloomshell ($700.000)</h2>
+      <p style="font-size:0.86rem; color:var(--text-muted); margin-bottom:1rem;">
+        Descubre en qué categorías te conviene más invertir con <strong>Trendy</strong> (menor mínimo por referencia, alta recordación de marca) y en cuáles <strong>Bloomshell</strong> te multiplica el capital con márgenes superiores al 80%–110%.
+      </p>
+      <div class="table-wrapper">
+        <table class="data-table" id="compareSuppliersTable">
+          <thead>
+            <tr>
+              <th>Categoría de Producto</th>
+              <th>Refs Trendy (En Stock)</th>
+              <th>ROI Promedio Trendy ($400k)</th>
+              <th>Mejor Ganador Trendy</th>
+              <th>Refs Bloomshell (En Stock)</th>
+              <th>ROI Promedio Bloomshell ($700k)</th>
+              <th>Mejor Ganador Bloomshell</th>
+              <th>Veredicto Estratégico</th>
+            </tr>
+          </thead>
+          <tbody></tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================================================================== -->
+  <!-- VISTA 5: SIMULADOR Y AUTO-ARMADOR DE PEDIDO MAYORISTA                 -->
+  <!-- ===================================================================== -->
+  <section class="view-panel" id="view-simulator">
+    <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(460px, 1fr)); gap:1.25rem; margin-bottom:1.25rem;">
+      <!-- Panel Presupuesto Trendy -->
+      <div class="budget-panel">
+        <div style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:0.5rem;">
+          <div>
+            <span class="badge badge-trendy">PROVEEDOR TRENDY</span>
+            <h3 style="font-size:1.1rem; font-weight:800; margin-top:0.25rem;">Meta Emprendedor: $400.000 COP</h3>
+          </div>
+          <div style="display:flex; gap:0.4rem;">
+            <input type="number" id="inputBudgetTrendy" class="filter-input" value="400000" step="50000" style="width:135px; font-weight:800;" />
+            <button class="btn btn-primary btn-sm" id="btnRunAutoTrendy">✨ Auto-Armar</button>
+          </div>
+        </div>
+        <div class="progress-track"><div class="progress-fill" id="progTrendy" style="width:0%;"></div></div>
+        <div style="display:flex; justify-content:space-between; font-size:0.82rem;">
+          <span>Invertido Trendy: <strong id="simTrendyInvested">$0</strong></span>
+          <span>Venta Detal: <strong id="simTrendyRetail">$0</strong></span>
+          <span style="color:var(--success);">Ganancia Libre: <strong id="simTrendyProfit">+$0</strong></span>
+        </div>
+      </div>
+
+      <!-- Panel Presupuesto Bloomshell -->
+      <div class="budget-panel">
+        <div style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:0.5rem;">
+          <div>
+            <span class="badge badge-bloom">PROVEEDOR BLOOMSHELL</span>
+            <h3 style="font-size:1.1rem; font-weight:800; margin-top:0.25rem;">Meta Mayorista Rango 1: $700.000 COP</h3>
+          </div>
+          <div style="display:flex; gap:0.4rem;">
+            <input type="number" id="inputBudgetBloom" class="filter-input" value="700000" step="50000" style="width:135px; font-weight:800;" />
+            <button class="btn btn-bloom btn-sm" id="btnRunAutoBloom">✨ Auto-Armar</button>
+          </div>
+        </div>
+        <div class="progress-track"><div class="progress-fill" id="progBloom" style="width:0%;"></div></div>
+        <div style="display:flex; justify-content:space-between; font-size:0.82rem;">
+          <span>Invertido Bloomshell: <strong id="simBloomInvested">$0</strong></span>
+          <span>Venta Detal: <strong id="simBloomRetail">$0</strong></span>
+          <span style="color:var(--success);">Ganancia Libre: <strong id="simBloomProfit">+$0</strong></span>
+        </div>
+      </div>
+    </div>
+
+    <div class="budget-panel">
+      <div style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:0.75rem; margin-bottom:1rem;">
+        <div>
+          <h3 style="font-size:1.1rem; font-weight:800;">📋 Tu Orden Mayorista Sugerida / Seleccionada</h3>
+          <p style="font-size:0.82rem; color:var(--text-muted);" id="simSummaryTotals">0 referencias seleccionadas</p>
+        </div>
+        <div style="display:flex; gap:0.5rem; flex-wrap:wrap;">
+          <button class="btn btn-success" id="btnExportOrderCsv">📥 Descargar Pedido en Excel (.CSV)</button>
+          <button class="btn btn-primary" id="btnDownloadOrderImagesZip">📸 Descargar Fotos de Todo mi Pedido (.ZIP)</button>
+          <button class="btn btn-outline" id="btnCopyOrderWhatsapp">📲 Copiar Resumen Pedido</button>
+          <button class="btn btn-outline" id="btnClearCart" style="color:var(--danger);">🗑️ Vaciar Pedido</button>
+        </div>
+      </div>
+
+      <div class="table-wrapper">
+        <table class="data-table" id="simCartTable">
+          <thead>
+            <tr>
+              <th>Foto</th>
+              <th>Proveedor</th>
+              <th>Ref / SKU</th>
+              <th>Producto</th>
+              <th>Costo Mayorista Ud</th>
+              <th>Precio Detal Ud</th>
+              <th>Mín. Mayorista</th>
+              <th>Cantidad a Pedir</th>
+              <th>Subtotal Mayorista</th>
+              <th>Ganancia Proyectada</th>
+              <th>Quitar</th>
+            </tr>
+          </thead>
+          <tbody></tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================================================================== -->
+  <!-- MODAL DE DETALLE DE PRODUCTO, VARIANTES Y DESCARGA DE IMAGENES        -->
+  <!-- ===================================================================== -->
+  <div class="modal-backdrop" id="productModal">
+    <div class="modal-dialog">
+      <div class="modal-header">
+        <div style="display:flex; align-items:center; gap:0.6rem; flex-wrap:wrap;">
+          <span class="badge" id="modalSupplierBadge">TRENDY</span>
+          <span class="card-ref" id="modalRefBadge">REF</span>
+          <span class="badge badge-rank" id="modalRankBadge">#1</span>
+          <a id="modalStoreLink" href="#" target="_blank" rel="noopener" class="btn btn-outline btn-sm">🔗 Ver en web oficial ↗</a>
+        </div>
+        <button class="btn btn-outline btn-sm" id="btnCloseModal">✕ Cerrar</button>
+      </div>
+      <div class="modal-body">
+        <!-- Columna Galeria e Imagenes para Catalogo -->
+        <div>
+          <div class="main-image-frame">
+            <img id="modalMainImg" src="" alt="Imagen de producto" />
+          </div>
+          <div style="text-align:center; font-size:0.76rem; color:var(--text-muted); margin-top:0.35rem;" id="modalImgCounter">Imagen 1 de 1</div>
+          <div class="thumbs-strip" id="modalThumbs"></div>
+
+          <div style="background:var(--primary-soft); border:1px solid var(--primary-border); border-radius:12px; padding:0.9rem; margin-top:0.75rem; display:flex; flex-direction:column; gap:0.5rem;">
+            <div style="font-size:0.82rem; font-weight:800; color:var(--primary);">📸 Imágenes listas para cargar en tu catálogo</div>
+            <div style="display:grid; grid-template-columns:1fr 1fr; gap:0.45rem;">
+              <button class="btn btn-outline btn-sm" id="btnDownloadCurrentImg">⬇️ Bajar Foto Actual</button>
+              <button class="btn btn-primary btn-sm" id="btnDownloadAllProdZip">📦 Bajar Todas (.ZIP)</button>
+            </div>
+            <div style="font-size:0.72rem; color:var(--text-muted); word-break:break-all;">
+              Carpeta local: <code id="modalLocalFolder"></code>
+            </div>
+          </div>
+        </div>
+
+        <!-- Columna Estudio de Mercado y Variantes -->
+        <div style="display:flex; flex-direction:column; gap:1rem;">
+          <div>
+            <div style="font-size:0.78rem; color:var(--text-muted); font-weight:700;" id="modalCategoryText">Categoría</div>
+            <h2 style="font-size:1.35rem; font-weight:900; margin-top:0.15rem;" id="modalTitle">Nombre del Producto</h2>
+          </div>
+
+          <div class="finance-box" style="grid-template-columns:repeat(4, 1fr); padding:0.85rem;">
+            <div class="fin-item">
+              <span class="fin-label" id="modalTier1Label">Mayorista Escala 1</span>
+              <span class="fin-val wholesale" id="modalTier1Price">$0</span>
+            </div>
+            <div class="fin-item">
+              <span class="fin-label" id="modalTier2Label">Mayorista Escala 2</span>
+              <span class="fin-val" id="modalTier2Price">$0</span>
+            </div>
+            <div class="fin-item">
+              <span class="fin-label">Precio Venta Detal</span>
+              <span class="fin-val retail" id="modalRetailPrice">$0</span>
+            </div>
+            <div class="fin-item">
+              <span class="fin-label">Ganancia / ROI Unidad</span>
+              <span class="fin-val profit" id="modalProfitText">+$0 (0%)</span>
+            </div>
+          </div>
+
+          <div style="display:flex; gap:0.5rem; flex-wrap:wrap;">
+            <button class="btn btn-primary" id="modalBtnAddOrder">➕ Agregar al Pedido Mayorista</button>
+            <button class="btn btn-outline" id="modalBtnToggleOwned">📦 Marcar en Mi Catálogo</button>
+            <button class="btn btn-outline" id="modalBtnCopyFicha">📋 Copiar Ficha para Mi Catálogo</button>
+          </div>
+
+          <div class="local-fit-list" id="modalReasonsBox"></div>
+
+          <div>
+            <h4 style="font-size:0.82rem; text-transform:uppercase; color:var(--text-muted); margin-bottom:0.45rem;" id="modalVariantsTitle">Variantes / Tonos Disponibles</h4>
+            <div id="modalVariantsGrid" style="display:grid; grid-template-columns:repeat(auto-fill, minmax(175px, 1fr)); gap:0.5rem; max-height:210px; overflow-y:auto;"></div>
+          </div>
+
+          <div style="border:1px solid var(--border); border-radius:10px; padding:0.85rem; background:#fff;">
+            <h4 style="font-size:0.8rem; text-transform:uppercase; color:var(--text-muted); margin-bottom:0.35rem;">📝 Descripción y Detalles Comerciales</h4>
+            <p style="font-size:0.86rem; color:#334155; white-space:pre-line;" id="modalDescText"></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="toast-container" id="toastContainer"></div>
+
+  <script src="datos/mercado_unificado_data.js"></script>
+  <script>
+    (function () {
+      const rawData = window.MARKET_STUDY_DATA || { products: [], recentChanges: [], scanHistory: [] };
+      const allProducts = (rawData.products || []).map(p => {
+        const localImgs = Array.isArray(p.allLocalImages) ? p.allLocalImages : [];
+        const remoteImgs = Array.isArray(p.allRemoteImages) ? p.allRemoteImages : [];
+        const maxLen = Math.max(localImgs.length, remoteImgs.length);
+        const imageEntries = [];
+        for (let i = 0; i < maxLen; i++) {
+          const loc = localImgs[i] || '';
+          const rem = remoteImgs[i] || '';
+          const fileName = (loc || rem).split('/').pop().split('?')[0] || `img_${i + 1}.jpg`;
+          imageEntries.push({ localPath: loc, remoteUrl: rem, fileName });
+        }
+        return { ...p, imageEntries };
+      });
+
+      // Persistencia Local: Mi Catalogo Actual y Carrito Mayorista
+      const STORAGE_OWNED_KEY = 'TRENDY_BLOOM_MY_CATALOG_V1';
+      const STORAGE_CART_KEY = 'TRENDY_BLOOM_WHOLESALE_CART_V1';
+
+      let ownedSet = new Set();
+      let cartMap = {}; // unifiedId -> qty
+
+      try {
+        const savedOwned = JSON.parse(localStorage.getItem(STORAGE_OWNED_KEY) || '[]');
+        if (Array.isArray(savedOwned)) ownedSet = new Set(savedOwned);
+        const savedCart = JSON.parse(localStorage.getItem(STORAGE_CART_KEY) || '{}');
+        if (savedCart && typeof savedCart === 'object') cartMap = savedCart;
+      } catch (e) {}
+
+      function saveOwned() {
+        localStorage.setItem(STORAGE_OWNED_KEY, JSON.stringify(Array.from(ownedSet)));
+        updateGlobalCounters();
+      }
+
+      function saveCart() {
+        localStorage.setItem(STORAGE_CART_KEY, JSON.stringify(cartMap));
+        updateGlobalCounters();
+      }
+
+      const state = {
+        supplier: '',
+        recCode: '',
+        myCatalogFilter: '',
+        category: '',
+        onlyStock: true,
+        warmClimate: false,
+        top50Rank: false,
+        lowMinInvest: false,
+        priceMin: '',
+        priceMax: '',
+        search: '',
+        sort: 'score_desc',
+        view: 'grid',
+        page: 1,
+        pageSize: 24
+      };
+
+      function formatCOP(val) {
+        const n = Number(val) || 0;
+        return '$' + Math.round(n).toLocaleString('es-CO');
+      }
+
+      function showToast(msg) {
+        const c = document.getElementById('toastContainer');
+        const t = document.createElement('div');
+        t.className = 'toast';
+        t.textContent = msg;
+        c.appendChild(t);
+        setTimeout(() => t.remove(), 3400);
+      }
+
+      function getImgSrc(entry) {
+        if (!entry) return '';
+        return entry.localPath || entry.remoteUrl || '';
+      }
+
+      // Generador ZIP sin dependencias externas (STORE)
+      const crcTable = (() => {
+        const table = new Uint32Array(256);
+        for (let n = 0; n < 256; n++) {
+          let c = n;
+          for (let k = 0; k < 8; k++) {
+            c = (c & 1) ? (0xEDB88320 ^ (c >>> 1)) : (c >>> 1);
+          }
+          table[n] = c >>> 0;
+        }
+        return table;
+      })();
+
+      function crc32(bytes) {
+        let crc = 0xFFFFFFFF;
+        for (let i = 0; i < bytes.length; i++) {
+          crc = (crc >>> 8) ^ crcTable[(crc ^ bytes[i]) & 0xFF];
+        }
+        return (crc ^ 0xFFFFFFFF) >>> 0;
+      }
+
+      async function fetchImageBytes(entry) {
+        const urls = [entry.localPath, entry.remoteUrl].filter(Boolean);
+        for (const u of urls) {
+          try {
+            const resp = await fetch(u);
+            if (resp.ok) {
+              const buf = await resp.arrayBuffer();
+              if (buf.byteLength > 0) return new Uint8Array(buf);
+            }
+          } catch (e) {}
+        }
+        return null;
+      }
+
+      async function downloadEntriesAsZip(entries, zipFilename) {
+        if (!entries || !entries.length) {
+          showToast('⚠️ No hay imágenes para descargar');
+          return;
+        }
+        showToast(`⏳ Empaquetando ${entries.length} imágenes en ${zipFilename}...`);
+        const files = [];
+        const usedNames = new Set();
+
+        for (let i = 0; i < entries.length; i++) {
+          const entry = entries[i];
+          const bytes = await fetchImageBytes(entry);
+          if (!bytes) continue;
+          let name = (entry.customPrefix ? `${entry.customPrefix}_${entry.fileName}` : entry.fileName).replace(/[^a-zA-Z0-9._-]/g, '_');
+          if (usedNames.has(name)) name = `${i + 1}_${name}`;
+          usedNames.add(name);
+          files.push({ name, bytes, crc: crc32(bytes) });
+        }
+
+        if (!files.length) {
+          showToast('⚠️ Las imágenes están en tu carpeta local (imagenes / imagenes_bloomshell).');
+          return;
+        }
+
+        const enc = new TextEncoder();
+        const localParts = [];
+        const centralParts = [];
+        let offset = 0;
+
+        for (const f of files) {
+          const nameBytes = enc.encode(f.name);
+          const localHeader = new Uint8Array(30 + nameBytes.length);
+          const lv = new DataView(localHeader.buffer);
+          lv.setUint32(0, 0x04034b50, true);
+          lv.setUint16(4, 20, true);
+          lv.setUint32(14, f.crc, true);
+          lv.setUint32(18, f.bytes.length, true);
+          lv.setUint32(22, f.bytes.length, true);
+          lv.setUint16(26, nameBytes.length, true);
+          localHeader.set(nameBytes, 30);
+
+          localParts.push(localHeader, f.bytes);
+
+          const centralHeader = new Uint8Array(46 + nameBytes.length);
+          const cv = new DataView(centralHeader.buffer);
+          cv.setUint32(0, 0x02014b50, true);
+          cv.setUint16(4, 20, true);
+          cv.setUint16(6, 20, true);
+          cv.setUint32(16, f.crc, true);
+          cv.setUint32(20, f.bytes.length, true);
+          cv.setUint32(24, f.bytes.length, true);
+          cv.setUint16(28, nameBytes.length, true);
+          cv.setUint32(42, offset, true);
+          centralHeader.set(nameBytes, 46);
+
+          centralParts.push(centralHeader);
+          offset += localHeader.length + f.bytes.length;
+        }
+
+        const centralSize = centralParts.reduce((a, b) => a + b.length, 0);
+        const eocd = new Uint8Array(22);
+        const ev = new DataView(eocd.buffer);
+        ev.setUint32(0, 0x06054b50, true);
+        ev.setUint16(8, files.length, true);
+        ev.setUint16(10, files.length, true);
+        ev.setUint32(12, centralSize, true);
+        ev.setUint32(16, offset, true);
+
+        const blob = new Blob([...localParts, ...centralParts, eocd], { type: 'application/zip' });
+        const url = URL.createObjectURL(blob);
+        const a = document.createElement('a');
+        a.href = url;
+        a.download = zipFilename;
+        document.body.appendChild(a);
+        a.click();
+        a.remove();
+        setTimeout(() => URL.revokeObjectURL(url), 4000);
+        showToast(`✅ Descargado ${zipFilename} con ${files.length} fotos listas para tu catálogo`);
+      }
+
+      // Inicializar Contadores y Categorías
+      function updateGlobalCounters() {
+        const trendyCount = allProducts.filter(p => p.supplier === 'Trendy').length;
+        const bloomCount = allProducts.filter(p => p.supplier === 'Bloomshell').length;
+        const mustBuy = allProducts.filter(p => p.recommendationCode === 'COMPRA_OBLIGATORIA').length;
+        const cashCow = allProducts.filter(p => p.recommendationCode === 'VACA_LECHERA').length;
+        const newTrend = allProducts.filter(p => p.recommendationCode === 'LANZAMIENTO_TENDENCIA').length;
+        const missingWinners = allProducts.filter(p =>
+          ['COMPRA_OBLIGATORIA', 'VACA_LECHERA', 'LANZAMIENTO_TENDENCIA'].includes(p.recommendationCode) &&
+          !ownedSet.has(p.unifiedId)
+        ).length;
+
+        document.getElementById('statTotalAll').textContent = allProducts.length;
+        document.getElementById('statTrendyCount').textContent = trendyCount;
+        document.getElementById('statBloomCount').textContent = bloomCount;
+        document.getElementById('statMyCatalogCount').textContent = ownedSet.size;
+        document.getElementById('statScanDate').textContent = (rawData.scanTimestamp || '').split('T')[0] || 'Hoy';
+
+        document.getElementById('kpiMustBuyCount').textContent = mustBuy;
+        document.getElementById('kpiCashCowCount').textContent = cashCow;
+        document.getElementById('kpiNewTrendCount').textContent = newTrend;
+        document.getElementById('kpiMissingWinnersCount').textContent = missingWinners;
+
+        document.getElementById('badgeTopPicks').textContent = mustBuy + cashCow + newTrend;
+        document.getElementById('badgeChanges').textContent = (rawData.recentChanges || []).length;
+        document.getElementById('badgeCartCount').textContent = Object.keys(cartMap).length;
+      }
+
+      function initCategoriesSidebar() {
+        const counts = {};
+        allProducts.forEach(p => {
+          const c = p.unifiedCategory || 'Otros';
+          counts[c] = (counts[c] || 0) + 1;
+        });
+        const sortedCats = Object.keys(counts).sort((a, b) => counts[b] - counts[a]);
+        const ul = document.getElementById('unifiedCategoryList');
+        ul.innerHTML = '';
+
+        const allLi = document.createElement('li');
+        allLi.innerHTML = `<button class="cat-btn ${state.category === '' ? 'active' : ''}" data-cat="">
+          <span>Todas las categorías</span><span class="cat-count">${allProducts.length}</span>
+        </button>`;
+        ul.appendChild(allLi);
+
+        sortedCats.forEach(cat => {
+          const li = document.createElement('li');
+          li.innerHTML = `<button class="cat-btn ${state.category === cat ? 'active' : ''}" data-cat="${cat}">
+            <span style="overflow:hidden; text-overflow:ellipsis; white-space:nowrap;">${cat.replace(' > ', ' › ')}</span>
+            <span class="cat-count">${counts[cat]}</span>
+          </button>`;
+          ul.appendChild(li);
+        });
+
+        ul.querySelectorAll('.cat-btn').forEach(btn => {
+          btn.addEventListener('click', () => {
+            state.category = btn.getAttribute('data-cat');
+            state.page = 1;
+            initCategoriesSidebar();
+            renderMarketExplorer();
+          });
+        });
+      }
+
+      function getFilteredProducts() {
+        const q = state.search.trim().toLowerCase();
+        const pMin = state.priceMin !== '' ? Number(state.priceMin) : null;
+        const pMax = state.priceMax !== '' ? Number(state.priceMax) : null;
+
+        const filtered = allProducts.filter(p => {
+          if (state.supplier && p.supplier !== state.supplier) return false;
+          if (state.category && p.unifiedCategory !== state.category) return false;
+
+          if (state.recCode === 'TOP_WINNERS') {
+            if (!['COMPRA_OBLIGATORIA', 'VACA_LECHERA', 'LANZAMIENTO_TENDENCIA'].includes(p.recommendationCode)) return false;
+          } else if (state.recCode && p.recommendationCode !== state.recCode) {
+            return false;
+          }
+
+          if (state.myCatalogFilter === 'MISSING' && ownedSet.has(p.unifiedId)) return false;
+          if (state.myCatalogFilter === 'OWNED' && !ownedSet.has(p.unifiedId)) return false;
+          if (state.myCatalogFilter === 'IN_CART' && !cartMap[p.unifiedId]) return false;
+
+          if (state.onlyStock && (!p.isAvailable || p.totalStock <= 0)) return false;
+          if (state.warmClimate && p.localFitScore < 82) return false;
+          if (state.top50Rank && p.topSaleRank > 50) return false;
+          if (state.lowMinInvest && p.minInvestmentTier1 > 45000) return false;
+
+          if (pMin !== null && p.retailPrice < pMin) return false;
+          if (pMax !== null && p.retailPrice > pMax) return false;
+
+          if (q) {
+            const hay = `${p.name} ${p.reference} ${p.productId} ${p.unifiedCategory} ${p.supplier} ${p.descriptionText} ${(p.localFitReasons || []).join(' ')}`.toLowerCase();
+            if (!hay.includes(q)) return false;
+          }
+          return true;
+        });
+
+        filtered.sort((a, b) => {
+          switch (state.sort) {
+            case 'score_desc': return b.opportunityScore - a.opportunityScore;
+            case 'rank_asc': return a.topSaleRank - b.topSaleRank;
+            case 'roi_desc': return b.roiPercentTier1 - a.roiPercentTier1;
+            case 'profit_desc': return b.unitProfitTier1 - a.unitProfitTier1;
+            case 'rotation_asc': return a.deltaStock - b.deltaStock;
+            case 'min_inv_asc': return (a.minInvestmentTier1 || 999999) - (b.minInvestmentTier1 || 999999);
+            case 'price_asc': return a.retailPrice - b.retailPrice;
+            case 'recent_desc': return String(b.releaseDate || '').localeCompare(String(a.releaseDate || ''));
+            default: return b.opportunityScore - a.opportunityScore;
+          }
+        });
+
+        return filtered;
+      }
+
+      function renderMarketExplorer() {
+        const filtered = getFilteredProducts();
+        document.getElementById('lblFilteredCount').textContent = filtered.length;
+
+        const totalPages = Math.max(1, Math.ceil(filtered.length / state.pageSize));
+        if (state.page > totalPages) state.page = totalPages;
+        const start = (state.page - 1) * state.pageSize;
+        const pageItems = filtered.slice(start, start + state.pageSize);
+
+        const container = document.getElementById('marketCatalogContainer');
+        container.innerHTML = '';
+
+        if (!pageItems.length) {
+          container.innerHTML = `<div style="background:#fff; padding:3rem; border-radius:14px; text-align:center; border:1px solid var(--border);">
+            <h3>No se encontraron productos con estos filtros</h3>
+            <p style="color:var(--text-muted); margin-top:0.35rem;">Prueba limpiando los filtros laterales o cambiando la búsqueda.</p>
+          </div>`;
+          document.getElementById('marketPagination').innerHTML = '';
+          return;
+        }
+
+        if (state.view === 'grid') {
+          const grid = document.createElement('div');
+          grid.className = 'products-grid';
+
+          pageItems.forEach(p => {
+            const isOwned = ownedSet.has(p.unifiedId);
+            const inCartQty = cartMap[p.unifiedId] || 0;
+            const firstImg = p.imageEntries[0];
+            const imgSrc = getImgSrc(firstImg);
+            const fallback = firstImg ? firstImg.remoteUrl : '';
+
+            const card = document.createElement('div');
+            card.className = `product-card ${isOwned ? 'in-my-catalog' : ''}`;
+
+            const supBadgeClass = p.supplier === 'Trendy' ? 'badge-trendy' : 'badge-bloom';
+            const rankHtml = p.topSaleRank <= 120 ? `<span class="badge badge-rank">🏆 #${p.topSaleRank} Ventas</span>` : '';
+            const deltaHtml = p.deltaStock < 0
+              ? `<span style="color:#dc2626; font-weight:800;">📉 Bodega: ${p.deltaStock} uds</span>`
+              : (p.isNewInScan ? `<span style="color:#7c3aed; font-weight:800;">✨ NUEVO</span>` : `<span>Stock: ${p.totalStock} uds</span>`);
+
+            card.innerHTML = `
+              <div class="rec-banner rec-${p.recommendationCode}">
+                <span>${p.recommendationTier}</span>
+                <strong>${p.opportunityScore} pts</strong>
+              </div>
+              <div class="card-media">
+                <img src="${imgSrc}" data-fallback="${fallback}" alt="${p.name}" loading="lazy" onerror="if(this.dataset.fallback && this.src !== this.dataset.fallback){this.src=this.dataset.fallback;}" />
+                <div class="card-badges-top">
+                  <div class="badge-col">
+                    <span class="badge ${supBadgeClass}">${p.supplier.toUpperCase()}</span>
+                    ${rankHtml}
+                  </div>
+                  <span class="badge ${p.totalStock > 0 ? 'badge-stock' : 'badge-out'}">
+                    ${p.totalStock > 0 ? `${p.totalStock} uds` : 'Agotado'}
+                  </span>
+                </div>
+              </div>
+              <div class="card-body">
+                <div class="card-meta">
+                  <span style="overflow:hidden; text-overflow:ellipsis; white-space:nowrap;">${(p.unifiedCategory || '').replace(' > ', ' › ')}</span>
+                  <span class="card-ref">${p.reference || p.productId}</span>
+                </div>
+                <h3 class="card-title">${p.name}</h3>
+
+                <div class="finance-box">
+                  <div class="fin-item">
+                    <span class="fin-label">Mayorista (${p.supplier === 'Trendy' ? '$400k' : '$700k'})</span>
+                    <span class="fin-val wholesale">
+                      ${formatCOP(p.wholesaleTier1)}
+                      ${p.wholesaleListPrice > p.wholesaleTier1 ? `<span style="text-decoration:line-through; color:var(--text-muted); font-size:0.7rem; font-weight:500; margin-left:3px;">${formatCOP(p.wholesaleListPrice)}</span>` : ''}
+                    </span>
+                    <span style="font-size:0.67rem; color:var(--text-muted);">Escala 2 (${p.supplier === 'Trendy' ? '$1M' : '$1.5M'}): ${formatCOP(p.wholesaleTier2)}</span>
+                  </div>
+                  <div class="fin-item">
+                    <span class="fin-label">Precio Venta Detal (PVP)</span>
+                    <span class="fin-val retail">
+                      ${formatCOP(p.retailPrice)}
+                      ${p.retailListPrice > p.retailPrice ? `<span style="text-decoration:line-through; color:var(--text-muted); font-size:0.7rem; font-weight:500; margin-left:3px;">${formatCOP(p.retailListPrice)}</span>` : ''}
+                    </span>
+                    <span style="font-size:0.67rem; color:var(--text-muted);">${p.wholesaleSource && p.wholesaleSource.includes('Vivo') ? '✓ Precio en vivo' : '✓ Oficial'}</span>
+                  </div>
+                  <div class="fin-item">
+                    <span class="fin-label">Ganancia / ROI Ud</span>
+                    <span class="fin-val profit">+${formatCOP(p.unitProfitTier1)} (${p.roiPercentTier1}%)</span>
+                  </div>
+                  <div class="fin-item">
+                    <span class="fin-label">Mínimo (${p.minWholesaleQty} uds)</span>
+                    <span class="fin-val">${formatCOP(p.minInvestmentTier1)}</span>
+                  </div>
+                </div>
+
+                <div class="local-fit-list">
+                  ☀️ <strong>Valle:</strong> ${(p.localFitReasons && p.localFitReasons[0]) || 'Alta rotación'}
+                  <div style="margin-top:0.2rem; display:flex; justify-content:space-between; font-size:0.7rem; color:var(--text-muted);">
+                    ${deltaHtml}
+                    <span>📸 ${p.imageEntries.length} fotos</span>
+                  </div>
+                </div>
+
+                <div class="card-actions">
+                  <button class="btn btn-sm ${inCartQty ? 'btn-success' : 'btn-primary'} btn-add-cart">
+                    ${inCartQty ? `🛒 En Pedido (${inCartQty})` : `➕ Pedir (${p.minWholesaleQty}+)`}
+                  </button>
+                  <button class="btn btn-sm ${isOwned ? 'btn-active-cat' : 'btn-outline'} btn-toggle-owned" title="Marcar si ya tienes este producto en tu catálogo actual">
+                    ${isOwned ? '📦 En Mi Catálogo' : '📦 ¿Lo tienes?'}
+                  </button>
+                  <button class="btn btn-sm btn-outline btn-zip-card" title="Descargar imágenes para tu catálogo">📸</button>
+                </div>
+              </div>
+            `;
+
+            card.querySelector('.card-media').addEventListener('click', () => openProductModal(p));
+            card.querySelector('.card-title').addEventListener('click', () => openProductModal(p));
+            card.querySelector('.btn-add-cart').addEventListener('click', () => {
+              addToCart(p.unifiedId, p.minWholesaleQty || 1);
+              renderMarketExplorer();
+              renderSimulator();
+            });
+            card.querySelector('.btn-toggle-owned').addEventListener('click', () => {
+              toggleOwned(p.unifiedId);
+              renderMarketExplorer();
+              renderGapMatrix();
+            });
+            card.querySelector('.btn-zip-card').addEventListener('click', () => {
+              downloadEntriesAsZip(p.imageEntries, `${p.supplier}_${p.reference || p.productId}_imagenes.zip`);
+            });
+
+            grid.appendChild(card);
+          });
+
+          container.appendChild(grid);
+        } else {
+          const wrap = document.createElement('div');
+          wrap.className = 'table-wrapper';
+          const tbl = document.createElement('table');
+          tbl.className = 'data-table';
+          tbl.innerHTML = `
+            <thead>
+              <tr>
+                <th>Foto</th>
+                <th>Puntaje / Clasificación</th>
+                <th>Proveedor / Ranking</th>
+                <th>Producto / Ref</th>
+                <th>Categoría</th>
+                <th>Mayorista ($400k/$700k)</th>
+                <th>Precio Detal</th>
+                <th>Ganancia / ROI</th>
+                <th>Mínimo Mayorista</th>
+                <th>Stock Bodega</th>
+                <th>Acciones</th>
+              </tr>
+            </thead>
+            <tbody></tbody>
+          `;
+          const tbody = tbl.querySelector('tbody');
+
+          pageItems.forEach(p => {
+            const firstImg = p.imageEntries[0];
+            const imgSrc = getImgSrc(firstImg);
+            const fallback = firstImg ? firstImg.remoteUrl : '';
+            const isOwned = ownedSet.has(p.unifiedId);
+            const inCartQty = cartMap[p.unifiedId] || 0;
+
+            const tr = document.createElement('tr');
+            tr.innerHTML = `
+              <td><img src="${imgSrc}" data-fallback="${fallback}" style="width:46px; height:46px; object-fit:cover; border-radius:8px; cursor:pointer;" onerror="if(this.dataset.fallback && this.src !== this.dataset.fallback){this.src=this.dataset.fallback;}" /></td>
+              <td>
+                <strong style="font-size:0.95rem;">${p.opportunityScore} pts</strong>
+                <div style="font-size:0.72rem; color:var(--text-muted);">${p.recommendationTier}</div>
+              </td>
+              <td>
+                <span class="badge ${p.supplier === 'Trendy' ? 'badge-trendy' : 'badge-bloom'}">${p.supplier}</span>
+                ${p.topSaleRank <= 150 ? `<div style="font-size:0.74rem; font-weight:700; margin-top:2px;">🏆 #${p.topSaleRank} Ventas</div>` : ''}
+              </td>
+              <td>
+                <div style="font-weight:800; cursor:pointer;" class="tbl-title-link">${p.name}</div>
+                <span class="card-ref">${p.reference || p.productId}</span>
+              </td>
+              <td>${(p.unifiedCategory || '').replace(' > ', ' › ')}</td>
+              <td style="font-weight:800; color:var(--bloom);">${formatCOP(p.wholesaleTier1)}</td>
+              <td style="font-weight:800; color:var(--primary);">${formatCOP(p.retailPrice)}</td>
+              <td style="font-weight:800; color:var(--success);">+${formatCOP(p.unitProfitTier1)} (${p.roiPercentTier1}%)</td>
+              <td>${p.minWholesaleQty} uds (${formatCOP(p.minInvestmentTier1)})</td>
+              <td>${p.totalStock} uds</td>
+              <td style="white-space:nowrap;">
+                <button class="btn btn-sm ${inCartQty ? 'btn-success' : 'btn-primary'} btn-t-cart">${inCartQty ? `🛒 (${inCartQty})` : '➕ Pedir'}</button>
+                <button class="btn btn-sm ${isOwned ? 'btn-active-cat' : 'btn-outline'} btn-t-own">${isOwned ? '📦 Tengo' : '📦'}</button>
+                <button class="btn btn-sm btn-outline btn-t-zip">📸 ZIP</button>
+              </td>
+            `;
+            tr.querySelector('img').addEventListener('click', () => openProductModal(p));
+            tr.querySelector('.tbl-title-link').addEventListener('click', () => openProductModal(p));
+            tr.querySelector('.btn-t-cart').addEventListener('click', () => {
+              addToCart(p.unifiedId, p.minWholesaleQty || 1);
+              renderMarketExplorer();
+              renderSimulator();
+            });
+            tr.querySelector('.btn-t-own').addEventListener('click', () => {
+              toggleOwned(p.unifiedId);
+              renderMarketExplorer();
+              renderGapMatrix();
+            });
+            tr.querySelector('.btn-t-zip').addEventListener('click', () => {
+              downloadEntriesAsZip(p.imageEntries, `${p.supplier}_${p.reference || p.productId}_imagenes.zip`);
+            });
+            tbody.appendChild(tr);
+          });
+
+          wrap.appendChild(tbl);
+          container.appendChild(wrap);
+        }
+
+        renderPagination(totalPages);
+      }
+
+      function renderPagination(totalPages) {
+        const bar = document.getElementById('marketPagination');
+        bar.innerHTML = '';
+        if (totalPages <= 1) return;
+
+        for (let i = 1; i <= totalPages; i++) {
+          if (totalPages > 10 && Math.abs(i - state.page) > 2 && i !== 1 && i !== totalPages) continue;
+          const btn = document.createElement('button');
+          btn.className = `page-btn ${i === state.page ? 'active' : ''}`;
+          btn.textContent = i;
+          btn.onclick = () => {
+            state.page = i;
+            renderMarketExplorer();
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+          };
+          bar.appendChild(btn);
+        }
+      }
+
+      // Gestión de Mi Catálogo y Simulador
+      function toggleOwned(unifiedId) {
+        if (ownedSet.has(unifiedId)) {
+          ownedSet.delete(unifiedId);
+          showToast('Quitado de «Mi Catálogo Actual»');
+        } else {
+          ownedSet.add(unifiedId);
+          showToast('📦 Registrado en «Mi Catálogo Actual»');
+        }
+        saveOwned();
+      }
+
+      function addToCart(unifiedId, minQty) {
+        const current = cartMap[unifiedId] || 0;
+        cartMap[unifiedId] = current === 0 ? Math.max(1, minQty) : current + 1;
+        saveCart();
+        showToast('🛒 Producto agregado al Simulador de Pedido Mayorista');
+      }
+
+      // =========================================================================
+      // VISTA 2: MATRIZ DE BRECHAS DE MI CATALOGO (VALLE DEL CAUCA)
+      // =========================================================================
+      function renderGapMatrix() {
+        const byCat = {};
+        allProducts.forEach(p => {
+          const c = p.unifiedCategory || 'Otros';
+          if (!byCat[c]) byCat[c] = [];
+          byCat[c].push(p);
+        });
+
+        const container = document.getElementById('gapMatrixContainer');
+        container.innerHTML = '';
+
+        const sortedCats = Object.keys(byCat).sort((a, b) => byCat[b].length - byCat[a].length);
+
+        sortedCats.forEach(cat => {
+          const items = byCat[cat];
+          const ownedInCat = items.filter(p => ownedSet.has(p.unifiedId));
+          const availableMissing = items
+            .filter(p => p.isAvailable && p.totalStock >= p.minWholesaleQty && !ownedSet.has(p.unifiedId))
+            .sort((a, b) => b.opportunityScore - a.opportunityScore);
+
+          const top3 = availableMissing.slice(0, 3);
+          const statusClass = ownedInCat.length === 0 ? 'critical' : (ownedInCat.length < 3 ? 'warning' : 'covered');
+          const statusLabel = ownedInCat.length === 0
+            ? '🚨 BRECHA CRÍTICA (0 en tu catálogo)'
+            : (ownedInCat.length < 3 ? `⚠️ SURTIDO BAJO (${ownedInCat.length} en tu catálogo)` : `✅ CUBIERTO (${ownedInCat.length} en tu catálogo)`);
+
+          const card = document.createElement('div');
+          card.className = `gap-card ${statusClass}`;
+          card.innerHTML = `
+            <div style="display:flex; justify-content:space-between; align-items:flex-start; gap:0.5rem;">
+              <div>
+                <h3 style="font-size:0.98rem; font-weight:800;">${cat.replace(' > ', ' › ')}</h3>
+                <span style="font-size:0.75rem; font-weight:700; color:var(--text-muted);">${statusLabel} • ${items.length} opciones en proveedores</span>
+              </div>
+              <button class="btn btn-outline btn-sm btn-filter-this-cat">Ver todos</button>
+            </div>
+            <div style="font-size:0.78rem; font-weight:700; color:var(--primary);">Top 3 Recomendados para Roldanillo / Cartago:</div>
+            <div style="display:flex; flex-direction:column; gap:0.45rem;" class="gap-top-list"></div>
+          `;
+
+          card.querySelector('.btn-filter-this-cat').addEventListener('click', () => {
+            state.category = cat;
+            switchTab('view-market');
+            initCategoriesSidebar();
+            renderMarketExplorer();
+          });
+
+          const listEl = card.querySelector('.gap-top-list');
+          top3.forEach(p => {
+            const firstImg = p.imageEntries[0];
+            const imgSrc = getImgSrc(firstImg);
+            const row = document.createElement('div');
+            row.style = 'display:flex; align-items:center; justify-content:space-between; gap:0.5rem; background:#f8fafc; padding:0.45rem; border-radius:8px; border:1px solid var(--border);';
+            row.innerHTML = `
+              <div style="display:flex; align-items:center; gap:0.5rem; overflow:hidden;">
+                <img src="${imgSrc}" style="width:38px; height:38px; border-radius:6px; object-fit:cover; flex-shrink:0;" />
+                <div style="overflow:hidden;">
+                  <div style="font-size:0.8rem; font-weight:800; white-space:nowrap; overflow:hidden; text-overflow:ellipsis; cursor:pointer;" class="gap-prod-title">${p.name}</div>
+                  <div style="font-size:0.72rem; color:var(--text-muted);">
+                    <strong>${p.supplier}</strong> • Mayorista: ${formatCOP(p.wholesaleTier1)} → Detal: ${formatCOP(p.retailPrice)} (+${p.roiPercentTier1}%)
+                  </div>
+                </div>
+              </div>
+              <button class="btn btn-primary btn-sm btn-gap-add" style="flex-shrink:0;">➕ Pedir</button>
+            `;
+            row.querySelector('.gap-prod-title').addEventListener('click', () => openProductModal(p));
+            row.querySelector('.btn-gap-add').addEventListener('click', () => {
+              addToCart(p.unifiedId, p.minWholesaleQty || 1);
+              renderSimulator();
+            });
+            listEl.appendChild(row);
+          });
+
+          container.appendChild(card);
+        });
+      }
+
+      // =========================================================================
+      // VISTA 3: RADAR DE ESCANEO PAULATINO
+      // =========================================================================
+      function renderRadarView() {
+        const pillsEl = document.getElementById('scanHistoryPills');
+        pillsEl.innerHTML = (rawData.scanHistory || []).map(h => `
+          <div style="background:#f8fafc; border:1px solid var(--border); border-radius:8px; padding:0.45rem 0.75rem; font-size:0.78rem;">
+            📅 <strong>${h.scanId}</strong> — ${h.note} (${h.itemsCount} productos)
+          </div>
+        `).join('');
+
+        const filterType = document.getElementById('radarFilterType').value;
+        const changes = (rawData.recentChanges || []).filter(c => {
+          if (!filterType) return true;
+          return String(c.Tipo_Cambio || '').includes(filterType);
+        });
+
+        const tbody = document.querySelector('#radarChangesTable tbody');
+        tbody.innerHTML = '';
+
+        changes.forEach(c => {
+          const prod = allProducts.find(p => p.unifiedId === c.ID_Unificado);
+          const tr = document.createElement('tr');
+          tr.innerHTML = `
+            <td><span class="badge ${c.Proveedor === 'Trendy' ? 'badge-trendy' : 'badge-bloom'}">${c.Proveedor}</span></td>
+            <td><strong>${c.Tipo_Cambio}</strong></td>
+            <td><span class="card-ref">${c.Referencia || c.ID_Unificado}</span></td>
+            <td style="font-weight:800; cursor:pointer;" class="radar-prod-link">${c.Producto}</td>
+            <td>${(c.Categoria || '').replace(' > ', ' › ')}</td>
+            <td>${c.Stock_Anterior} uds</td>
+            <td><strong>${c.Stock_Actual} uds</strong></td>
+            <td style="font-weight:800; color:${c.Diferencia_Stock < 0 ? '#dc2626' : '#059669'};">
+              ${c.Diferencia_Stock > 0 ? '+' + c.Diferencia_Stock : c.Diferencia_Stock} uds
+            </td>
+            <td>${formatCOP(c.Precio_Actual)}</td>
+            <td><button class="btn btn-outline btn-sm btn-radar-open">Ver</button></td>
+          `;
+          if (prod) {
+            tr.querySelector('.radar-prod-link').addEventListener('click', () => openProductModal(prod));
+            tr.querySelector('.btn-radar-open').addEventListener('click', () => openProductModal(prod));
+          }
+          tbody.appendChild(tr);
+        });
+      }
+
+      // =========================================================================
+      // VISTA 4: COMPARADOR CARA A CARA TRENDY vs BLOOMSHELL
+      // =========================================================================
+      function renderCompareView() {
+        const byCat = {};
+        allProducts.forEach(p => {
+          if (!p.isAvailable || p.totalStock <= 0) return;
+          const c = p.unifiedCategory || 'Otros';
+          if (!byCat[c]) byCat[c] = { Trendy: [], Bloomshell: [] };
+          byCat[c][p.supplier].push(p);
+        });
+
+        const tbody = document.querySelector('#compareSuppliersTable tbody');
+        tbody.innerHTML = '';
+
+        Object.keys(byCat).sort().forEach(cat => {
+          const tList = byCat[cat].Trendy.sort((a, b) => b.opportunityScore - a.opportunityScore);
+          const bList = byCat[cat].Bloomshell.sort((a, b) => b.opportunityScore - a.opportunityScore);
+
+          const avgRoiT = tList.length ? Math.round(tList.reduce((s, x) => s + x.roiPercentTier1, 0) / tList.length) : 0;
+          const avgRoiB = bList.length ? Math.round(bList.reduce((s, x) => s + x.roiPercentTier1, 0) / bList.length) : 0;
+
+          const bestT = tList[0];
+          const bestB = bList[0];
+
+          let verdict = 'Combinar ambos proveedores';
+          if (avgRoiB > avgRoiT + 15 && bList.length >= 2) {
+            verdict = '🟣 Mayor margen en Bloomshell (+' + avgRoiB + '% ROI)';
+          } else if (tList.length > bList.length * 2) {
+            verdict = '🌸 Mayor variedad y recordación en Trendy';
+          }
+
+          const tr = document.createElement('tr');
+          tr.innerHTML = `
+            <td style="font-weight:800;">${cat.replace(' > ', ' › ')}</td>
+            <td>${tList.length} refs</td>
+            <td style="font-weight:800; color:var(--primary);">${avgRoiT}% ROI</td>
+            <td>${bestT ? `<strong>${bestT.name}</strong><br><small>Mayorista: ${formatCOP(bestT.wholesaleTier1)} → Detal: ${formatCOP(bestT.retailPrice)}</small>` : '—'}</td>
+            <td>${bList.length} refs</td>
+            <td style="font-weight:800; color:var(--bloom);">${avgRoiB}% ROI</td>
+            <td>${bestB ? `<strong>${bestB.name}</strong><br><small>Mayorista: ${formatCOP(bestB.wholesaleTier1)} → Detal: ${formatCOP(bestB.retailPrice)}</small>` : '—'}</td>
+            <td style="font-weight:700;">${verdict}</td>
+          `;
+          tbody.appendChild(tr);
+        });
+      }
+
+      // =========================================================================
+      // VISTA 5: SIMULADOR Y AUTO-ARMADOR DE PEDIDO MAYORISTA
+      // =========================================================================
+      function autoBuildOrderForSupplier(supplierName, targetBudget) {
+        // Limpiar primero los items de ese proveedor en el carrito
+        Object.keys(cartMap).forEach(uid => {
+          const p = allProducts.find(x => x.unifiedId === uid);
+          if (p && p.supplier === supplierName) delete cartMap[uid];
+        });
+
+        const candidates = allProducts
+          .filter(p =>
+            p.supplier === supplierName &&
+            p.isAvailable &&
+            p.totalStock >= p.minWholesaleQty &&
+            p.wholesaleTier1 > 0 &&
+            p.unitProfitTier1 > 0 &&
+            !ownedSet.has(p.unifiedId) &&
+            p.minInvestmentTier1 <= targetBudget * 0.25
+          )
+          .sort((a, b) => b.opportunityScore - a.opportunityScore);
+
+        let spent = 0;
+        const usedCats = {};
+
+        for (const p of candidates) {
+          const packCost = p.wholesaleTier1 * p.minWholesaleQty;
+          const catCount = usedCats[p.unifiedCategory] || 0;
+          if (catCount >= 4) continue; // Diversificar categorías
+          if (spent + packCost <= targetBudget * 1.06) {
+            cartMap[p.unifiedId] = p.minWholesaleQty;
+            spent += packCost;
+            usedCats[p.unifiedCategory] = catCount + 1;
+          }
+          if (spent >= targetBudget * 0.98) break;
+        }
+
+        saveCart();
+        renderSimulator();
+        renderMarketExplorer();
+        showToast(`✨ Pedido óptimo de ${supplierName} armado: ${formatCOP(spent)} invertidos en productos ganadores`);
+      }
+
+      function renderSimulator() {
+        const targetT = Number(document.getElementById('inputBudgetTrendy').value) || 400000;
+        const targetB = Number(document.getElementById('inputBudgetBloom').value) || 700000;
+
+        let invT = 0, retT = 0, profT = 0;
+        let invB = 0, retB = 0, profB = 0;
+
+        const tbody = document.querySelector('#simCartTable tbody');
+        tbody.innerHTML = '';
+
+        const uids = Object.keys(cartMap);
+        uids.forEach(uid => {
+          const p = allProducts.find(x => x.unifiedId === uid);
+          if (!p) return;
+          const qty = cartMap[uid];
+          const subWholesale = p.wholesaleTier1 * qty;
+          const subRetail = p.retailPrice * qty;
+          const subProfit = p.unitProfitTier1 * qty;
+
+          if (p.supplier === 'Trendy') {
+            invT += subWholesale; retT += subRetail; profT += subProfit;
+          } else {
+            invB += subWholesale; retB += subRetail; profB += subProfit;
+          }
+
+          const firstImg = p.imageEntries[0];
+          const imgSrc = getImgSrc(firstImg);
+
+          const tr = document.createElement('tr');
+          tr.innerHTML = `
+            <td><img src="${imgSrc}" style="width:42px; height:42px; border-radius:6px; object-fit:cover;" /></td>
+            <td><span class="badge ${p.supplier === 'Trendy' ? 'badge-trendy' : 'badge-bloom'}">${p.supplier}</span></td>
+            <td><span class="card-ref">${p.reference || p.productId}</span></td>
+            <td style="font-weight:800; cursor:pointer;" class="sim-title">${p.name}</td>
+            <td>${formatCOP(p.wholesaleTier1)}</td>
+            <td>${formatCOP(p.retailPrice)}</td>
+            <td>${p.minWholesaleQty} uds</td>
+            <td>
+              <input type="number" class="filter-input sim-qty-input" value="${qty}" min="1" max="${p.totalStock}" style="width:78px; font-weight:800;" />
+            </td>
+            <td style="font-weight:800;">${formatCOP(subWholesale)}</td>
+            <td style="font-weight:800; color:var(--success);">+${formatCOP(subProfit)} (${p.roiPercentTier1}%)</td>
+            <td><button class="btn btn-outline btn-sm btn-remove-item" style="color:var(--danger);">✕</button></td>
+          `;
+
+          tr.querySelector('.sim-title').addEventListener('click', () => openProductModal(p));
+          tr.querySelector('.sim-qty-input').addEventListener('change', (e) => {
+            const v = Math.max(1, Number(e.target.value) || 1);
+            cartMap[uid] = v;
+            saveCart();
+            renderSimulator();
+          });
+          tr.querySelector('.btn-remove-item').addEventListener('click', () => {
+            delete cartMap[uid];
+            saveCart();
+            renderSimulator();
+            renderMarketExplorer();
+          });
+          tbody.appendChild(tr);
+        });
+
+        document.getElementById('simTrendyInvested').textContent = formatCOP(invT);
+        document.getElementById('simTrendyRetail').textContent = formatCOP(retT);
+        document.getElementById('simTrendyProfit').textContent = '+' + formatCOP(profT);
+        document.getElementById('progTrendy').style.width = Math.min(100, Math.round((invT / targetT) * 100)) + '%';
+
+        document.getElementById('simBloomInvested').textContent = formatCOP(invB);
+        document.getElementById('simBloomRetail').textContent = formatCOP(retB);
+        document.getElementById('simBloomProfit').textContent = '+' + formatCOP(profB);
+        document.getElementById('progBloom').style.width = Math.min(100, Math.round((invB / targetB) * 100)) + '%';
+
+        const totalInv = invT + invB;
+        const totalProf = profT + profB;
+        document.getElementById('simSummaryTotals').textContent =
+          `${uids.length} referencias seleccionadas • Inversión Mayorista Total: ${formatCOP(totalInv)} → Ganancia Libre Proyectada: +${formatCOP(totalProf)}`;
+      }
+
+      // =========================================================================
+      // MODAL DE PRODUCTO
+      // =========================================================================
+      let currentModalProd = null;
+      let currentModalImgIdx = 0;
+
+      function openProductModal(p) {
+        currentModalProd = p;
+        currentModalImgIdx = 0;
+
+        const supBadge = document.getElementById('modalSupplierBadge');
+        supBadge.textContent = p.supplier.toUpperCase();
+        supBadge.className = `badge ${p.supplier === 'Trendy' ? 'badge-trendy' : 'badge-bloom'}`;
+
+        document.getElementById('modalRefBadge').textContent = `REF: ${p.reference || p.productId}`;
+        document.getElementById('modalRankBadge').textContent = p.topSaleRank < 999 ? `🏆 #${p.topSaleRank} Más Vendido` : `Puntaje: ${p.opportunityScore} pts`;
+        document.getElementById('modalStoreLink').href = p.url;
+        document.getElementById('modalCategoryText').textContent = (p.unifiedCategory || '').replace(' > ', ' › ');
+        document.getElementById('modalTitle').textContent = p.name;
+        document.getElementById('modalLocalFolder').textContent = `c:\\Users\\Usuario\\Documents\\trendy\\${(p.imageFolderLocal || '').replace(/\//g, '\\')}`;
+
+        document.getElementById('modalTier1Label').textContent = p.wholesaleTier1Label || 'Mayorista Escala 1';
+        document.getElementById('modalTier1Price').innerHTML = formatCOP(p.wholesaleTier1) +
+          (p.wholesaleListPrice > p.wholesaleTier1 ? ` <small style="text-decoration:line-through; color:var(--text-muted); font-weight:500;">${formatCOP(p.wholesaleListPrice)}</small>` : '');
+        document.getElementById('modalTier2Label').textContent = p.wholesaleTier2Label || 'Mayorista Escala 2';
+        document.getElementById('modalTier2Price').textContent = formatCOP(p.wholesaleTier2);
+        document.getElementById('modalRetailPrice').innerHTML = formatCOP(p.retailPrice) +
+          (p.retailListPrice > p.retailPrice ? ` <small style="text-decoration:line-through; color:var(--text-muted); font-weight:500;">${formatCOP(p.retailListPrice)}</small>` : '');
+        document.getElementById('modalProfitText').textContent = `+${formatCOP(p.unitProfitTier1)} (${p.roiPercentTier1}% ROI)`;
+
+        document.getElementById('modalReasonsBox').innerHTML = `
+          <div><strong>🎯 Diagnóstico Estudio de Mercado (${p.opportunityScore}/100 pts — ${p.recommendationTier}):</strong></div>
+          <ul style="margin-left:1.1rem; margin-top:0.25rem;">
+            ${(p.localFitReasons || []).map(r => `<li>${r}</li>`).join('')}
+            <li><strong>Mínimo mayorista:</strong> ${p.minWholesaleQtyText} (Inversión mínima: ${formatCOP(p.minInvestmentTier1)} → Ganancia paquete: +${formatCOP(p.minProfitPackTier1)})</li>
+            <li><strong>Fuente precio mayorista:</strong> ${p.wholesaleSource}</li>
+          </ul>
+        `;
+
+        document.getElementById('modalDescText').textContent = p.descriptionText || '';
+
+        const varGrid = document.getElementById('modalVariantsGrid');
+        varGrid.innerHTML = '';
+        (p.variants || []).forEach(v => {
+          const div = document.createElement('div');
+          div.style = 'border:1px solid var(--border); border-radius:8px; padding:0.45rem 0.6rem; background:#f8fafc; font-size:0.78rem;';
+          const vEmp = v.wholesaleTier1 || p.wholesaleTier1;
+          const vPvp = v.price || p.retailPrice;
+          div.innerHTML = `
+            <div style="font-weight:800;">${v.color || v.tono || v.name}</div>
+            <div style="color:var(--text-muted); font-size:0.72rem;">SKU: ${v.reference || v.skuId} • <strong>${v.stock} uds</strong></div>
+            <div style="font-size:0.72rem; margin-top:2px;">
+              <span style="color:var(--bloom); font-weight:700;">Mayorista: ${formatCOP(vEmp)}</span> •
+              <span style="color:var(--primary); font-weight:700;">Detal: ${formatCOP(vPvp)}</span>
+            </div>
+          `;
+          varGrid.appendChild(div);
+        });
+
+        renderModalGallery();
+        document.getElementById('productModal').classList.add('open');
+      }
+
+      function renderModalGallery() {
+        if (!currentModalProd) return;
+        const entries = currentModalProd.imageEntries || [];
+        const curr = entries[currentModalImgIdx];
+        const mainImg = document.getElementById('modalMainImg');
+        if (curr) {
+          mainImg.src = getImgSrc(curr);
+          mainImg.dataset.fallback = curr.remoteUrl || '';
+          mainImg.onerror = function () {
+            if (this.dataset.fallback && this.src !== this.dataset.fallback) this.src = this.dataset.fallback;
+          };
+        }
+        document.getElementById('modalImgCounter').textContent = `Imagen ${entries.length ? currentModalImgIdx + 1 : 0} de ${entries.length}`;
+
+        const strip = document.getElementById('modalThumbs');
+        strip.innerHTML = '';
+        entries.forEach((ent, idx) => {
+          const d = document.createElement('div');
+          d.className = `thumb-item ${idx === currentModalImgIdx ? 'active' : ''}`;
+          d.innerHTML = `<img src="${getImgSrc(ent)}" data-fallback="${ent.remoteUrl || ''}" onerror="if(this.dataset.fallback && this.src !== this.dataset.fallback){this.src=this.dataset.fallback;}" />`;
+          d.onclick = () => {
+            currentModalImgIdx = idx;
+            renderModalGallery();
+          };
+          strip.appendChild(d);
+        });
+      }
+
+      // Eventos Globales y Tabs
+      function switchTab(tabId) {
+        document.querySelectorAll('.nav-tab[data-tab]').forEach(b => {
+          b.classList.toggle('active', b.getAttribute('data-tab') === tabId);
+        });
+        document.querySelectorAll('.view-panel').forEach(p => {
+          p.classList.toggle('active', p.id === tabId);
+        });
+      }
+
+      document.querySelectorAll('.nav-tab[data-tab]').forEach(btn => {
+        btn.addEventListener('click', () => {
+          const tabId = btn.getAttribute('data-tab');
+          switchTab(tabId);
+        });
+      });
+
+      document.querySelectorAll('.sup-btn').forEach(btn => {
+        btn.addEventListener('click', () => {
+          document.querySelectorAll('.sup-btn').forEach(b => b.classList.remove('active'));
+          btn.classList.add('active');
+          state.supplier = btn.getAttribute('data-sup');
+          state.page = 1;
+          renderMarketExplorer();
+        });
+      });
+
+      document.getElementById('filterRecCode').addEventListener('change', e => {
+        state.recCode = e.target.value;
+        state.page = 1;
+        renderMarketExplorer();
+      });
+
+      document.getElementById('filterMyCatalog').addEventListener('change', e => {
+        state.myCatalogFilter = e.target.value;
+        state.page = 1;
+        renderMarketExplorer();
+      });
+
+      document.getElementById('chkOnlyStock').addEventListener('change', e => {
+        state.onlyStock = e.target.checked;
+        state.page = 1;
+        renderMarketExplorer();
+      });
+
+      document.getElementById('chkWarmClimate').addEventListener('change', e => {
+        state.warmClimate = e.target.checked;
+        state.page = 1;
+        renderMarketExplorer();
+      });
+
+      document.getElementById('chkTop50Rank').addEventListener('change', e => {
+        state.top50Rank = e.target.checked;
+        state.page = 1;
+        renderMarketExplorer();
+      });
+
+      document.getElementById('chkLowMinInvest').addEventListener('change', e => {
+        state.lowMinInvest = e.target.checked;
+        state.page = 1;
+        renderMarketExplorer();
+      });
+
+      document.getElementById('priceMin').addEventListener('input', e => {
+        state.priceMin = e.target.value;
+        state.page = 1;
+        renderMarketExplorer();
+      });
+
+      document.getElementById('priceMax').addEventListener('input', e => {
+        state.priceMax = e.target.value;
+        state.page = 1;
+        renderMarketExplorer();
+      });
+
+      document.getElementById('searchInput').addEventListener('input', e => {
+        state.search = e.target.value;
+        state.page = 1;
+        renderMarketExplorer();
+      });
+
+      document.getElementById('sortSelect').addEventListener('change', e => {
+        state.sort = e.target.value;
+        state.page = 1;
+        renderMarketExplorer();
+      });
+
+      document.getElementById('btnToggleView').addEventListener('click', e => {
+        state.view = state.view === 'grid' ? 'table' : 'grid';
+        e.target.textContent = state.view === 'grid' ? '📋 Vista Tabla' : '🔲 Vista Cuadrícula';
+        renderMarketExplorer();
+      });
+
+      document.getElementById('btnResetFilters').addEventListener('click', () => {
+        state.supplier = '';
+        state.recCode = '';
+        state.myCatalogFilter = '';
+        state.category = '';
+        state.onlyStock = true;
+        state.warmClimate = false;
+        state.top50Rank = false;
+        state.lowMinInvest = false;
+        state.priceMin = '';
+        state.priceMax = '';
+        state.search = '';
+        state.page = 1;
+
+        document.querySelectorAll('.sup-btn').forEach(b => b.classList.toggle('active', b.getAttribute('data-sup') === ''));
+        document.getElementById('filterRecCode').value = '';
+        document.getElementById('filterMyCatalog').value = '';
+        document.getElementById('chkOnlyStock').checked = true;
+        document.getElementById('chkWarmClimate').checked = false;
+        document.getElementById('chkTop50Rank').checked = false;
+        document.getElementById('chkLowMinInvest').checked = false;
+        document.getElementById('priceMin').value = '';
+        document.getElementById('priceMax').value = '';
+        document.getElementById('searchInput').value = '';
+
+        initCategoriesSidebar();
+        renderMarketExplorer();
+      });
+
+      // KPI Cards Quick Filters
+      document.getElementById('kpiQuickMustBuy').addEventListener('click', () => {
+        state.recCode = 'COMPRA_OBLIGATORIA';
+        document.getElementById('filterRecCode').value = 'COMPRA_OBLIGATORIA';
+        state.page = 1;
+        renderMarketExplorer();
+      });
+      document.getElementById('kpiQuickCashCow').addEventListener('click', () => {
+        state.recCode = 'VACA_LECHERA';
+        document.getElementById('filterRecCode').value = 'VACA_LECHERA';
+        state.page = 1;
+        renderMarketExplorer();
+      });
+      document.getElementById('kpiQuickNewTrend').addEventListener('click', () => {
+        state.recCode = 'LANZAMIENTO_TENDENCIA';
+        document.getElementById('filterRecCode').value = 'LANZAMIENTO_TENDENCIA';
+        state.page = 1;
+        renderMarketExplorer();
+      });
+      document.getElementById('kpiQuickMissingWinners').addEventListener('click', () => {
+        state.recCode = 'TOP_WINNERS';
+        state.myCatalogFilter = 'MISSING';
+        document.getElementById('filterRecCode').value = 'TOP_WINNERS';
+        document.getElementById('filterMyCatalog').value = 'MISSING';
+        state.page = 1;
+        renderMarketExplorer();
+      });
+
+      // Auto-Fill Buttons
+      document.getElementById('btnAutoFillTrendyQuick').addEventListener('click', () => {
+        autoBuildOrderForSupplier('Trendy', Number(document.getElementById('inputBudgetTrendy').value) || 400000);
+        switchTab('view-simulator');
+      });
+      document.getElementById('btnAutoFillBloomQuick').addEventListener('click', () => {
+        autoBuildOrderForSupplier('Bloomshell', Number(document.getElementById('inputBudgetBloom').value) || 700000);
+        switchTab('view-simulator');
+      });
+      document.getElementById('btnRunAutoTrendy').addEventListener('click', () => {
+        autoBuildOrderForSupplier('Trendy', Number(document.getElementById('inputBudgetTrendy').value) || 400000);
+      });
+      document.getElementById('btnRunAutoBloom').addEventListener('click', () => {
+        autoBuildOrderForSupplier('Bloomshell', Number(document.getElementById('inputBudgetBloom').value) || 700000);
+      });
+
+      document.getElementById('btnClearCart').addEventListener('click', () => {
+        cartMap = {};
+        saveCart();
+        renderSimulator();
+        renderMarketExplorer();
+      });
+
+      document.getElementById('radarFilterType').addEventListener('change', renderRadarView);
+
+      // Exportaciones CSV y ZIP de Pedido
+      function exportCsvRows(headers, rows, filename) {
+        const escape = v => `"${String(v ?? '').replace(/\r?\n/g, ' ').replace(/"/g, '""')}"`;
+        const lines = [headers.map(escape).join(';')];
+        rows.forEach(r => lines.push(r.map(escape).join(';')));
+        const blob = new Blob(['\uFEFF' + lines.join('\r\n')], { type: 'text/csv;charset=utf-8;' });
+        const url = URL.createObjectURL(blob);
+        const a = document.createElement('a');
+        a.href = url;
+        a.download = filename;
+        document.body.appendChild(a);
+        a.click();
+        a.remove();
+        setTimeout(() => URL.revokeObjectURL(url), 3000);
+      }
+
+      document.getElementById('btnExportMarketCsv').addEventListener('click', () => {
+        const filtered = getFilteredProducts();
+        const headers = [
+          'Puntaje', 'Recomendacion', 'Proveedor', 'Ranking_Ventas', 'Referencia_SKU', 'Producto',
+          'Categoria', 'Costo_Mayorista_COP', 'Precio_Detal_COP', 'Ganancia_Ud_COP', 'ROI_%',
+          'Minimo_Mayorista', 'Inversion_Minima_COP', 'Stock_Bodega', 'URL', 'Carpeta_Imagenes'
+        ];
+        const rows = filtered.map(p => [
+          p.opportunityScore, p.recommendationTier, p.supplier,
+          p.topSaleRank < 999 ? `#${p.topSaleRank}` : 'N/A', p.reference || p.productId, p.name,
+          p.unifiedCategory, p.wholesaleTier1, p.retailPrice, p.unitProfitTier1, `${p.roiPercentTier1}%`,
+          p.minWholesaleQty, p.minInvestmentTier1, p.totalStock, p.url, p.imageFolderLocal
+        ]);
+        exportCsvRows(headers, rows, `estudio_mercado_filtrado_${filtered.length}.csv`);
+        showToast('✅ Exportado Excel de Estudio de Mercado');
+      });
+
+      document.getElementById('btnExportOrderCsv').addEventListener('click', () => {
+        const uids = Object.keys(cartMap);
+        if (!uids.length) {
+          showToast('⚠️ Agrega productos al simulador primero');
+          return;
+        }
+        const headers = [
+          'Proveedor', 'Referencia_SKU', 'Producto', 'Categoria', 'Cantidad_Pedir',
+          'Costo_Mayorista_Ud', 'Subtotal_Mayorista_COP', 'Precio_Detal_Sugerido',
+          'Venta_Total_Proyectada', 'Ganancia_Neta_Proyectada', 'Carpeta_Imagenes_Local'
+        ];
+        const rows = uids.map(uid => {
+          const p = allProducts.find(x => x.unifiedId === uid);
+          const q = cartMap[uid];
+          return [
+            p.supplier, p.reference || p.productId, p.name, p.unifiedCategory, q,
+            p.wholesaleTier1, p.wholesaleTier1 * q, p.retailPrice,
+            p.retailPrice * q, p.unitProfitTier1 * q, p.imageFolderLocal
+          ];
+        });
+        exportCsvRows(headers, rows, `pedido_mayorista_trendy_bloomshell.csv`);
+        showToast('✅ Pedido Mayorista exportado a Excel (.CSV)');
+      });
+
+      document.getElementById('btnDownloadOrderImagesZip').addEventListener('click', () => {
+        const uids = Object.keys(cartMap);
+        if (!uids.length) {
+          showToast('⚠️ No hay productos en el pedido para descargar sus fotos');
+          return;
+        }
+        const entries = [];
+        uids.forEach(uid => {
+          const p = allProducts.find(x => x.unifiedId === uid);
+          if (p && p.imageEntries) {
+            p.imageEntries.forEach(ent => {
+              entries.push({ ...ent, customPrefix: `${p.supplier}_${p.reference || p.productId}` });
+            });
+          }
+        });
+        downloadEntriesAsZip(entries, 'fotos_mi_pedido_mayorista.zip');
+      });
+
+      document.getElementById('btnCopyOrderWhatsapp').addEventListener('click', () => {
+        const uids = Object.keys(cartMap);
+        if (!uids.length) return;
+        const lines = ['*PEDIDO MAYORISTA — ESTUDIO DE MERCADO*', ''];
+        let total = 0;
+        uids.forEach(uid => {
+          const p = allProducts.find(x => x.unifiedId === uid);
+          const q = cartMap[uid];
+          const sub = p.wholesaleTier1 * q;
+          total += sub;
+          lines.push(`• [${p.supplier}] *${p.name}* (Ref: ${p.reference || p.productId}) x ${q} uds = ${formatCOP(sub)}`);
+        });
+        lines.push('', `*TOTAL INVERSIÓN MAYORISTA: ${formatCOP(total)}*`);
+        navigator.clipboard.writeText(lines.join('\n'));
+        showToast('📲 Resumen de pedido copiado al portapapeles');
+      });
+
+      // Modal buttons
+      document.getElementById('btnCloseModal').addEventListener('click', () => {
+        document.getElementById('productModal').classList.remove('open');
+      });
+      document.getElementById('productModal').addEventListener('click', e => {
+        if (e.target.id === 'productModal') document.getElementById('productModal').classList.remove('open');
+      });
+      document.getElementById('modalBtnAddOrder').addEventListener('click', () => {
+        if (!currentModalProd) return;
+        addToCart(currentModalProd.unifiedId, currentModalProd.minWholesaleQty || 1);
+        renderMarketExplorer();
+        renderSimulator();
+      });
+      document.getElementById('modalBtnToggleOwned').addEventListener('click', () => {
+        if (!currentModalProd) return;
+        toggleOwned(currentModalProd.unifiedId);
+        renderMarketExplorer();
+        renderGapMatrix();
+      });
+      document.getElementById('btnDownloadAllProdZip').addEventListener('click', () => {
+        if (!currentModalProd) return;
+        downloadEntriesAsZip(currentModalProd.imageEntries, `${currentModalProd.supplier}_${currentModalProd.reference || currentModalProd.productId}_imagenes.zip`);
+      });
+      document.getElementById('btnDownloadCurrentImg').addEventListener('click', async () => {
+        if (!currentModalProd) return;
+        const ent = currentModalProd.imageEntries[currentModalImgIdx];
+        if (!ent) return;
+        downloadEntriesAsZip([ent], ent.fileName);
+      });
+      document.getElementById('modalBtnCopyFicha').addEventListener('click', () => {
+        if (!currentModalProd) return;
+        const p = currentModalProd;
+        const text = [
+          `✨ ${p.name}`,
+          `🔖 Ref: ${p.reference || p.productId} | Marca: ${p.supplier}`,
+          `💲 Precio: ${formatCOP(p.retailPrice)}`,
+          `📝 Descripción: ${p.descriptionText || ''}`
+        ].join('\n');
+        navigator.clipboard.writeText(text);
+        showToast('📋 Ficha comercial copiada para tu catálogo / WhatsApp');
+      });
+
+      // Exportar / Importar Mi Catalogo JSON
+      document.getElementById('btnExportMyCatalog').addEventListener('click', () => {
+        const blob = new Blob([JSON.stringify(Array.from(ownedSet), null, 2)], { type: 'application/json' });
+        const url = URL.createObjectURL(blob);
+        const a = document.createElement('a');
+        a.href = url;
+        a.download = 'mi_catalogo_actual.json';
+        a.click();
+        URL.revokeObjectURL(url);
+      });
+      document.getElementById('inputImportMyCatalog').addEventListener('change', e => {
+        const file = e.target.files[0];
+        if (!file) return;
+        const reader = new FileReader();
+        reader.onload = ev => {
+          try {
+            const arr = JSON.parse(ev.target.result);
+            if (Array.isArray(arr)) {
+              ownedSet = new Set(arr);
+              saveOwned();
+              renderGapMatrix();
+              renderMarketExplorer();
+              showToast(`✅ Cargados ${ownedSet.size} productos en «Mi Catálogo Actual»`);
+            }
+          } catch (err) {}
+        };
+        reader.readAsText(file);
+      });
+
+      // Inicializar todo
+      updateGlobalCounters();
+      initCategoriesSidebar();
+      renderMarketExplorer();
+      renderGapMatrix();
+      renderRadarView();
+      renderCompareView();
+      renderSimulator();
+    })();
+  </script>
+</body>
+</html>

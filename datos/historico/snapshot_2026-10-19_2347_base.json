@@ -1,0 +1,3347 @@
+{
+    "scanId":  "2026-10-19_2347",
+    "timestamp":  "2026-10-19T23:47:41-05:00",
+    "note":  "Snapshot base inicial (Trendy 19 Oct 2026)",
+    "items":  [
+                  {
+                      "unifiedId":  "TRENDY_13",
+                      "supplier":  "Trendy",
+                      "productId":  "13",
+                      "reference":  "STN-SCR1508",
+                      "name":  "Sachet Crema Reparadora Nocturna SCR1508",
+                      "retailPrice":  12000,
+                      "totalStock":  11,
+                      "isAvailable":  true
+                  },
+                  {
+                      "unifiedId":  "TRENDY_18",
+                      "supplier":  "Trendy",
+                      "productId":  "18",
+                      "reference":  "STN-SPG1766",
+                      "name":  "Sombra Escarcha Party Glitter Ref SPG176",
+                      "retailPrice":  5000,
+                      "totalStock":  339,
+                      "isAvailable":  true
+                  },
+                  {
+                      "unifiedId":  "TRENDY_20",
+                      "supplier":  "Trendy",
+                      "productId":  "20",
+                      "reference":  "STN-KCM1729",
+                      "name":  "Kit Brochas Mini Café Ref KCM1729",
+                      "retailPrice":  50000,
+                      "totalStock":  2,
+                      "isAvailable":  true
+                  },
+                  {
+                      "unifiedId":  "TRENDY_22",
+                      "supplier":  "Trendy",
+                      "productId":  "22",
+                      "reference":  "STN-BMT1713",
+                      "name":  "Bolsa Mediana Trendy Ref BMT1713",
+                      "retailPrice":  2500,
+                      "totalStock":  17,
+                      "isAvailable":  true
+                  },
+                  {
+                      "unifiedId":  "TRENDY_23",
+                      "supplier":  "Trendy",
+                      "productId":  "23",
+                      "reference":  "STN-PSB1688",
+                      "name":  "Polvos Sueltos Bakery Grande Ref PSB1688",
+                      "retailPrice":  20000,
+                      "totalStock":  25,
+                      "isAvailable":  true
+                  },
+                  {
+                      "unifiedId":  "TRENDY_26",
+                      "supplier":  "Trendy",
+                      "productId":  "26",
+                      "reference":  "STN-LVT1589",
+                      "name":  "Labial Matte Teddy Ref LVT1589",
+                      "retailPrice":  10000,
+                      "totalStock":  1655,
+                      "isAvailable":  true
+                  },
+                  {
+                      "unifiedId":  "TRENDY_29",
+                      "supplier":  "Trendy",
+                      "productId":  "29",
+                      "reference":  "STN-SCT1471",
+                      "name":  "Sombra Glitter Circus Ref Sct1471",
+                      "retailPrice":  20000,
+                      "totalStock":  126,
+                      "isAvailable":  true
+                  },
+                  {
+                      "unifiedId":  "TRENDY_33",
+                      "supplier":  "Trendy",
+                      "productId":  "33",
+                      "reference":  "TONO 01-BET1496",
+                      "name":  "Contorno En Crema Bronzer Stamp Ref Bet1496",
+                      "retailPrice":  20000,
+                      "totalStock":  490,
+                      "isAvailable":  true
+                  },
+                  {
+                      "unifiedId":  "TRENDY_42",
+                      "supplier":  "Trendy",
+                      "productId":  "42",
+                      "reference":  "STN-HKS1551",
+                      "name":  "Brillo Lip Balm Kisses Sin Color Ref HKS1551",
+                      "retailPrice":  8000,
+                      "totalStock":  710,
+                      "isAvailable":  true
+                  },
+                  {
+                      "unifiedId":  "TRENDY_43",
+                      "supplier":  "Trendy",
+                      "productId":  "43",
+                      "reference":  "STN-HKC1550",
+                      "name":  "Brillo Lip Balm Kisses Rojo Ref HKC1550",
+                      "retailPrice":  8000,
+                      "totalStock":  1414,
+                      "isAvailable":  true
+                  },
+                  {
+                      "unifiedId":  "TRENDY_44",
+                      "supplier":  "Trendy",
+                      "productId":  "44",
+                      "reference":  "STN-KBT1484",
+                      "name":  "Kit De Labios Tiger Lips Ref KBT1484",
+                      "retailPrice":  35000,
+                      "totalStock":  214,
+                      "isAvailable":  true
+                  },
+                  {
+                      "unifiedId":  "TRENDY_51",
+                      "supplier":  "Trendy",
+                      "productId":  "51",
+                      "reference":  "STN-HRC1326",
+                      "name":  "Rubor En Crema Happy Ref HRC1326",
+                      "retailPrice":  5000,
+                      "totalStock":  60,
+                      "isAvailable":  true
+                  },
+                  {
+                      "unifiedId":  "TRENDY_52",
+                      "supplier":  "Trendy",
+                      "productId":  "52",
+                      "reference":  "STN-MDNN8888",
+                      "name":  "Plancha Pro Ref MDNN8888",
+                      "retailPrice":  190000,
+                      "totalStock":  14,
+                      "isAvailable":  true
+                  },
+                  {
+                      "unifiedId":  "TRENDY_53",
+                      "supplier":  "Trendy",
+                      "productId":  "53",
+                      "reference":  "TVA1730 VINO ANIMALP",
+                      "name":  "Tarjetero Monedero Trendy",
+                      "retailPrice":  18000,
+                      "totalStock":  375,
+                      "isAvailable":  true
+                  },
+                  {
+                      "unifiedId":  "TRENDY_54",
+                      "supplier":  "Trendy",
+                      "productId":  "54",
+                      "reference":  "STN-SMT1657",
+                      "name":  "Sombra Meow Ref SMT1657",
+                      "retailPrice":  12000,
+                      "totalStock":  141,
+                      "isAvailable":  true
+                  },
+                  {
+                      "unifiedId":  "TRENDY_55",
+                      "supplier":  "Trendy",
+                      "productId":  "55",
+                      "reference":  "STN-IPU1654",
+                      "name":  "Iluminador Pin Up Ref IPU1654",
+                      "retailPrice":  15000,
+                      "totalStock":  1535,
+                      "isAvailable":  true
+                  },
+                  {
+                      "unifiedId":  "TRENDY_63",
+                      "supplier":  "Trendy",
+                      "productId":  "63",
+                      "reference":  "R1602 #01",
+                      "name":  "Rubor Doble Mia Ref R1602",
+                      "retailPrice":  25000,
+                      "totalStock":  88,
+                      "isAvailable":  true
+                  },
+                  {
+                      "unifiedId":  "TRENDY_75",
+                      "supplier":  "Trendy",
+                      "productId":  "75",
+                      "reference":  "STN-IHT1408",
+                      "name":  "Kit X 4 Iluminador Quesito Hightouille Ref IHT1408",
+                      "retailPrice":  15000,
+                      "totalStock":  342,
+                      "isAvailable":  true
+                  },
+                  {
+                      "unifiedId":  "TRENDY_78",
+                      "supplier":  "Trendy",
+                      "productId":  "78",
+                      "reference":  "STN-KBG1400",
+                      "name":  "Kit X 5 Garden Gloss Ref Kbg1400",
+                      "retailPrice":  20000,
+                      "totalStock":  1429,
+                      "isAvailable":  true
+                  },
+                  {
+                      "unifiedId":  "TRENDY_79",
+                      "supplier":  "Trendy",
+                      "productId":  "79",
+                      "reference":  "STN-SLC1369",
+                      "name":  "Sombra Líquida Champagne Ref SLC1369",
+                      "retailPrice":  15000,
+                      "totalStock":  711,
+                      "isAvailable":  true
+                  },
+                  {
+                      "unifiedId":  "TRENDY_80",
+                      "supplier":  "Trendy",
+                      "productId":  "80",
+                      "reference":  "STN-TST1368",
+                      "name":  "Tinta School Ref TST1368",
+                      "retailPrice":  10000,
+                      "totalStock":  299,
+                      "isAvailable":  true
+                  },
+                  {
+                      "unifiedId":  "TRENDY_81",
+                      "supplier":  "Trendy",
+                      "productId":  "81",
+                      "reference":  "STN-BCC1367",
+                      "name":  "Brillo Cherry Shine Ref BCS1367",
+                      "retailPrice":  5000,
+                      "totalStock":  10,
+                      "isAvailable":  true
+                  },
+                  {
+                      "unifiedId":  "TRENDY_82",
+                      "supplier":  "Trendy",
+                      "productId":  "82",
+                      "reference":  "STN-BCC1366",
+                      "name":  "Brillo Cherry Color Ref BCC1366",
+                      "retailPrice":  5000,
+                      "totalStock":  609,
+                      "isAvailable":  true
+                  },
+                  {
+                      "unifiedId":  "TRENDY_92",
+                      "supplier":  "Trendy",
+                      "productId":  "92",
+                      "reference":  "Morado",
+                      "name":  "Cosmetiquera Plegable Ref CVA-CVN1731",
+                      "retailPrice":  25000,
+                      "totalStock":  275,
+                      "isAvailable":  true
+                  },
+                  {
+                      "unifiedId":  "TRENDY_94",
+                      "supplier":  "Trendy",
+                      "productId":  "94",
+                      "reference":  "STN-P220",
+                      "name":  "Brocha Individual Doble Piel P220",
+                      "retailPrice":  15000,
+                      "totalStock":  162,
+                      "isAvailable":  true
+                  },
+                  {
+                      "unifiedId":  "TRENDY_96",
+                      "supplier":  "Trendy",
+                      "productId":  "96",
+                      "reference":  "STN-BCT1807",
+                      "name":  "Kit Brochas Cristal X5 Und Ref BCT1807",
+                      "retailPrice":  25000,
+                      "totalStock":  7,
+                      "isAvailable":  true
+                  },
+                  {
+                      "unifiedId":  "TRENDY_109",
+                      "supplier":  "Trendy",
+                      "productId":  "109",
+                      "reference":  "STN-PEGA15",
+                      "name":  "Pegante De Pestañas Doble Trendy Ref Pega15",
+                      "retailPrice":  15000,
+                      "totalStock":  683,
+                      "isAvailable":  true
+                  },
+                  {
+                      "unifiedId":  "TRENDY_110",
+                      "supplier":  "Trendy",
+                      "productId":  "110",
+                      "reference":  "STN-BPM1426",
+                      "name":  "Brillo Magico Doble Perfect Match Ref Bpm1426",
+                      "retailPrice":  8000,
+                      "totalStock":  891,
+                      "isAvailable":  true
+                  },
+                  {
+                      "unifiedId":  "TRENDY_112",
+                      "supplier":  "Trendy",
+                      "productId":  "112",
+                      "reference":  "STN-PMT1371",
+                      "name":  "Primer Menta Trendy 60ml Ref PMT1371",
+                      "retailPrice":  15000,
+                      "totalStock":  1026,
+                      "isAvailable":  true
+                  },
+                  {
+                      "unifiedId":  "TRENDY_113",
+                      "supplier":  "Trendy",
+                      "productId":  "113",
+                      "reference":  "STN-BLP1370",
+                      "name":  "Primer Basic Look Ref BLP1370",
+                      "retailPrice":  25000,
+                      "totalStock":  140,
+                      "isAvailable":  true
+                  },
+                  {
+                      "unifiedId":  "TRENDY_114",
+                      "supplier":  "Trendy",
+                      "productId":  "114",
+                      "reference":  "STN-SFR1279",
+                      "name":  "Kit Primer Y Fijador Rose Ref SFR1279",
+                      "retailPrice":  20000,
+                      "totalStock":  4,
+                      "isAvailable":  true
+                  },
+                  {
+                      "unifiedId":  "TRENDY_115",
+                      "supplier":  "Trendy",
+                      "productId":  "115",
+                      "reference":  "STN-DLT1270",
+                      "name":  "Delineador De Labios Trendy Ref Dlt1270",
+                      "retailPrice":  6000,
+                      "totalStock":  1137,
+                      "isAvailable":  true
+                  },
+                  {
+                      "unifiedId":  "TRENDY_119",
+                      "supplier":  "Trendy",
+                      "productId":  "119",
+                      "reference":  "STN-BST1412",
+                      "name":  "Contorno en Barra Individual Bronzer Stick REF BST1412",
+                      "retailPrice":  15000,
+                      "totalStock":  3578,
+                      "isAvailable":  true
+                  },
+                  {
+                      "unifiedId":  "TRENDY_130",
+                      "supplier":  "Trendy",
+                      "productId":  "130",
+                      "reference":  "STN-PHT1588",
+                      "name":  "Papeletas Anti Grasa Hombre Ref Pht1588",
+                      "retailPrice":  10000,
+                      "totalStock":  635,
+                      "isAvailable":  true
+                  },
+                  {
+                      "unifiedId":  "TRENDY_134",
+                      "supplier":  "Trendy",
+                      "productId":  "134",
+                      "reference":  "STN-PBB1462",
+                      "name":  "Polvos Banana Boom Ref PBB1462",
+                      "retailPrice":  12000,
+                      "totalStock":  2246,
+                      "isAvailable":  true
+                  },
+                  {
+                      "unifiedId":  "TRENDY_135",
+                      "supplier":  "Trendy",
+                      "productId":  "135",
+                      "reference":  "STN-HRT1461",
+                      "name":  "Brillo Reparador Rosas Trendy REF HRT1461",
+                      "retailPrice":  6000,
+                      "totalStock":  1067,
+                      "isAvailable":  true
+                  },
+                  {
+                      "unifiedId":  "TRENDY_136",
+                      "supplier":  "Trendy",
+                      "productId":  "136",
+                      "reference":  "STN-HMA1460",
+                      "name":  "Hidratante Mágico Aloe Vera Trendy REF HMA1460",
+                      "retailPrice":  6000,
+                      "totalStock":  7553,
+                      "isAvailable":  true
+                  },
+                  {
+                      "unifiedId":  "TRENDY_137",
+                      "supplier":  "Trendy",
+                      "productId":  "137",
+                      "reference":  "STN-TPI1414",
+                      "name":  "Tinta Ice Paleta Ref Tpi1414",
+                      "retailPrice":  10000,
+                      "totalStock":  158,
+                      "isAvailable":  true
+                  },
+                  {
+                      "unifiedId":  "TRENDY_146",
+                      "supplier":  "Trendy",
+                      "productId":  "146",
+                      "reference":  "STN-P201",
+                      "name":  "Brocha Individual Difuminadora P201",
+                      "retailPrice":  6000,
+                      "totalStock":  18,
+                      "isAvailable":  true
+                  },
+                  {
+                      "unifiedId":  "TRENDY_148",
+                      "supplier":  "Trendy",
+                      "productId":  "148",
+                      "reference":  "STN-P115",
+                      "name":  "Brocha Individual Difuminadora Grande P115",
+                      "retailPrice":  4000,
+                      "totalStock":  4,
+                      "isAvailable":  true
+                  },
+                  {
+                      "unifiedId":  "TRENDY_150",
+                      "supplier":  "Trendy",
+                      "productId":  "150",
+                      "reference":  "STN-P113",
+                      "name":  "Brocha Individual Contorno Nariz P113",
+                      "retailPrice":  8000,
+                      "totalStock":  23,
+                      "isAvailable":  true
+                  },
+                  {
+                      "unifiedId":  "TRENDY_151",
+                      "supplier":  "Trendy",
+                      "productId":  "151",
+                      "reference":  "STN-P112",
+                      "name":  "Brocha Individual Lengua De Gato P112",
+                      "retailPrice":  4000,
+                      "totalStock":  135,
+                      "isAvailable":  true
+                  },
+                  {
+                      "unifiedId":  "TRENDY_152",
+                      "supplier":  "Trendy",
+                      "productId":  "152",
+                      "reference":  "STN-P111",
+                      "name":  "Brocha Individual Kabuki Corrector P111",
+                      "retailPrice":  10000,
+                      "totalStock":  421,
+                      "isAvailable":  true
+                  },
+                  {
+                      "unifiedId":  "TRENDY_154",
+                      "supplier":  "Trendy",
+                      "productId":  "154",
+                      "reference":  "STN-P103",
+                      "name":  "Brocha Individual Base P103",
+                      "retailPrice":  15000,
+                      "totalStock":  7,
+                      "isAvailable":  true
+                  },
+                  {
+                      "unifiedId":  "TRENDY_155",
+                      "supplier":  "Trendy",
+                      "productId":  "155",
+                      "reference":  "STN-P102",
+                      "name":  "Brocha Individual Polvo Detalle P102",
+                      "retailPrice":  15000,
+                      "totalStock":  76,
+                      "isAvailable":  true
+                  },
+                  {
+                      "unifiedId":  "TRENDY_156",
+                      "supplier":  "Trendy",
+                      "productId":  "156",
+                      "reference":  "STN-P217",
+                      "name":  "Brocha Individual Productos En Crema P217",
+                      "retailPrice":  10000,
+                      "totalStock":  184,
+                      "isAvailable":  true
+                  },
+                  {
+                      "unifiedId":  "TRENDY_158",
+                      "supplier":  "Trendy",
+                      "productId":  "158",
+                      "reference":  "STN-P215",
+                      "name":  "Brocha Individual Kabuki Rubor P215",
+                      "retailPrice":  10000,
+                      "totalStock":  2,
+                      "isAvailable":  true
+                  },
+                  {
+                      "unifiedId":  "TRENDY_160",
+                      "supplier":  "Trendy",
+                      "productId":  "160",
+                      "reference":  "STN-P212",
+                      "name":  "Brocha Individual Gota Fluffy P212",
+                      "retailPrice":  10000,
+                      "totalStock":  179,
+                      "isAvailable":  true
+                  },
+                  {
+                      "unifiedId":  "TRENDY_161",
+                      "supplier":  "Trendy",
+                      "productId":  "161",
+                      "reference":  "STN-P211",
+                      "name":  "Brocha Individual Kabuki Mini P211",
+                      "retailPrice":  10000,
+                      "totalStock":  644,
+                      "isAvailable":  true
+                  },
+                  {
+                      "unifiedId":  "TRENDY_162",
+                      "supplier":  "Trendy",
+                      "productId":  "162",
+                      "reference":  "STN-P210",
+                      "name":  "Brocha Individual Corrector Mini P210",
+                      "retailPrice":  10000,
+                      "totalStock":  1072,
+                      "isAvailable":  true
+                  },
+                  {
+                      "unifiedId":  "TRENDY_163",
+                      "supplier":  "Trendy",
+                      "productId":  "163",
+                      "reference":  "STN-P209",
+                      "name":  "Brocha Individual Cejas Y Pestañas P209",
+                      "retailPrice":  8000,
+                      "totalStock":  88,
+                      "isAvailable":  true
+                  },
+                  {
+                      "unifiedId":  "TRENDY_170",
+                      "supplier":  "Trendy",
+                      "productId":  "170",
+                      "reference":  "STN-P202",
+                      "name":  "Brocha Individual Difuminadora Mini P202",
+                      "retailPrice":  4000,
+                      "totalStock":  17,
+                      "isAvailable":  true
+                  },
+                  {
+                      "unifiedId":  "TRENDY_174",
+                      "supplier":  "Trendy",
+                      "productId":  "174",
+                      "reference":  "MG11#01",
+                      "name":  "Corrector Magic Grande Ref MG11",
+                      "retailPrice":  30000,
+                      "totalStock":  2128,
+                      "isAvailable":  true
+                  },
+                  {
+                      "unifiedId":  "TRENDY_175",
+                      "supplier":  "Trendy",
+                      "productId":  "175",
+                      "reference":  "STN-CD05",
+                      "name":  "Cosmetiquera Cuerina Trendy REF CD05",
+                      "retailPrice":  30000,
+                      "totalStock":  57,
+                      "isAvailable":  true
+                  },
+                  {
+                      "unifiedId":  "TRENDY_176",
+                      "supplier":  "Trendy",
+                      "productId":  "176",
+                      "reference":  "STN-P214",
+                      "name":  "Brocha Individual Doble Kabuki Angular P214",
+                      "retailPrice":  15000,
+                      "totalStock":  152,
+                      "isAvailable":  true
+                  },
+                  {
+                      "unifiedId":  "TRENDY_179",
+                      "supplier":  "Trendy",
+                      "productId":  "179",
+                      "reference":  "STN-P106",
+                      "name":  "Brocha Individual Contorno P106",
+                      "retailPrice":  10000,
+                      "totalStock":  666,
+                      "isAvailable":  true
+                  },
+                  {
+                      "unifiedId":  "TRENDY_180",
+                      "supplier":  "Trendy",
+                      "productId":  "180",
+                      "reference":  "STN-P104",
+                      "name":  "Brocha Individual Base Kabuki P104",
+                      "retailPrice":  15000,
+                      "totalStock":  875,
+                      "isAvailable":  true
+                  },
+                  {
+                      "unifiedId":  "TRENDY_181",
+                      "supplier":  "Trendy",
+                      "productId":  "181",
+                      "reference":  "STN-P101",
+                      "name":  "Brocha Individual Polvo Ancha P101",
+                      "retailPrice":  15000,
+                      "totalStock":  237,
+                      "isAvailable":  true
+                  },
+                  {
+                      "unifiedId":  "TRENDY_182",
+                      "supplier":  "Trendy",
+                      "productId":  "182",
+                      "reference":  "STN-P100",
+                      "name":  "Brocha Individual Polvo Gigante P100",
+                      "retailPrice":  15000,
+                      "totalStock":  77,
+                      "isAvailable":  true
+                  },
+                  {
+                      "unifiedId":  "TRENDY_184",
+                      "supplier":  "Trendy",
+                      "productId":  "184",
+                      "reference":  "STN-P109",
+                      "name":  "Brocha Individual Kabuki Pequeña P109",
+                      "retailPrice":  10000,
+                      "totalStock":  275,
+                      "isAvailable":  true
+                  },
+                  {
+                      "unifiedId":  "TRENDY_185",
+                      "supplier":  "Trendy",
+                      "productId":  "185",
+                      "reference":  "STN-P108",
+                      "name":  "Brocha Individual Doble Angular y Gota P108",
+                      "retailPrice":  15000,
+                      "totalStock":  551,
+                      "isAvailable":  true
+                  },
+                  {
+                      "unifiedId":  "TRENDY_187",
+                      "supplier":  "Trendy",
+                      "productId":  "187",
+                      "reference":  "STN-MAT1314",
+                      "name":  "Mascarilla Aloe Trendy Ref MAT1314",
+                      "retailPrice":  15000,
+                      "totalStock":  139,
+                      "isAvailable":  true
+                  },
+                  {
+                      "unifiedId":  "TRENDY_189",
+                      "supplier":  "Trendy",
+                      "productId":  "189",
+                      "reference":  "STN-SGA1740",
+                      "name":  "Sachet Gel Aloe Vera Fresh Aloe 70g Ref STN-SGA1740",
+                      "retailPrice":  8000,
+                      "totalStock":  149,
+                      "isAvailable":  true
+                  },
+                  {
+                      "unifiedId":  "TRENDY_211",
+                      "supplier":  "Trendy",
+                      "productId":  "211",
+                      "reference":  "STN-CC11",
+                      "name":  "Brillo Cotton Candy Ref CC11",
+                      "retailPrice":  15000,
+                      "totalStock":  239,
+                      "isAvailable":  true
+                  },
+                  {
+                      "unifiedId":  "TRENDY_214",
+                      "supplier":  "Trendy",
+                      "productId":  "214",
+                      "reference":  "STN-DRT1329",
+                      "name":  "Delineador de Glitter Rock Ref DRT1329",
+                      "retailPrice":  8000,
+                      "totalStock":  116,
+                      "isAvailable":  true
+                  },
+                  {
+                      "unifiedId":  "TRENDY_215",
+                      "supplier":  "Trendy",
+                      "productId":  "215",
+                      "reference":  "STN-STT1328",
+                      "name":  "Tinta Soda Ref STT1328",
+                      "retailPrice":  10000,
+                      "totalStock":  372,
+                      "isAvailable":  true
+                  },
+                  {
+                      "unifiedId":  "TRENDY_216",
+                      "supplier":  "Trendy",
+                      "productId":  "216",
+                      "reference":  "STN-RBS1312",
+                      "name":  "Rubor Blush Stamp Ref RBS1312",
+                      "retailPrice":  20000,
+                      "totalStock":  1802,
+                      "isAvailable":  true
+                  },
+                  {
+                      "unifiedId":  "TRENDY_218",
+                      "supplier":  "Trendy",
+                      "productId":  "218",
+                      "reference":  "STN-SHT1310",
+                      "name":  "Sombra Hollywood Ref SHT1310",
+                      "retailPrice":  15000,
+                      "totalStock":  8,
+                      "isAvailable":  true
+                  },
+                  {
+                      "unifiedId":  "TRENDY_221",
+                      "supplier":  "Trendy",
+                      "productId":  "221",
+                      "reference":  "STN-HCG1283",
+                      "name":  "Brillo Candy Voluminizador en Barra REF HCG1283",
+                      "retailPrice":  6000,
+                      "totalStock":  1232,
+                      "isAvailable":  true
+                  },
+                  {
+                      "unifiedId":  "TRENDY_222",
+                      "supplier":  "Trendy",
+                      "productId":  "222",
+                      "reference":  "STN-CHT1253",
+                      "name":  "Iluminador en Trío Cloud Ref CHT1253",
+                      "retailPrice":  5000,
+                      "totalStock":  1029,
+                      "isAvailable":  true
+                  },
+                  {
+                      "unifiedId":  "TRENDY_255",
+                      "supplier":  "Trendy",
+                      "productId":  "255",
+                      "reference":  "TONO 05-SP98",
+                      "name":  "Corrector Doble Super Cool Ref SP98",
+                      "retailPrice":  15000,
+                      "totalStock":  2388,
+                      "isAvailable":  true
+                  },
+                  {
+                      "unifiedId":  "TRENDY_257",
+                      "supplier":  "Trendy",
+                      "productId":  "257",
+                      "reference":  "STN-SRT1287",
+                      "name":  "Sombra Rock Ref Srt1287",
+                      "retailPrice":  15000,
+                      "totalStock":  128,
+                      "isAvailable":  true
+                  },
+                  {
+                      "unifiedId":  "TRENDY_262",
+                      "supplier":  "Trendy",
+                      "productId":  "262",
+                      "reference":  "STN-LL15",
+                      "name":  "Kit X12 Delineadores De Labios Love Lips Trendy Ref LL15",
+                      "retailPrice":  60000,
+                      "totalStock":  0,
+                      "isAvailable":  false
+                  },
+                  {
+                      "unifiedId":  "TRENDY_263",
+                      "supplier":  "Trendy",
+                      "productId":  "263",
+                      "reference":  "STN-DL07",
+                      "name":  "Tinta Y Brillo Doggie Lips Trendy Ref DL07",
+                      "retailPrice":  10000,
+                      "totalStock":  130,
+                      "isAvailable":  true
+                  },
+                  {
+                      "unifiedId":  "TRENDY_268",
+                      "supplier":  "Trendy",
+                      "productId":  "268",
+                      "reference":  "STN-PK12",
+                      "name":  "Rubor E Iluminador Puppy Collection Ref PK12",
+                      "retailPrice":  15000,
+                      "totalStock":  4,
+                      "isAvailable":  true
+                  },
+                  {
+                      "unifiedId":  "TRENDY_284",
+                      "supplier":  "Trendy",
+                      "productId":  "284",
+                      "reference":  "STN-SCT1278",
+                      "name":  "Sombra Candy Ref Sct1278",
+                      "retailPrice":  15000,
+                      "totalStock":  510,
+                      "isAvailable":  true
+                  },
+                  {
+                      "unifiedId":  "TRENDY_286",
+                      "supplier":  "Trendy",
+                      "productId":  "286",
+                      "reference":  "STN-LOV3",
+                      "name":  "Rubor Garden Of Love Ref Lov3",
+                      "retailPrice":  10000,
+                      "totalStock":  471,
+                      "isAvailable":  true
+                  },
+                  {
+                      "unifiedId":  "TRENDY_287",
+                      "supplier":  "Trendy",
+                      "productId":  "287",
+                      "reference":  "STN-PSC1251",
+                      "name":  "Rubor Pink Sweet Cotton Trendy Ref Psc1251",
+                      "retailPrice":  15000,
+                      "totalStock":  1071,
+                      "isAvailable":  true
+                  },
+                  {
+                      "unifiedId":  "TRENDY_291",
+                      "supplier":  "Trendy",
+                      "productId":  "291",
+                      "reference":  "STN-PD08",
+                      "name":  "Sombra Dreams Pro Trendy Ref PD08",
+                      "retailPrice":  50000,
+                      "totalStock":  84,
+                      "isAvailable":  true
+                  },
+                  {
+                      "unifiedId":  "TRENDY_293",
+                      "supplier":  "Trendy",
+                      "productId":  "293",
+                      "reference":  "STN-ST23",
+                      "name":  "Sombra Terra Trendy Ref St23",
+                      "retailPrice":  15000,
+                      "totalStock":  3,
+                      "isAvailable":  true
+                  },
+                  {
+                      "unifiedId":  "TRENDY_294",
+                      "supplier":  "Trendy",
+                      "productId":  "294",
+                      "reference":  "STN-OT10",
+                      "name":  "Sombra Cartera Teddy Ref RROt10",
+                      "retailPrice":  20000,
+                      "totalStock":  400,
+                      "isAvailable":  true
+                  },
+                  {
+                      "unifiedId":  "TRENDY_315",
+                      "supplier":  "Trendy",
+                      "productId":  "315",
+                      "reference":  "STN-KM10",
+                      "name":  "Kit Brochas Mini Rosado Ref KM10",
+                      "retailPrice":  50000,
+                      "totalStock":  3,
+                      "isAvailable":  true
+                  },
+                  {
+                      "unifiedId":  "TRENDY_330",
+                      "supplier":  "Trendy",
+                      "productId":  "330",
+                      "reference":  "LAPIZ DE OJOS NEGRO  EY15",
+                      "name":  "Lápiz De Ojos Trendy Ref EY",
+                      "retailPrice":  10000,
+                      "totalStock":  1212,
+                      "isAvailable":  true
+                  },
+                  {
+                      "unifiedId":  "TRENDY_331",
+                      "supplier":  "Trendy",
+                      "productId":  "331",
+                      "reference":  "KIT DE CEJAS DT25",
+                      "name":  "Kit De Cejas Basic Brows Ref DT25",
+                      "retailPrice":  15000,
+                      "totalStock":  671,
+                      "isAvailable":  true
+                  },
+                  {
+                      "unifiedId":  "TRENDY_344",
+                      "supplier":  "Trendy",
+                      "productId":  "344",
+                      "reference":  "SACHET SUMMER",
+                      "name":  "Sachet Primer Serum Summer Ref SSS1158",
+                      "retailPrice":  15000,
+                      "totalStock":  796,
+                      "isAvailable":  true
+                  },
+                  {
+                      "unifiedId":  "TRENDY_345",
+                      "supplier":  "Trendy",
+                      "productId":  "345",
+                      "reference":  "SACHET WATERMELON",
+                      "name":  "Sachet Primer Serum  Watermelon Ref SPW1157",
+                      "retailPrice":  10000,
+                      "totalStock":  11,
+                      "isAvailable":  true
+                  },
+                  {
+                      "unifiedId":  "TRENDY_357",
+                      "supplier":  "Trendy",
+                      "productId":  "357",
+                      "reference":  "CEPILLO SECADOR",
+                      "name":  "Cepillo Secador Mandarinna",
+                      "retailPrice":  190000,
+                      "totalStock":  18,
+                      "isAvailable":  true
+                  },
+                  {
+                      "unifiedId":  "TRENDY_372",
+                      "supplier":  "Trendy",
+                      "productId":  "372",
+                      "reference":  "BEAUTY GLAZED B56",
+                      "name":  "Sombra Color Studio Beauty Glazed Ref B56",
+                      "retailPrice":  50000,
+                      "totalStock":  4,
+                      "isAvailable":  true
+                  },
+                  {
+                      "unifiedId":  "TRENDY_375",
+                      "supplier":  "Trendy",
+                      "productId":  "375",
+                      "reference":  "BEAUTY GLAZED B52",
+                      "name":  "Sombra Perfixt Beauty Glazed Ref B52",
+                      "retailPrice":  35000,
+                      "totalStock":  36,
+                      "isAvailable":  true
+                  },
+                  {
+                      "unifiedId":  "TRENDY_378",
+                      "supplier":  "Trendy",
+                      "productId":  "378",
+                      "reference":  "ESTANDAR BRCH OM20",
+                      "name":  "Organizador Brochas Redondo Ref Om20",
+                      "retailPrice":  15000,
+                      "totalStock":  21,
+                      "isAvailable":  true
+                  },
+                  {
+                      "unifiedId":  "TRENDY_379",
+                      "supplier":  "Trendy",
+                      "productId":  "379",
+                      "reference":  "PINZA RIZADORA MANDA",
+                      "name":  "Pinza Rizadora Mandarinna",
+                      "retailPrice":  170000,
+                      "totalStock":  15,
+                      "isAvailable":  true
+                  },
+                  {
+                      "unifiedId":  "TRENDY_386",
+                      "supplier":  "Trendy",
+                      "productId":  "386",
+                      "reference":  "01 NEGRO AC30",
+                      "name":  "Delineador Plumon Artist Ref Ac30 Negro",
+                      "retailPrice":  20000,
+                      "totalStock":  713,
+                      "isAvailable":  true
+                  },
+                  {
+                      "unifiedId":  "TRENDY_387",
+                      "supplier":  "Trendy",
+                      "productId":  "387",
+                      "reference":  "ESTANDAR GF19",
+                      "name":  "Gel Fijador de CejasRef GF19",
+                      "retailPrice":  15000,
+                      "totalStock":  2586,
+                      "isAvailable":  true
+                  },
+                  {
+                      "unifiedId":  "TRENDY_388",
+                      "supplier":  "Trendy",
+                      "productId":  "388",
+                      "reference":  "ESTANDAR CE10",
+                      "name":  "Delineador Doble Trendy Cat Eye Ref CE10",
+                      "retailPrice":  15000,
+                      "totalStock":  2847,
+                      "isAvailable":  true
+                  },
+                  {
+                      "unifiedId":  "TRENDY_389",
+                      "supplier":  "Trendy",
+                      "productId":  "389",
+                      "reference":  "TONO 04 B69",
+                      "name":  "Lápiz Para Cejas Beauty Glazed Ref B69",
+                      "retailPrice":  10000,
+                      "totalStock":  185,
+                      "isAvailable":  true
+                  },
+                  {
+                      "unifiedId":  "TRENDY_390",
+                      "supplier":  "Trendy",
+                      "productId":  "390",
+                      "reference":  "MALETA MEDIANA",
+                      "name":  "Maleta Mediana de Maquillaje Ref MMT923",
+                      "retailPrice":  70000,
+                      "totalStock":  3,
+                      "isAvailable":  true
+                  },
+                  {
+                      "unifiedId":  "TRENDY_392",
+                      "supplier":  "Trendy",
+                      "productId":  "392",
+                      "reference":  "ESTANDAR HD26",
+                      "name":  "Iluminador Donut Ref HD26",
+                      "retailPrice":  10000,
+                      "totalStock":  720,
+                      "isAvailable":  true
+                  },
+                  {
+                      "unifiedId":  "TRENDY_394",
+                      "supplier":  "Trendy",
+                      "productId":  "394",
+                      "reference":  "ESTANDAR FE5",
+                      "name":  "Pestañina Fortalecedora Fresh Trendy Ref FE5",
+                      "retailPrice":  15000,
+                      "totalStock":  262,
+                      "isAvailable":  true
+                  },
+                  {
+                      "unifiedId":  "TRENDY_395",
+                      "supplier":  "Trendy",
+                      "productId":  "395",
+                      "reference":  "ESTANDAR SA11",
+                      "name":  "Serum Hidratante Morado Trendy Ref Sa11",
+                      "retailPrice":  20000,
+                      "totalStock":  1452,
+                      "isAvailable":  true
+                  },
+                  {
+                      "unifiedId":  "TRENDY_396",
+                      "supplier":  "Trendy",
+                      "productId":  "396",
+                      "reference":  "ESTANDAR CAM02",
+                      "name":  "Delineador En Plumón Doble Ref CAM02",
+                      "retailPrice":  15000,
+                      "totalStock":  1628,
+                      "isAvailable":  true
+                  },
+                  {
+                      "unifiedId":  "TRENDY_398",
+                      "supplier":  "Trendy",
+                      "productId":  "398",
+                      "reference":  "ESTANDAR HL15",
+                      "name":  "Brillo Magico Honey Ref Hl15",
+                      "retailPrice":  6000,
+                      "totalStock":  2485,
+                      "isAvailable":  true
+                  },
+                  {
+                      "unifiedId":  "TRENDY_402",
+                      "supplier":  "Trendy",
+                      "productId":  "402",
+                      "reference":  "ESTANDAR ES26",
+                      "name":  "Exfoliante Corporal Summer Trendy 350ml  ES26",
+                      "retailPrice":  20000,
+                      "totalStock":  4206,
+                      "isAvailable":  true
+                  },
+                  {
+                      "unifiedId":  "TRENDY_403",
+                      "supplier":  "Trendy",
+                      "productId":  "403",
+                      "reference":  "ESTANDAR RFSL13",
+                      "name":  "Voluminizador de Labios Smoothie Lips Ref SL13",
+                      "retailPrice":  12000,
+                      "totalStock":  15,
+                      "isAvailable":  true
+                  },
+                  {
+                      "unifiedId":  "TRENDY_404",
+                      "supplier":  "Trendy",
+                      "productId":  "404",
+                      "reference":  "ESTANDAR LC002",
+                      "name":  "Primer de Pelo Termoprotector Mandarinna Ref LC002",
+                      "retailPrice":  30000,
+                      "totalStock":  8,
+                      "isAvailable":  true
+                  },
+                  {
+                      "unifiedId":  "TRENDY_406",
+                      "supplier":  "Trendy",
+                      "productId":  "406",
+                      "reference":  "ACEITE DESMAQUILLANT",
+                      "name":  "Aceite Desmaquillante Trendy Ref ADT862",
+                      "retailPrice":  20000,
+                      "totalStock":  1871,
+                      "isAvailable":  true
+                  },
+                  {
+                      "unifiedId":  "TRENDY_409",
+                      "supplier":  "Trendy",
+                      "productId":  "409",
+                      "reference":  "ESTANDAR ELR23",
+                      "name":  "Rubor Trendy Eclipse Lunar Ref Elr23",
+                      "retailPrice":  10000,
+                      "totalStock":  1643,
+                      "isAvailable":  true
+                  },
+                  {
+                      "unifiedId":  "TRENDY_410",
+                      "supplier":  "Trendy",
+                      "productId":  "410",
+                      "reference":  "ESTANDAR HS24",
+                      "name":  "Mascarilla Hidratante De Labios Strawberry Trendy Ref Hs24",
+                      "retailPrice":  15000,
+                      "totalStock":  117,
+                      "isAvailable":  true
+                  },
+                  {
+                      "unifiedId":  "TRENDY_411",
+                      "supplier":  "Trendy",
+                      "productId":  "411",
+                      "reference":  "ESTANDAR CN09",
+                      "name":  "Fijador Cosmic Night Ref CN09",
+                      "retailPrice":  25000,
+                      "totalStock":  1236,
+                      "isAvailable":  true
+                  },
+                  {
+                      "unifiedId":  "TRENDY_423",
+                      "supplier":  "Trendy",
+                      "productId":  "423",
+                      "reference":  "ESTANDAR HC16",
+                      "name":  "Sobre Mascarilla Stickers Para Acné Happy Clean Ref Hc16",
+                      "retailPrice":  15000,
+                      "totalStock":  1937,
+                      "isAvailable":  true
+                  },
+                  {
+                      "unifiedId":  "TRENDY_426",
+                      "supplier":  "Trendy",
+                      "productId":  "426",
+                      "reference":  "ESTANDAR COSM PASTEL",
+                      "name":  "Cosmetiquera Pastel Trendy Ref CD01",
+                      "retailPrice":  25000,
+                      "totalStock":  108,
+                      "isAvailable":  true
+                  },
+                  {
+                      "unifiedId":  "TRENDY_432",
+                      "supplier":  "Trendy",
+                      "productId":  "432",
+                      "reference":  "ESTANDAR SB18",
+                      "name":  "Kit Dúo Rubor Líquido Safari Blush Ref SB18",
+                      "retailPrice":  25000,
+                      "totalStock":  727,
+                      "isAvailable":  true
+                  },
+                  {
+                      "unifiedId":  "TRENDY_434",
+                      "supplier":  "Trendy",
+                      "productId":  "434",
+                      "reference":  "ESTANDAR 7498B",
+                      "name":  "Tinta Heladito Ref 7498B",
+                      "retailPrice":  10000,
+                      "totalStock":  470,
+                      "isAvailable":  true
+                  },
+                  {
+                      "unifiedId":  "TRENDY_435",
+                      "supplier":  "Trendy",
+                      "productId":  "435",
+                      "reference":  "ESTANDAR PESTNA CAT",
+                      "name":  "Pestañina Cat Trendy Ref CM05",
+                      "retailPrice":  15000,
+                      "totalStock":  865,
+                      "isAvailable":  true
+                  },
+                  {
+                      "unifiedId":  "TRENDY_437",
+                      "supplier":  "Trendy",
+                      "productId":  "437",
+                      "reference":  "ESTANDAR PM02",
+                      "name":  "Primer Masmelo Trendy REF PM02",
+                      "retailPrice":  25000,
+                      "totalStock":  1183,
+                      "isAvailable":  true
+                  },
+                  {
+                      "unifiedId":  "TRENDY_440",
+                      "supplier":  "Trendy",
+                      "productId":  "440",
+                      "reference":  "ESTANDAR EM15",
+                      "name":  "Mascarilla De Hidrogel Para Ojos Aloe Ref EM15",
+                      "retailPrice":  20000,
+                      "totalStock":  797,
+                      "isAvailable":  true
+                  },
+                  {
+                      "unifiedId":  "TRENDY_445",
+                      "supplier":  "Trendy",
+                      "productId":  "445",
+                      "reference":  "CAJA LABIALES LT02",
+                      "name":  "Caja de Labiales Matte X24 Candy Ref LT02",
+                      "retailPrice":  55000,
+                      "totalStock":  2,
+                      "isAvailable":  true
+                  },
+                  {
+                      "unifiedId":  "TRENDY_446",
+                      "supplier":  "Trendy",
+                      "productId":  "446",
+                      "reference":  "ESTANDAR LT18",
+                      "name":  "Voluminizador De Labios Trendy Ref LT18",
+                      "retailPrice":  12000,
+                      "totalStock":  120,
+                      "isAvailable":  true
+                  },
+                  {
+                      "unifiedId":  "TRENDY_447",
+                      "supplier":  "Trendy",
+                      "productId":  "447",
+                      "reference":  "ESTANDAR BL07",
+                      "name":  "Rubor En Barra Blush Love Ref BL07",
+                      "retailPrice":  15000,
+                      "totalStock":  266,
+                      "isAvailable":  true
+                  },
+                  {
+                      "unifiedId":  "TRENDY_449",
+                      "supplier":  "Trendy",
+                      "productId":  "449",
+                      "reference":  "ESTANDAR 7999A",
+                      "name":  "Tinta Frutas Ref 7999A",
+                      "retailPrice":  10000,
+                      "totalStock":  733,
+                      "isAvailable":  true
+                  },
+                  {
+                      "unifiedId":  "TRENDY_453",
+                      "supplier":  "Trendy",
+                      "productId":  "453",
+                      "reference":  "ESTANDAR C06-09PEACH",
+                      "name":  "Sombra Frutas Ref C06-09 Ref Peach",
+                      "retailPrice":  15000,
+                      "totalStock":  2,
+                      "isAvailable":  true
+                  },
+                  {
+                      "unifiedId":  "TRENDY_454",
+                      "supplier":  "Trendy",
+                      "productId":  "454",
+                      "reference":  "ESTANDAR C06-09 UVA",
+                      "name":  "Sombra Frutas Uva Ref C06",
+                      "retailPrice":  15000,
+                      "totalStock":  5,
+                      "isAvailable":  true
+                  },
+                  {
+                      "unifiedId":  "TRENDY_456",
+                      "supplier":  "Trendy",
+                      "productId":  "456",
+                      "reference":  "ESTANDAR C06-09COCO",
+                      "name":  "Sombra Frutas Coco Ref C06",
+                      "retailPrice":  15000,
+                      "totalStock":  100,
+                      "isAvailable":  true
+                  },
+                  {
+                      "unifiedId":  "TRENDY_474",
+                      "supplier":  "Trendy",
+                      "productId":  "474",
+                      "reference":  "ESTANDAR ET01",
+                      "name":  "Encrespador Oro Rosa Ref Edt660",
+                      "retailPrice":  15000,
+                      "totalStock":  969,
+                      "isAvailable":  true
+                  },
+                  {
+                      "unifiedId":  "TRENDY_484",
+                      "supplier":  "Trendy",
+                      "productId":  "484",
+                      "reference":  "TONO 03 C05",
+                      "name":  "Corrector Magic Mini Ref CMT547",
+                      "retailPrice":  12000,
+                      "totalStock":  4092,
+                      "isAvailable":  true
+                  },
+                  {
+                      "unifiedId":  "TRENDY_493",
+                      "supplier":  "Trendy",
+                      "productId":  "493",
+                      "reference":  "TONO 358",
+                      "name":  "Base Truly Matte L.A. Colors Ref BAT574",
+                      "retailPrice":  18000,
+                      "totalStock":  1163,
+                      "isAvailable":  true
+                  },
+                  {
+                      "unifiedId":  "TRENDY_494",
+                      "supplier":  "Trendy",
+                      "productId":  "494",
+                      "reference":  "TONO 06 AQUA",
+                      "name":  "Base Aqua OG Ref BAQ564",
+                      "retailPrice":  30000,
+                      "totalStock":  482,
+                      "isAvailable":  true
+                  },
+                  {
+                      "unifiedId":  "TRENDY_497",
+                      "supplier":  "Trendy",
+                      "productId":  "497",
+                      "reference":  "STN-VPG1966",
+                      "name":  "Voluminizador Plump Gloss Ref Vpg1966",
+                      "retailPrice":  5000,
+                      "totalStock":  1125,
+                      "isAvailable":  true
+                  },
+                  {
+                      "unifiedId":  "TRENDY_498",
+                      "supplier":  "Trendy",
+                      "productId":  "498",
+                      "reference":  "STN-CDT1857",
+                      "name":  "Cepillo Anti Frizz Rosado Ref CDT1857",
+                      "retailPrice":  15000,
+                      "totalStock":  372,
+                      "isAvailable":  true
+                  },
+                  {
+                      "unifiedId":  "TRENDY_504",
+                      "supplier":  "Trendy",
+                      "productId":  "504",
+                      "reference":  "STN-SNH1845",
+                      "name":  "Sombra Para Niñas Celular Ref SNH1845",
+                      "retailPrice":  10000,
+                      "totalStock":  35,
+                      "isAvailable":  true
+                  },
+                  {
+                      "unifiedId":  "TRENDY_508",
+                      "supplier":  "Trendy",
+                      "productId":  "508",
+                      "reference":  "STN-SLB1927",
+                      "name":  "Iluminador Liquido Brilla Ref Slb1927",
+                      "retailPrice":  8000,
+                      "totalStock":  762,
+                      "isAvailable":  true
+                  },
+                  {
+                      "unifiedId":  "TRENDY_510",
+                      "supplier":  "Trendy",
+                      "productId":  "510",
+                      "reference":  "STN-RLG1846",
+                      "name":  "Brillo Red Lips Ref RLG1846",
+                      "retailPrice":  8000,
+                      "totalStock":  385,
+                      "isAvailable":  true
+                  },
+                  {
+                      "unifiedId":  "TRENDY_512",
+                      "supplier":  "Trendy",
+                      "productId":  "512",
+                      "reference":  "STN-DSH1761",
+                      "name":  "Doypack Serum Hidratante Morado Ref DSH1761",
+                      "retailPrice":  10000,
+                      "totalStock":  131,
+                      "isAvailable":  true
+                  },
+                  {
+                      "unifiedId":  "TRENDY_513",
+                      "supplier":  "Trendy",
+                      "productId":  "513",
+                      "reference":  "STN-FRT1755",
+                      "name":  "Fijador Retro Face Ref FRT1755",
+                      "retailPrice":  15000,
+                      "totalStock":  587,
+                      "isAvailable":  true
+                  },
+                  {
+                      "unifiedId":  "TRENDY_514",
+                      "supplier":  "Trendy",
+                      "productId":  "514",
+                      "reference":  "STN-LLI1735",
+                      "name":  "Delineador De Labios Individual Love Lips Ref LLI1735",
+                      "retailPrice":  10000,
+                      "totalStock":  3,
+                      "isAvailable":  true
+                  },
+                  {
+                      "unifiedId":  "TRENDY_515",
+                      "supplier":  "Trendy",
+                      "productId":  "515",
+                      "reference":  "TONO 01 RBH1651",
+                      "name":  "Rubor En Crema Beverly Hills Ref Rbh1651",
+                      "retailPrice":  15000,
+                      "totalStock":  5676,
+                      "isAvailable":  true
+                  },
+                  {
+                      "unifiedId":  "TRENDY_517",
+                      "supplier":  "Trendy",
+                      "productId":  "517",
+                      "reference":  "STN-SFC1760",
+                      "name":  "Doypack Fijador Cosmic Night Ref SFC1760",
+                      "retailPrice":  15000,
+                      "totalStock":  1154,
+                      "isAvailable":  true
+                  },
+                  {
+                      "unifiedId":  "TRENDY_523",
+                      "supplier":  "Trendy",
+                      "productId":  "523",
+                      "reference":  "STN-CHR1925",
+                      "name":  "Crema De Manos Rose Ref CHR1925",
+                      "retailPrice":  10000,
+                      "totalStock":  161,
+                      "isAvailable":  true
+                  },
+                  {
+                      "unifiedId":  "TRENDY_524",
+                      "supplier":  "Trendy",
+                      "productId":  "524",
+                      "reference":  "STN-SBT1880",
+                      "name":  "Sombra Blossom Ref SBT1880",
+                      "retailPrice":  15000,
+                      "totalStock":  869,
+                      "isAvailable":  true
+                  },
+                  {
+                      "unifiedId":  "TRENDY_525",
+                      "supplier":  "Trendy",
+                      "productId":  "525",
+                      "reference":  "STN-SST1879",
+                      "name":  "Sombra Sunset Ref SST1879",
+                      "retailPrice":  25000,
+                      "totalStock":  202,
+                      "isAvailable":  true
+                  },
+                  {
+                      "unifiedId":  "TRENDY_527",
+                      "supplier":  "Trendy",
+                      "productId":  "527",
+                      "reference":  "STN-SSB1867",
+                      "name":  "Sombra Safari Boom Ref SSB1867",
+                      "retailPrice":  15000,
+                      "totalStock":  324,
+                      "isAvailable":  true
+                  },
+                  {
+                      "unifiedId":  "TRENDY_529",
+                      "supplier":  "Trendy",
+                      "productId":  "529",
+                      "reference":  "STN-MCR1861",
+                      "name":  "Sombra Color Rosa Ref MCR1861",
+                      "retailPrice":  25000,
+                      "totalStock":  413,
+                      "isAvailable":  true
+                  },
+                  {
+                      "unifiedId":  "TRENDY_531",
+                      "supplier":  "Trendy",
+                      "productId":  "531",
+                      "reference":  "STN-PCT1798",
+                      "name":  "Pompon Cotton Ref Pct1798",
+                      "retailPrice":  10000,
+                      "totalStock":  403,
+                      "isAvailable":  true
+                  },
+                  {
+                      "unifiedId":  "TRENDY_532",
+                      "supplier":  "Trendy",
+                      "productId":  "532",
+                      "reference":  "STN-SPV1777",
+                      "name":  "Sombra Vintage Ref Spv1777",
+                      "retailPrice":  30000,
+                      "totalStock":  342,
+                      "isAvailable":  true
+                  },
+                  {
+                      "unifiedId":  "TRENDY_535",
+                      "supplier":  "Trendy",
+                      "productId":  "535",
+                      "reference":  "STN-MT1665",
+                      "name":  "Torre Multi Iluminador Cat Ref MT1665",
+                      "retailPrice":  20000,
+                      "totalStock":  435,
+                      "isAvailable":  true
+                  },
+                  {
+                      "unifiedId":  "TRENDY_539",
+                      "supplier":  "Trendy",
+                      "productId":  "539",
+                      "reference":  "STN-PFT1779",
+                      "name":  "Perfilador Facial Con Repuestos Ref Pft1779",
+                      "retailPrice":  6000,
+                      "totalStock":  561,
+                      "isAvailable":  true
+                  },
+                  {
+                      "unifiedId":  "TRENDY_540",
+                      "supplier":  "Trendy",
+                      "productId":  "540",
+                      "reference":  "STN-DPT1778",
+                      "name":  "Depilador Individual Ref Dpt1778",
+                      "retailPrice":  6000,
+                      "totalStock":  795,
+                      "isAvailable":  true
+                  },
+                  {
+                      "unifiedId":  "TRENDY_550",
+                      "supplier":  "Trendy",
+                      "productId":  "550",
+                      "reference":  "STN-SCT1775",
+                      "name":  "Sacapuntas Duo Cosmético Ref SCT1775",
+                      "retailPrice":  6000,
+                      "totalStock":  339,
+                      "isAvailable":  true
+                  },
+                  {
+                      "unifiedId":  "TRENDY_554",
+                      "supplier":  "Trendy",
+                      "productId":  "554",
+                      "reference":  "STN-BDT1749",
+                      "name":  "Brillo Gloss Dash Ref BDT1749",
+                      "retailPrice":  15000,
+                      "totalStock":  977,
+                      "isAvailable":  true
+                  },
+                  {
+                      "unifiedId":  "TRENDY_555",
+                      "supplier":  "Trendy",
+                      "productId":  "555",
+                      "reference":  "STN-BMT1748",
+                      "name":  "Brillo Gloss Maddie Ref BMT1748",
+                      "retailPrice":  15000,
+                      "totalStock":  377,
+                      "isAvailable":  true
+                  },
+                  {
+                      "unifiedId":  "TRENDY_557",
+                      "supplier":  "Trendy",
+                      "productId":  "557",
+                      "reference":  "STN-TEB1745",
+                      "name":  "Tinta Con Escarcha Be Mine Ref TEB1745",
+                      "retailPrice":  10000,
+                      "totalStock":  1030,
+                      "isAvailable":  true
+                  },
+                  {
+                      "unifiedId":  "TRENDY_558",
+                      "supplier":  "Trendy",
+                      "productId":  "558",
+                      "reference":  "STN-BHB1744",
+                      "name":  "Brillo Gloss Happy Berry Ref BHB1744",
+                      "retailPrice":  15000,
+                      "totalStock":  197,
+                      "isAvailable":  true
+                  },
+                  {
+                      "unifiedId":  "TRENDY_560",
+                      "supplier":  "Trendy",
+                      "productId":  "560",
+                      "reference":  "STN-KSC1737",
+                      "name":  "Kit De Glosses Sweet Cream Ref KSC1737",
+                      "retailPrice":  20000,
+                      "totalStock":  369,
+                      "isAvailable":  true
+                  },
+                  {
+                      "unifiedId":  "TRENDY_561",
+                      "supplier":  "Trendy",
+                      "productId":  "561",
+                      "reference":  "STN-BJL1726",
+                      "name":  "Brillo Just Lips Balm Ref BJL1726",
+                      "retailPrice":  10000,
+                      "totalStock":  231,
+                      "isAvailable":  true
+                  },
+                  {
+                      "unifiedId":  "TRENDY_562",
+                      "supplier":  "Trendy",
+                      "productId":  "562",
+                      "reference":  "STN-BGT1712",
+                      "name":  "Bolsa Empaque Morada Grande Ref BGT1712",
+                      "retailPrice":  3000,
+                      "totalStock":  164,
+                      "isAvailable":  true
+                  },
+                  {
+                      "unifiedId":  "TRENDY_563",
+                      "supplier":  "Trendy",
+                      "productId":  "563",
+                      "reference":  "STN-BLT1686",
+                      "name":  "Rubor Doble Loop Blush Ref BLT1686",
+                      "retailPrice":  15000,
+                      "totalStock":  469,
+                      "isAvailable":  true
+                  },
+                  {
+                      "unifiedId":  "TRENDY_564",
+                      "supplier":  "Trendy",
+                      "productId":  "564",
+                      "reference":  "STN-BKL1685",
+                      "name":  "Brillo Gloss Kiss Lips Ref BKL1685",
+                      "retailPrice":  8000,
+                      "totalStock":  655,
+                      "isAvailable":  true
+                  },
+                  {
+                      "unifiedId":  "TRENDY_566",
+                      "supplier":  "Trendy",
+                      "productId":  "566",
+                      "reference":  "STN-WGT1652",
+                      "name":  "Iluminador Wonderland Glow Ref WGT1652",
+                      "retailPrice":  20000,
+                      "totalStock":  104,
+                      "isAvailable":  true
+                  },
+                  {
+                      "unifiedId":  "TRENDY_571",
+                      "supplier":  "Trendy",
+                      "productId":  "571",
+                      "reference":  "STN-BMS1596",
+                      "name":  "Kit Labios Soda Pop Ref Bms1596",
+                      "retailPrice":  18000,
+                      "totalStock":  329,
+                      "isAvailable":  true
+                  },
+                  {
+                      "unifiedId":  "TRENDY_573",
+                      "supplier":  "Trendy",
+                      "productId":  "573",
+                      "reference":  "STN-BMT1497",
+                      "name":  "Barra Multipropósito Mejillas Y Labios Ref BMT1497",
+                      "retailPrice":  15000,
+                      "totalStock":  665,
+                      "isAvailable":  true
+                  },
+                  {
+                      "unifiedId":  "TRENDY_575",
+                      "supplier":  "Trendy",
+                      "productId":  "575",
+                      "reference":  "TONO 01-ABT1742",
+                      "name":  "Rubor En Crema Aura Ref ABT1742",
+                      "retailPrice":  5000,
+                      "totalStock":  437,
+                      "isAvailable":  true
+                  },
+                  {
+                      "unifiedId":  "TRENDY_576",
+                      "supplier":  "Trendy",
+                      "productId":  "576",
+                      "reference":  "TONO 02-PMT1741",
+                      "name":  "Polvos Sueltos Master Touch Ref PMT1741",
+                      "retailPrice":  25000,
+                      "totalStock":  32,
+                      "isAvailable":  true
+                  },
+                  {
+                      "unifiedId":  "TRENDY_577",
+                      "supplier":  "Trendy",
+                      "productId":  "577",
+                      "reference":  "TONO 04-BMT1675",
+                      "name":  "Base Mousse Ref BMT1675",
+                      "retailPrice":  25000,
+                      "totalStock":  1933,
+                      "isAvailable":  true
+                  },
+                  {
+                      "unifiedId":  "TRENDY_580",
+                      "supplier":  "Trendy",
+                      "productId":  "580",
+                      "reference":  "STN-SRP1860",
+                      "name":  "Sombras Retro Phone Ref SRP1860",
+                      "retailPrice":  15000,
+                      "totalStock":  61,
+                      "isAvailable":  true
+                  },
+                  {
+                      "unifiedId":  "TRENDY_583",
+                      "supplier":  "Trendy",
+                      "productId":  "583",
+                      "reference":  "BPT1963#1",
+                      "name":  "Brillo De Labios Lip Oil Pretty Things Ref Bpt1963",
+                      "retailPrice":  15000,
+                      "totalStock":  3562,
+                      "isAvailable":  true
+                  },
+                  {
+                      "unifiedId":  "TRENDY_584",
+                      "supplier":  "Trendy",
+                      "productId":  "584",
+                      "reference":  "BAT1878#2",
+                      "name":  "Brillo De Labios Aura Ref BAT1878",
+                      "retailPrice":  20000,
+                      "totalStock":  2064,
+                      "isAvailable":  true
+                  },
+                  {
+                      "unifiedId":  "TRENDY_586",
+                      "supplier":  "Trendy",
+                      "productId":  "586",
+                      "reference":  "STN-BMP1920",
+                      "name":  "Kit X 3 Gloss Mood Pills Ref Bmp1920",
+                      "retailPrice":  15000,
+                      "totalStock":  2472,
+                      "isAvailable":  true
+                  },
+                  {
+                      "unifiedId":  "TRENDY_587",
+                      "supplier":  "Trendy",
+                      "productId":  "587",
+                      "reference":  "STN-PAT1894",
+                      "name":  "Primer Aloha Ref PAT1894",
+                      "retailPrice":  15000,
+                      "totalStock":  488,
+                      "isAvailable":  true
+                  },
+                  {
+                      "unifiedId":  "TRENDY_595",
+                      "supplier":  "Trendy",
+                      "productId":  "595",
+                      "reference":  "STN-TGT1896",
+                      "name":  "Tinta Gloss Corazón Trendy Ref Tgt1896",
+                      "retailPrice":  5000,
+                      "totalStock":  420,
+                      "isAvailable":  true
+                  },
+                  {
+                      "unifiedId":  "TRENDY_596",
+                      "supplier":  "Trendy",
+                      "productId":  "596",
+                      "reference":  "STN-RTG1725",
+                      "name":  "Rubor Tutu Glow Trendy Ref Rtg1725",
+                      "retailPrice":  15000,
+                      "totalStock":  356,
+                      "isAvailable":  true
+                  },
+                  {
+                      "unifiedId":  "TRENDY_598",
+                      "supplier":  "Trendy",
+                      "productId":  "598",
+                      "reference":  "STN-LRV2051",
+                      "name":  "Labial Red Velvet REF LRV2051",
+                      "retailPrice":  10000,
+                      "totalStock":  231,
+                      "isAvailable":  true
+                  },
+                  {
+                      "unifiedId":  "TRENDY_601",
+                      "supplier":  "Trendy",
+                      "productId":  "601",
+                      "reference":  "STN-B177",
+                      "name":  "Brillo Retráctil Beauty Glazed Ref B177",
+                      "retailPrice":  15000,
+                      "totalStock":  1260,
+                      "isAvailable":  true
+                  },
+                  {
+                      "unifiedId":  "TRENDY_604",
+                      "supplier":  "Trendy",
+                      "productId":  "604",
+                      "reference":  "STN-ICT1768",
+                      "name":  "Iluminador Chocolate Ref Ict1768",
+                      "retailPrice":  15000,
+                      "totalStock":  542,
+                      "isAvailable":  true
+                  },
+                  {
+                      "unifiedId":  "TRENDY_605",
+                      "supplier":  "Trendy",
+                      "productId":  "605",
+                      "reference":  "STN-RBT1769",
+                      "name":  "Rubor Bakery Ref Rbt1769",
+                      "retailPrice":  10000,
+                      "totalStock":  686,
+                      "isAvailable":  true
+                  },
+                  {
+                      "unifiedId":  "TRENDY_606",
+                      "supplier":  "Trendy",
+                      "productId":  "606",
+                      "reference":  "SLU1936 TONO 2",
+                      "name":  "Sombra En Barra + Líquida Level Up Ref SLU1936",
+                      "retailPrice":  10000,
+                      "totalStock":  1847,
+                      "isAvailable":  true
+                  },
+                  {
+                      "unifiedId":  "TRENDY_607",
+                      "supplier":  "Trendy",
+                      "productId":  "607",
+                      "reference":  "STN-SSV1505",
+                      "name":  "Sachet Suero Vitamina C + Ácido Azelaico Trendy 30ml REF SSV1505",
+                      "retailPrice":  20000,
+                      "totalStock":  4,
+                      "isAvailable":  true
+                  },
+                  {
+                      "unifiedId":  "TRENDY_614",
+                      "supplier":  "Trendy",
+                      "productId":  "614",
+                      "reference":  "SERUM DE PESTAÑAS",
+                      "name":  "Serum Crecimiento De Pestañas Trendy 4,5g",
+                      "retailPrice":  15000,
+                      "totalStock":  3923,
+                      "isAvailable":  true
+                  },
+                  {
+                      "unifiedId":  "TRENDY_622",
+                      "supplier":  "Trendy",
+                      "productId":  "622",
+                      "reference":  "STN-EML1727",
+                      "name":  "Dúo Exfoliante + Mascarilla De Labios Pink Lemon Ref EML1727",
+                      "retailPrice":  10000,
+                      "totalStock":  251,
+                      "isAvailable":  true
+                  },
+                  {
+                      "unifiedId":  "TRENDY_631",
+                      "supplier":  "Trendy",
+                      "productId":  "631",
+                      "reference":  "03 STYLE",
+                      "name":  "Kit Splash Y Crema The Perfect Ref PMS1932",
+                      "retailPrice":  15000,
+                      "totalStock":  102,
+                      "isAvailable":  true
+                  },
+                  {
+                      "unifiedId":  "TRENDY_632",
+                      "supplier":  "Trendy",
+                      "productId":  "632",
+                      "reference":  "ROSADO FYL1965",
+                      "name":  "Splash Fluffy Ref Fyr1965",
+                      "retailPrice":  20000,
+                      "totalStock":  393,
+                      "isAvailable":  true
+                  },
+                  {
+                      "unifiedId":  "TRENDY_633",
+                      "supplier":  "Trendy",
+                      "productId":  "633",
+                      "reference":  "MORADO FYR1964",
+                      "name":  "Splash Bunny Ref Fyr1964",
+                      "retailPrice":  20000,
+                      "totalStock":  339,
+                      "isAvailable":  true
+                  },
+                  {
+                      "unifiedId":  "TRENDY_634",
+                      "supplier":  "Trendy",
+                      "productId":  "634",
+                      "reference":  "PGT2004",
+                      "name":  "Perfume Pink Garden Ref Pgt2004",
+                      "retailPrice":  20000,
+                      "totalStock":  275,
+                      "isAvailable":  true
+                  },
+                  {
+                      "unifiedId":  "TRENDY_635",
+                      "supplier":  "Trendy",
+                      "productId":  "635",
+                      "reference":  "01 TEX",
+                      "name":  "Kit Splash Y Crema The Perfect Ref PMT1930",
+                      "retailPrice":  15000,
+                      "totalStock":  348,
+                      "isAvailable":  true
+                  },
+                  {
+                      "unifiedId":  "TRENDY_636",
+                      "supplier":  "Trendy",
+                      "productId":  "636",
+                      "reference":  "STN-KNB1929",
+                      "name":  "Kit Niñas Splash Y Crema Ballet Ref KNB1929",
+                      "retailPrice":  25000,
+                      "totalStock":  313,
+                      "isAvailable":  true
+                  },
+                  {
+                      "unifiedId":  "TRENDY_637",
+                      "supplier":  "Trendy",
+                      "productId":  "637",
+                      "reference":  "PMR1967",
+                      "name":  "Perfume Moon Rose Ref PMR1967",
+                      "retailPrice":  20000,
+                      "totalStock":  154,
+                      "isAvailable":  true
+                  },
+                  {
+                      "unifiedId":  "TRENDY_638",
+                      "supplier":  "Trendy",
+                      "productId":  "638",
+                      "reference":  "02 SUMMER",
+                      "name":  "Kit Splash Y Crema The Perfect Ref PMP1931",
+                      "retailPrice":  15000,
+                      "totalStock":  83,
+                      "isAvailable":  true
+                  },
+                  {
+                      "unifiedId":  "TRENDY_639",
+                      "supplier":  "Trendy",
+                      "productId":  "639",
+                      "reference":  "DY2081",
+                      "name":  "Kit X 2 Delineadores Stitch Dy2081",
+                      "retailPrice":  25000,
+                      "totalStock":  122,
+                      "isAvailable":  true
+                  },
+                  {
+                      "unifiedId":  "TRENDY_641",
+                      "supplier":  "Trendy",
+                      "productId":  "641",
+                      "reference":  "Dy2077",
+                      "name":  "Toallas Desmaquillantes Tristeza Dy2077",
+                      "retailPrice":  15000,
+                      "totalStock":  6,
+                      "isAvailable":  true
+                  },
+                  {
+                      "unifiedId":  "TRENDY_644",
+                      "supplier":  "Trendy",
+                      "productId":  "644",
+                      "reference":  "Dy2075",
+                      "name":  "Brillo Holográfico Stitch Ref Dy2075",
+                      "retailPrice":  8000,
+                      "totalStock":  928,
+                      "isAvailable":  true
+                  },
+                  {
+                      "unifiedId":  "TRENDY_652",
+                      "supplier":  "Trendy",
+                      "productId":  "652",
+                      "reference":  "STN-BDP1050",
+                      "name":  "Bolsa Kraft Trendy Ref Bdp1050",
+                      "retailPrice":  500,
+                      "totalStock":  708,
+                      "isAvailable":  true
+                  },
+                  {
+                      "unifiedId":  "TRENDY_654",
+                      "supplier":  "Trendy",
+                      "productId":  "654",
+                      "reference":  "STN-SCR1892",
+                      "name":  "Contorno En Crema Star Ref Scr1892",
+                      "retailPrice":  15000,
+                      "totalStock":  1256,
+                      "isAvailable":  true
+                  },
+                  {
+                      "unifiedId":  "TRENDY_655",
+                      "supplier":  "Trendy",
+                      "productId":  "655",
+                      "reference":  "PCF2054 #2",
+                      "name":  "Polvos Compactos Golden Ref PCF2054",
+                      "retailPrice":  25000,
+                      "totalStock":  1418,
+                      "isAvailable":  true
+                  },
+                  {
+                      "unifiedId":  "TRENDY_656",
+                      "supplier":  "Trendy",
+                      "productId":  "656",
+                      "reference":  "BQF2053 #7",
+                      "name":  "Base Queen Face Tint Ref Bqf2053",
+                      "retailPrice":  25000,
+                      "totalStock":  1557,
+                      "isAvailable":  true
+                  },
+                  {
+                      "unifiedId":  "TRENDY_659",
+                      "supplier":  "Trendy",
+                      "productId":  "659",
+                      "reference":  "STN-CQT1981",
+                      "name":  "Contorno En Crema Queen Ref CQT1981",
+                      "retailPrice":  10000,
+                      "totalStock":  1109,
+                      "isAvailable":  true
+                  },
+                  {
+                      "unifiedId":  "TRENDY_669",
+                      "supplier":  "Trendy",
+                      "productId":  "669",
+                      "reference":  "RCS2205 #04",
+                      "name":  "Rubor En Crema Star Ref RCS2205",
+                      "retailPrice":  15000,
+                      "totalStock":  2465,
+                      "isAvailable":  true
+                  },
+                  {
+                      "unifiedId":  "TRENDY_671",
+                      "supplier":  "Trendy",
+                      "productId":  "671",
+                      "reference":  "CUPCAKE CC01",
+                      "name":  "Contorno Cupcake Ref CC01",
+                      "retailPrice":  15000,
+                      "totalStock":  442,
+                      "isAvailable":  true
+                  },
+                  {
+                      "unifiedId":  "TRENDY_674",
+                      "supplier":  "Trendy",
+                      "productId":  "674",
+                      "reference":  "KIT DUO GE18",
+                      "name":  "Kit Dúo Pestañina + Fortalecedora Gold Eyes Ref GE18",
+                      "retailPrice":  25000,
+                      "totalStock":  3,
+                      "isAvailable":  true
+                  },
+                  {
+                      "unifiedId":  "TRENDY_695",
+                      "supplier":  "Trendy",
+                      "productId":  "695",
+                      "reference":  "STN-LMT2256",
+                      "name":  "Libreta Emprendedora Ref Lmt2256",
+                      "retailPrice":  15000,
+                      "totalStock":  34,
+                      "isAvailable":  true
+                  },
+                  {
+                      "unifiedId":  "TRENDY_696",
+                      "supplier":  "Trendy",
+                      "productId":  "696",
+                      "reference":  "STN-AMA2255",
+                      "name":  "Agenda 2026 Magia en el Alma Ref AMA2255",
+                      "retailPrice":  80000,
+                      "totalStock":  88,
+                      "isAvailable":  true
+                  },
+                  {
+                      "unifiedId":  "TRENDY_698",
+                      "supplier":  "Trendy",
+                      "productId":  "698",
+                      "reference":  "STN-KMW2155",
+                      "name":  "Kit Niñas Osito Ref KMW2155",
+                      "retailPrice":  20000,
+                      "totalStock":  732,
+                      "isAvailable":  true
+                  },
+                  {
+                      "unifiedId":  "TRENDY_702",
+                      "supplier":  "Trendy",
+                      "productId":  "702",
+                      "reference":  "STN-CTT2270",
+                      "name":  "Cepillo Pulidor Clean Look Ctt2270",
+                      "retailPrice":  12000,
+                      "totalStock":  10,
+                      "isAvailable":  true
+                  },
+                  {
+                      "unifiedId":  "TRENDY_706",
+                      "supplier":  "Trendy",
+                      "productId":  "706",
+                      "reference":  "STN-PHM2166",
+                      "name":  "Polvo De Hadas Golden Ref PHM2166",
+                      "retailPrice":  12000,
+                      "totalStock":  386,
+                      "isAvailable":  true
+                  },
+                  {
+                      "unifiedId":  "TRENDY_708",
+                      "supplier":  "Trendy",
+                      "productId":  "708",
+                      "reference":  "STN-DY2165",
+                      "name":  "Tarjetero Monedero Stitch Ref Dy2165",
+                      "retailPrice":  15000,
+                      "totalStock":  10,
+                      "isAvailable":  true
+                  },
+                  {
+                      "unifiedId":  "TRENDY_711",
+                      "supplier":  "Trendy",
+                      "productId":  "711",
+                      "reference":  "STN-BTT2162",
+                      "name":  "Borla Triangular Morada Ref Btt2162",
+                      "retailPrice":  5000,
+                      "totalStock":  18,
+                      "isAvailable":  true
+                  },
+                  {
+                      "unifiedId":  "TRENDY_714",
+                      "supplier":  "Trendy",
+                      "productId":  "714",
+                      "reference":  "ESTANDAR PM04",
+                      "name":  "Primer Rosas Trendy Grande Ref PM04",
+                      "retailPrice":  15000,
+                      "totalStock":  309,
+                      "isAvailable":  true
+                  },
+                  {
+                      "unifiedId":  "TRENDY_716",
+                      "supplier":  "Trendy",
+                      "productId":  "716",
+                      "reference":  "STN-KBT2157",
+                      "name":  "Kit Niñas Tutti Frutti Ref KBT2157",
+                      "retailPrice":  20000,
+                      "totalStock":  370,
+                      "isAvailable":  true
+                  },
+                  {
+                      "unifiedId":  "TRENDY_718",
+                      "supplier":  "Trendy",
+                      "productId":  "718",
+                      "reference":  "STN-KMA2156",
+                      "name":  "Kit Niñas Magia Ref KMA2156",
+                      "retailPrice":  20000,
+                      "totalStock":  56,
+                      "isAvailable":  true
+                  },
+                  {
+                      "unifiedId":  "TRENDY_719",
+                      "supplier":  "Trendy",
+                      "productId":  "719",
+                      "reference":  "STN-PPT2174",
+                      "name":  "Primer Pop Ref PPT2174",
+                      "retailPrice":  15000,
+                      "totalStock":  220,
+                      "isAvailable":  true
+                  },
+                  {
+                      "unifiedId":  "TRENDY_729",
+                      "supplier":  "Trendy",
+                      "productId":  "729",
+                      "reference":  "STN-CBG2167",
+                      "name":  "Gel Fijador De Cejas Glow Ref CBG2167",
+                      "retailPrice":  15000,
+                      "totalStock":  688,
+                      "isAvailable":  true
+                  },
+                  {
+                      "unifiedId":  "TRENDY_732",
+                      "supplier":  "Trendy",
+                      "productId":  "732",
+                      "reference":  "BANANA DY2188",
+                      "name":  "Polvos Sueltos Y Compactos Jack Ref DY2188",
+                      "retailPrice":  30000,
+                      "totalStock":  1332,
+                      "isAvailable":  true
+                  },
+                  {
+                      "unifiedId":  "TRENDY_737",
+                      "supplier":  "Trendy",
+                      "productId":  "737",
+                      "reference":  "OTH-AB202MAX",
+                      "name":  "Tripode Contenido Profesional Oth-ab202m",
+                      "retailPrice":  130000,
+                      "totalStock":  11,
+                      "isAvailable":  true
+                  },
+                  {
+                      "unifiedId":  "TRENDY_740",
+                      "supplier":  "Trendy",
+                      "productId":  "740",
+                      "reference":  "STN-KLT2088",
+                      "name":  "Kit Labios Love Travel Ref KLT2088",
+                      "retailPrice":  8000,
+                      "totalStock":  167,
+                      "isAvailable":  true
+                  },
+                  {
+                      "unifiedId":  "TRENDY_745",
+                      "supplier":  "Trendy",
+                      "productId":  "745",
+                      "reference":  "STN-BBS2096",
+                      "name":  "Kit X 3 Brillos Bloom To Shine Ref Bbs2096",
+                      "retailPrice":  18000,
+                      "totalStock":  318,
+                      "isAvailable":  true
+                  },
+                  {
+                      "unifiedId":  "TRENDY_746",
+                      "supplier":  "Trendy",
+                      "productId":  "746",
+                      "reference":  "STN-KCL2095",
+                      "name":  "Kit Crema Y Brillo Bright And Fun Ref Kcl2095",
+                      "retailPrice":  12000,
+                      "totalStock":  1144,
+                      "isAvailable":  true
+                  },
+                  {
+                      "unifiedId":  "TRENDY_754",
+                      "supplier":  "Trendy",
+                      "productId":  "754",
+                      "reference":  "CST1977",
+                      "name":  "Cepillo Snake Ref Cst1977",
+                      "retailPrice":  15000,
+                      "totalStock":  214,
+                      "isAvailable":  true
+                  },
+                  {
+                      "unifiedId":  "TRENDY_755",
+                      "supplier":  "Trendy",
+                      "productId":  "755",
+                      "reference":  "STN-CET1985",
+                      "name":  "Cepillo Espiral Ref Cet1985",
+                      "retailPrice":  15000,
+                      "totalStock":  211,
+                      "isAvailable":  true
+                  },
+                  {
+                      "unifiedId":  "TRENDY_756",
+                      "supplier":  "Trendy",
+                      "productId":  "756",
+                      "reference":  "STN-DTR1753",
+                      "name":  "Doypack Tonico De Rosas 235ml Ref DTR1753",
+                      "retailPrice":  15000,
+                      "totalStock":  2035,
+                      "isAvailable":  true
+                  },
+                  {
+                      "unifiedId":  "TRENDY_759",
+                      "supplier":  "Trendy",
+                      "productId":  "759",
+                      "reference":  "CPT1891",
+                      "name":  "Cepillo Pulidor Trendy Ref Cpt1891",
+                      "retailPrice":  8000,
+                      "totalStock":  779,
+                      "isAvailable":  true
+                  },
+                  {
+                      "unifiedId":  "TRENDY_784",
+                      "supplier":  "Trendy",
+                      "productId":  "784",
+                      "reference":  "DY2099ENNUI",
+                      "name":  "Brillos De Los Recuerdos Intensamente Ref Dy2099",
+                      "retailPrice":  5000,
+                      "totalStock":  7772,
+                      "isAvailable":  true
+                  },
+                  {
+                      "unifiedId":  "TRENDY_788",
+                      "supplier":  "Trendy",
+                      "productId":  "788",
+                      "reference":  "STN-DY2080",
+                      "name":  "Kit Labios Stitch Ref Dy2080",
+                      "retailPrice":  15000,
+                      "totalStock":  812,
+                      "isAvailable":  true
+                  },
+                  {
+                      "unifiedId":  "TRENDY_793",
+                      "supplier":  "Trendy",
+                      "productId":  "793",
+                      "reference":  "STN-BRT2287",
+                      "name":  "Kit Brocha X10 Rosa Terciopelo Ref BRT2287",
+                      "retailPrice":  80000,
+                      "totalStock":  26,
+                      "isAvailable":  true
+                  },
+                  {
+                      "unifiedId":  "TRENDY_796",
+                      "supplier":  "Trendy",
+                      "productId":  "796",
+                      "reference":  "STN-SFT2302",
+                      "name":  "Sticker Festivalero Ref Sft2302",
+                      "retailPrice":  4000,
+                      "totalStock":  613,
+                      "isAvailable":  true
+                  },
+                  {
+                      "unifiedId":  "TRENDY_798",
+                      "supplier":  "Trendy",
+                      "productId":  "798",
+                      "reference":  "STN-HMM2328-HMG2328",
+                      "name":  "Hair Clip Mariposa Mediana Ref Hmm2328",
+                      "retailPrice":  8000,
+                      "totalStock":  129,
+                      "isAvailable":  true
+                  },
+                  {
+                      "unifiedId":  "TRENDY_799",
+                      "supplier":  "Trendy",
+                      "productId":  "799",
+                      "reference":  "STN-HMG2327",
+                      "name":  "Hair Clip Mariposa Grande Ref Hmg2327",
+                      "retailPrice":  10000,
+                      "totalStock":  26,
+                      "isAvailable":  true
+                  },
+                  {
+                      "unifiedId":  "TRENDY_800",
+                      "supplier":  "Trendy",
+                      "productId":  "800",
+                      "reference":  "STN-HCT2329",
+                      "name":  "Hair Clip X2 Ref Hct2329",
+                      "retailPrice":  15000,
+                      "totalStock":  302,
+                      "isAvailable":  true
+                  },
+                  {
+                      "unifiedId":  "TRENDY_801",
+                      "supplier":  "Trendy",
+                      "productId":  "801",
+                      "reference":  "STN-KFP2288",
+                      "name":  "Kit Pelo Fabulosa Ref Kfp2288",
+                      "retailPrice":  10000,
+                      "totalStock":  77,
+                      "isAvailable":  true
+                  },
+                  {
+                      "unifiedId":  "TRENDY_802",
+                      "supplier":  "Trendy",
+                      "productId":  "802",
+                      "reference":  "STN-DY2180",
+                      "name":  "Espejo Villanas Ref Dy2180",
+                      "retailPrice":  15000,
+                      "totalStock":  113,
+                      "isAvailable":  true
+                  },
+                  {
+                      "unifiedId":  "TRENDY_811",
+                      "supplier":  "Trendy",
+                      "productId":  "811",
+                      "reference":  "STN-KFL2243",
+                      "name":  "Kit Labios Frutti Gloss Ref KFL2243",
+                      "retailPrice":  8000,
+                      "totalStock":  305,
+                      "isAvailable":  true
+                  },
+                  {
+                      "unifiedId":  "TRENDY_812",
+                      "supplier":  "Trendy",
+                      "productId":  "812",
+                      "reference":  "STN-KTT2249",
+                      "name":  "Kit Rubores Toy Ref Ktt2249",
+                      "retailPrice":  12000,
+                      "totalStock":  367,
+                      "isAvailable":  true
+                  },
+                  {
+                      "unifiedId":  "TRENDY_813",
+                      "supplier":  "Trendy",
+                      "productId":  "813",
+                      "reference":  "STN-KCT2246",
+                      "name":  "Kit Carrusel Primer Brillo Ref Kct2246",
+                      "retailPrice":  15000,
+                      "totalStock":  268,
+                      "isAvailable":  true
+                  },
+                  {
+                      "unifiedId":  "TRENDY_815",
+                      "supplier":  "Trendy",
+                      "productId":  "815",
+                      "reference":  "BAT2272 #2.5",
+                      "name":  "Base Aura Ref BAT2272",
+                      "retailPrice":  30000,
+                      "totalStock":  1729,
+                      "isAvailable":  true
+                  },
+                  {
+                      "unifiedId":  "TRENDY_816",
+                      "supplier":  "Trendy",
+                      "productId":  "816",
+                      "reference":  "STN-BMT2271",
+                      "name":  "Borrador De Maquillaje Ref BMT2271",
+                      "retailPrice":  15000,
+                      "totalStock":  6,
+                      "isAvailable":  true
+                  },
+                  {
+                      "unifiedId":  "TRENDY_817",
+                      "supplier":  "Trendy",
+                      "productId":  "817",
+                      "reference":  "KPG2087 #3",
+                      "name":  "Lip Combo Pink And Gold Ref Ref KPG2087",
+                      "retailPrice":  12000,
+                      "totalStock":  483,
+                      "isAvailable":  true
+                  },
+                  {
+                      "unifiedId":  "TRENDY_821",
+                      "supplier":  "Trendy",
+                      "productId":  "821",
+                      "reference":  "STN-RTT2204",
+                      "name":  "Rubor X 3 Primavera Ref Rtt2204",
+                      "retailPrice":  10000,
+                      "totalStock":  182,
+                      "isAvailable":  true
+                  },
+                  {
+                      "unifiedId":  "TRENDY_826",
+                      "supplier":  "Trendy",
+                      "productId":  "826",
+                      "reference":  "STN-SLT2203",
+                      "name":  "Sombra Liquida Glow Beat Ref Slt2203",
+                      "retailPrice":  8000,
+                      "totalStock":  556,
+                      "isAvailable":  true
+                  },
+                  {
+                      "unifiedId":  "TRENDY_828",
+                      "supplier":  "Trendy",
+                      "productId":  "828",
+                      "reference":  "CTT2229 #7",
+                      "name":  "Corrector De Ojeras Aura Ref CTT2229",
+                      "retailPrice":  20000,
+                      "totalStock":  292,
+                      "isAvailable":  true
+                  },
+                  {
+                      "unifiedId":  "TRENDY_829",
+                      "supplier":  "Trendy",
+                      "productId":  "829",
+                      "reference":  "STN-DY2240",
+                      "name":  "Kit Corporal Stitch Dy2240",
+                      "retailPrice":  28000,
+                      "totalStock":  9,
+                      "isAvailable":  true
+                  },
+                  {
+                      "unifiedId":  "TRENDY_831",
+                      "supplier":  "Trendy",
+                      "productId":  "831",
+                      "reference":  "STN-MT2380",
+                      "name":  "Gel Fijador Cejas Barbie Vaquera Ref MT2380",
+                      "retailPrice":  10000,
+                      "totalStock":  26,
+                      "isAvailable":  true
+                  },
+                  {
+                      "unifiedId":  "TRENDY_832",
+                      "supplier":  "Trendy",
+                      "productId":  "832",
+                      "reference":  "STN-MT2379",
+                      "name":  "Pestañina Barbie Vaquera Ref MT2379",
+                      "retailPrice":  15000,
+                      "totalStock":  5,
+                      "isAvailable":  true
+                  },
+                  {
+                      "unifiedId":  "TRENDY_833",
+                      "supplier":  "Trendy",
+                      "productId":  "833",
+                      "reference":  "STN-DY2378",
+                      "name":  "Kit Corporal Stitch Dy2378",
+                      "retailPrice":  28000,
+                      "totalStock":  14,
+                      "isAvailable":  true
+                  },
+                  {
+                      "unifiedId":  "TRENDY_834",
+                      "supplier":  "Trendy",
+                      "productId":  "834",
+                      "reference":  "STN-DY2377",
+                      "name":  "Kit Corporal Stitch Dy2377",
+                      "retailPrice":  28000,
+                      "totalStock":  5,
+                      "isAvailable":  true
+                  },
+                  {
+                      "unifiedId":  "TRENDY_835",
+                      "supplier":  "Trendy",
+                      "productId":  "835",
+                      "reference":  "STN-DY2376",
+                      "name":  "Kit Corporal Stitch Dy2376",
+                      "retailPrice":  28000,
+                      "totalStock":  7,
+                      "isAvailable":  true
+                  },
+                  {
+                      "unifiedId":  "TRENDY_836",
+                      "supplier":  "Trendy",
+                      "productId":  "836",
+                      "reference":  "STN-ILK2286",
+                      "name":  "Iluminador Líquido Panda Ref ILK2286",
+                      "retailPrice":  10000,
+                      "totalStock":  1194,
+                      "isAvailable":  true
+                  },
+                  {
+                      "unifiedId":  "TRENDY_843",
+                      "supplier":  "Trendy",
+                      "productId":  "843",
+                      "reference":  "STN-EPT2411",
+                      "name":  "Esponja Panda Ref Ept2411",
+                      "retailPrice":  10000,
+                      "totalStock":  288,
+                      "isAvailable":  true
+                  },
+                  {
+                      "unifiedId":  "TRENDY_845",
+                      "supplier":  "Trendy",
+                      "productId":  "845",
+                      "reference":  "STN-DY2300",
+                      "name":  "Collar Plateado Stitch DY2300",
+                      "retailPrice":  4000,
+                      "totalStock":  437,
+                      "isAvailable":  true
+                  },
+                  {
+                      "unifiedId":  "TRENDY_850",
+                      "supplier":  "Trendy",
+                      "productId":  "850",
+                      "reference":  "STN-DY2339",
+                      "name":  "Pin Rectangular Buzz Ref DY2339",
+                      "retailPrice":  5000,
+                      "totalStock":  1947,
+                      "isAvailable":  true
+                  },
+                  {
+                      "unifiedId":  "TRENDY_851",
+                      "supplier":  "Trendy",
+                      "productId":  "851",
+                      "reference":  "STN-DY2338",
+                      "name":  "Pin Vaqueros Toy Story DY2338",
+                      "retailPrice":  5000,
+                      "totalStock":  640,
+                      "isAvailable":  true
+                  },
+                  {
+                      "unifiedId":  "TRENDY_854",
+                      "supplier":  "Trendy",
+                      "productId":  "854",
+                      "reference":  "STN-DY2335",
+                      "name":  "Pin Marcianito DY2335",
+                      "retailPrice":  5000,
+                      "totalStock":  912,
+                      "isAvailable":  true
+                  },
+                  {
+                      "unifiedId":  "TRENDY_856",
+                      "supplier":  "Trendy",
+                      "productId":  "856",
+                      "reference":  "STN-DY2344",
+                      "name":  "Pin Marcianito Pizza DY2344",
+                      "retailPrice":  5000,
+                      "totalStock":  711,
+                      "isAvailable":  true
+                  },
+                  {
+                      "unifiedId":  "TRENDY_857",
+                      "supplier":  "Trendy",
+                      "productId":  "857",
+                      "reference":  "STN-DY2371",
+                      "name":  "Pin Dormidos Monsters Inc DY2371",
+                      "retailPrice":  5000,
+                      "totalStock":  7,
+                      "isAvailable":  true
+                  },
+                  {
+                      "unifiedId":  "TRENDY_858",
+                      "supplier":  "Trendy",
+                      "productId":  "858",
+                      "reference":  "STN-DY2370",
+                      "name":  "Pin Hangry Monsters Inc  DY2370",
+                      "retailPrice":  5000,
+                      "totalStock":  881,
+                      "isAvailable":  true
+                  },
+                  {
+                      "unifiedId":  "TRENDY_859",
+                      "supplier":  "Trendy",
+                      "productId":  "859",
+                      "reference":  "STN-DY2367",
+                      "name":  "Pin Sullivan DY2367",
+                      "retailPrice":  5000,
+                      "totalStock":  294,
+                      "isAvailable":  true
+                  },
+                  {
+                      "unifiedId":  "TRENDY_861",
+                      "supplier":  "Trendy",
+                      "productId":  "861",
+                      "reference":  "BLS2258 #2",
+                      "name":  "Brillo Lip Oil Sandía Ref BLS2258",
+                      "retailPrice":  3000,
+                      "totalStock":  1044,
+                      "isAvailable":  true
+                  },
+                  {
+                      "unifiedId":  "TRENDY_862",
+                      "supplier":  "Trendy",
+                      "productId":  "862",
+                      "reference":  "STN-GCD2283",
+                      "name":  "Betún De Cejas Doble Dreams Ref GCD2283",
+                      "retailPrice":  10000,
+                      "totalStock":  1009,
+                      "isAvailable":  true
+                  },
+                  {
+                      "unifiedId":  "TRENDY_863",
+                      "supplier":  "Trendy",
+                      "productId":  "863",
+                      "reference":  "CENICIENTA DY2290",
+                      "name":  "Kit Collar Niñas Princesas Ref DY2290",
+                      "retailPrice":  5000,
+                      "totalStock":  598,
+                      "isAvailable":  true
+                  },
+                  {
+                      "unifiedId":  "TRENDY_864",
+                      "supplier":  "Trendy",
+                      "productId":  "864",
+                      "reference":  "STN-DY2298",
+                      "name":  "Kit Maleta Corazón Stitch DY2298",
+                      "retailPrice":  15000,
+                      "totalStock":  139,
+                      "isAvailable":  true
+                  },
+                  {
+                      "unifiedId":  "TRENDY_865",
+                      "supplier":  "Trendy",
+                      "productId":  "865",
+                      "reference":  "STN-DY2297",
+                      "name":  "Kit Maleta Rapunzel Ref DY2297",
+                      "retailPrice":  15000,
+                      "totalStock":  185,
+                      "isAvailable":  true
+                  },
+                  {
+                      "unifiedId":  "TRENDY_866",
+                      "supplier":  "Trendy",
+                      "productId":  "866",
+                      "reference":  "ROSADO DY2294",
+                      "name":  "Kit Moño Y Hebilla Princesas Ref DY2294",
+                      "retailPrice":  4000,
+                      "totalStock":  147,
+                      "isAvailable":  true
+                  },
+                  {
+                      "unifiedId":  "TRENDY_867",
+                      "supplier":  "Trendy",
+                      "productId":  "867",
+                      "reference":  "STN-DY2293",
+                      "name":  "Kit Pulseras Intercambiable Princesas DY2293",
+                      "retailPrice":  4000,
+                      "totalStock":  1408,
+                      "isAvailable":  true
+                  },
+                  {
+                      "unifiedId":  "TRENDY_868",
+                      "supplier":  "Trendy",
+                      "productId":  "868",
+                      "reference":  "STN-DY2292",
+                      "name":  "Pulsera Plateada Princesas Ref DY2292",
+                      "retailPrice":  4000,
+                      "totalStock":  1588,
+                      "isAvailable":  true
+                  },
+                  {
+                      "unifiedId":  "TRENDY_869",
+                      "supplier":  "Trendy",
+                      "productId":  "869",
+                      "reference":  "STN-DY2291",
+                      "name":  "Kit Hebillas Princesas Ref DY2291",
+                      "retailPrice":  5000,
+                      "totalStock":  1063,
+                      "isAvailable":  true
+                  },
+                  {
+                      "unifiedId":  "TRENDY_870",
+                      "supplier":  "Trendy",
+                      "productId":  "870",
+                      "reference":  "BELLA DY2289",
+                      "name":  "Collar Dorado Princesas Ref DY2289",
+                      "retailPrice":  4000,
+                      "totalStock":  765,
+                      "isAvailable":  true
+                  },
+                  {
+                      "unifiedId":  "TRENDY_871",
+                      "supplier":  "Trendy",
+                      "productId":  "871",
+                      "reference":  "STN-DY2299",
+                      "name":  "Pulsera Plateada Stitch Ref DY2299",
+                      "retailPrice":  4000,
+                      "totalStock":  422,
+                      "isAvailable":  true
+                  },
+                  {
+                      "unifiedId":  "TRENDY_872",
+                      "supplier":  "Trendy",
+                      "productId":  "872",
+                      "reference":  "CRG1420 #1",
+                      "name":  "Corrector Hidrante Rebel Girl Ref Crg1420",
+                      "retailPrice":  12000,
+                      "totalStock":  1393,
+                      "isAvailable":  true
+                  },
+                  {
+                      "unifiedId":  "TRENDY_879",
+                      "supplier":  "Trendy",
+                      "productId":  "879",
+                      "reference":  "BHC2273 TONO 2",
+                      "name":  "Brillo Llavero Hippie Chic Ref BHC2273",
+                      "retailPrice":  10000,
+                      "totalStock":  627,
+                      "isAvailable":  true
+                  },
+                  {
+                      "unifiedId":  "TRENDY_880",
+                      "supplier":  "Trendy",
+                      "productId":  "880",
+                      "reference":  "KDL1765 TONO 4",
+                      "name":  "Kit de Labios Delicious Lips Crayola y Delineador Ref KDL1765",
+                      "retailPrice":  12000,
+                      "totalStock":  963,
+                      "isAvailable":  true
+                  },
+                  {
+                      "unifiedId":  "TRENDY_883",
+                      "supplier":  "Trendy",
+                      "productId":  "883",
+                      "reference":  "KPN2248 TONO 2",
+                      "name":  "Kit Rubor y Gloss Pinky News Ref KPN2248",
+                      "retailPrice":  15000,
+                      "totalStock":  3512,
+                      "isAvailable":  true
+                  },
+                  {
+                      "unifiedId":  "TRENDY_884",
+                      "supplier":  "Trendy",
+                      "productId":  "884",
+                      "reference":  "STN-DY2426",
+                      "name":  "Pin Buzz DY2426",
+                      "retailPrice":  5000,
+                      "totalStock":  839,
+                      "isAvailable":  true
+                  },
+                  {
+                      "unifiedId":  "TRENDY_886",
+                      "supplier":  "Trendy",
+                      "productId":  "886",
+                      "reference":  "STN-DY2333",
+                      "name":  "Pin Woody Toy Story DY2333",
+                      "retailPrice":  5000,
+                      "totalStock":  2861,
+                      "isAvailable":  true
+                  },
+                  {
+                      "unifiedId":  "TRENDY_888",
+                      "supplier":  "Trendy",
+                      "productId":  "888",
+                      "reference":  "STN-DY2350",
+                      "name":  "Pin Stitch Sandia DY2350",
+                      "retailPrice":  5000,
+                      "totalStock":  2667,
+                      "isAvailable":  true
+                  },
+                  {
+                      "unifiedId":  "TRENDY_889",
+                      "supplier":  "Trendy",
+                      "productId":  "889",
+                      "reference":  "STN-DY2348",
+                      "name":  "Pin Stitch Helado DY2348",
+                      "retailPrice":  5000,
+                      "totalStock":  1782,
+                      "isAvailable":  true
+                  },
+                  {
+                      "unifiedId":  "TRENDY_890",
+                      "supplier":  "Trendy",
+                      "productId":  "890",
+                      "reference":  "STN-DY2347",
+                      "name":  "Pin Stitch Abrazo DY2347",
+                      "retailPrice":  5000,
+                      "totalStock":  85,
+                      "isAvailable":  true
+                  },
+                  {
+                      "unifiedId":  "TRENDY_891",
+                      "supplier":  "Trendy",
+                      "productId":  "891",
+                      "reference":  "STN-DY2346",
+                      "name":  "Pin Stitch Guitarra DY2346",
+                      "retailPrice":  5000,
+                      "totalStock":  1711,
+                      "isAvailable":  true
+                  },
+                  {
+                      "unifiedId":  "TRENDY_892",
+                      "supplier":  "Trendy",
+                      "productId":  "892",
+                      "reference":  "STN-DY2345",
+                      "name":  "Pin Stitch Hawai DY2345",
+                      "retailPrice":  5000,
+                      "totalStock":  1556,
+                      "isAvailable":  true
+                  },
+                  {
+                      "unifiedId":  "TRENDY_893",
+                      "supplier":  "Trendy",
+                      "productId":  "893",
+                      "reference":  "STN-DY2343",
+                      "name":  "Pin Marcianito Taco Toy Story DY2343",
+                      "retailPrice":  5000,
+                      "totalStock":  1168,
+                      "isAvailable":  true
+                  },
+                  {
+                      "unifiedId":  "TRENDY_894",
+                      "supplier":  "Trendy",
+                      "productId":  "894",
+                      "reference":  "STN-DY2369",
+                      "name":  "Pin 3312 Monsters Inc DY2369",
+                      "retailPrice":  5000,
+                      "totalStock":  2130,
+                      "isAvailable":  true
+                  },
+                  {
+                      "unifiedId":  "TRENDY_897",
+                      "supplier":  "Trendy",
+                      "productId":  "897",
+                      "reference":  "STN-DY2349",
+                      "name":  "Pin Stitch Angel DY2349",
+                      "retailPrice":  5000,
+                      "totalStock":  218,
+                      "isAvailable":  true
+                  },
+                  {
+                      "unifiedId":  "TRENDY_898",
+                      "supplier":  "Trendy",
+                      "productId":  "898",
+                      "reference":  "STN-MT2396",
+                      "name":  "Kit Corporal Polly Pocket Rosado Ref MT2396",
+                      "retailPrice":  20000,
+                      "totalStock":  121,
+                      "isAvailable":  true
+                  },
+                  {
+                      "unifiedId":  "TRENDY_899",
+                      "supplier":  "Trendy",
+                      "productId":  "899",
+                      "reference":  "STN-CMF2399",
+                      "name":  "Crema Mantequilla Fresh Ref CMF2399",
+                      "retailPrice":  28000,
+                      "totalStock":  1631,
+                      "isAvailable":  true
+                  },
+                  {
+                      "unifiedId":  "TRENDY_901",
+                      "supplier":  "Trendy",
+                      "productId":  "901",
+                      "reference":  "STN-CMO2402",
+                      "name":  "Crema Mantequilla Orange Ref CMO2402",
+                      "retailPrice":  28000,
+                      "totalStock":  1549,
+                      "isAvailable":  true
+                  },
+                  {
+                      "unifiedId":  "TRENDY_902",
+                      "supplier":  "Trendy",
+                      "productId":  "902",
+                      "reference":  "STN-CMW2401",
+                      "name":  "Crema Mantequilla Watermelon Ref CMW2401",
+                      "retailPrice":  28000,
+                      "totalStock":  3730,
+                      "isAvailable":  true
+                  },
+                  {
+                      "unifiedId":  "TRENDY_904",
+                      "supplier":  "Trendy",
+                      "productId":  "904",
+                      "reference":  "BAM2430#1",
+                      "name":  "Brillo Aura Mocca Ref BAM2430",
+                      "retailPrice":  20000,
+                      "totalStock":  694,
+                      "isAvailable":  true
+                  },
+                  {
+                      "unifiedId":  "TRENDY_905",
+                      "supplier":  "Trendy",
+                      "productId":  "905",
+                      "reference":  "STN-DCT2573",
+                      "name":  "Delineador Cafe Rainbow Ref Dct2573",
+                      "retailPrice":  10000,
+                      "totalStock":  2588,
+                      "isAvailable":  true
+                  },
+                  {
+                      "unifiedId":  "TRENDY_906",
+                      "supplier":  "Trendy",
+                      "productId":  "906",
+                      "reference":  "STN-DYT2572",
+                      "name":  "Voluminizador Furia Ref DYT2572",
+                      "retailPrice":  15000,
+                      "totalStock":  469,
+                      "isAvailable":  true
+                  },
+                  {
+                      "unifiedId":  "TRENDY_907",
+                      "supplier":  "Trendy",
+                      "productId":  "907",
+                      "reference":  "STN-DYT2571",
+                      "name":  "Brillo Furia Ref DYT2571",
+                      "retailPrice":  15000,
+                      "totalStock":  172,
+                      "isAvailable":  true
+                  },
+                  {
+                      "unifiedId":  "TRENDY_908",
+                      "supplier":  "Trendy",
+                      "productId":  "908",
+                      "reference":  "STN-BTT2221",
+                      "name":  "Voluminizador Boutique Ref BTT2221",
+                      "retailPrice":  10000,
+                      "totalStock":  710,
+                      "isAvailable":  true
+                  },
+                  {
+                      "unifiedId":  "TRENDY_909",
+                      "supplier":  "Trendy",
+                      "productId":  "909",
+                      "reference":  "STN-GCG2577",
+                      "name":  "Gloss Cafe Garden Ref Gcg2577",
+                      "retailPrice":  10000,
+                      "totalStock":  2471,
+                      "isAvailable":  true
+                  },
+                  {
+                      "unifiedId":  "TRENDY_911",
+                      "supplier":  "Trendy",
+                      "productId":  "911",
+                      "reference":  "STN-PMB2486",
+                      "name":  "Papeletas Matificantes Bob Esponja Ref Pmb2486",
+                      "retailPrice":  10000,
+                      "totalStock":  608,
+                      "isAvailable":  true
+                  },
+                  {
+                      "unifiedId":  "TRENDY_912",
+                      "supplier":  "Trendy",
+                      "productId":  "912",
+                      "reference":  "Café Claro Ref DST2259",
+                      "name":  "Lápiz Delineador Ojos Safari Ref DST2259",
+                      "retailPrice":  5000,
+                      "totalStock":  2992,
+                      "isAvailable":  true
+                  },
+                  {
+                      "unifiedId":  "TRENDY_915",
+                      "supplier":  "Trendy",
+                      "productId":  "915",
+                      "reference":  "STN-MT2392",
+                      "name":  "Kit Primer y Fijador Barbie Malibu Ref MT2392",
+                      "retailPrice":  20000,
+                      "totalStock":  4,
+                      "isAvailable":  true
+                  },
+                  {
+                      "unifiedId":  "TRENDY_917",
+                      "supplier":  "Trendy",
+                      "productId":  "917",
+                      "reference":  "KMF2247 TONO 01",
+                      "name":  "Kit Piel Mistic Face Ref KMF2247",
+                      "retailPrice":  20000,
+                      "totalStock":  3612,
+                      "isAvailable":  true
+                  },
+                  {
+                      "unifiedId":  "TRENDY_924",
+                      "supplier":  "Trendy",
+                      "productId":  "924",
+                      "reference":  "STN-CMT649",
+                      "name":  "Cosmetiquera Marmol Trendy Ref CMT649",
+                      "retailPrice":  8000,
+                      "totalStock":  523,
+                      "isAvailable":  true
+                  },
+                  {
+                      "unifiedId":  "TRENDY_927",
+                      "supplier":  "Trendy",
+                      "productId":  "927",
+                      "reference":  "STN-CMR2400",
+                      "name":  "Crema Mantequilla Rosas Ref CMW2400",
+                      "retailPrice":  28000,
+                      "totalStock":  71,
+                      "isAvailable":  true
+                  },
+                  {
+                      "unifiedId":  "TRENDY_929",
+                      "supplier":  "Trendy",
+                      "productId":  "929",
+                      "reference":  "BLT2222 #1",
+                      "name":  "Gloss Retro Glow BLT2222",
+                      "retailPrice":  10000,
+                      "totalStock":  570,
+                      "isAvailable":  true
+                  },
+                  {
+                      "unifiedId":  "TRENDY_930",
+                      "supplier":  "Trendy",
+                      "productId":  "930",
+                      "reference":  "STN-KHT2503",
+                      "name":  "Kit Herramientas Básicas Luxé Ref KHT2503",
+                      "retailPrice":  25000,
+                      "totalStock":  626,
+                      "isAvailable":  true
+                  },
+                  {
+                      "unifiedId":  "TRENDY_940",
+                      "supplier":  "Trendy",
+                      "productId":  "940",
+                      "reference":  "LCD2284#4",
+                      "name":  "Lápiz De Cejas Dreams Ref LCD2284",
+                      "retailPrice":  15000,
+                      "totalStock":  947,
+                      "isAvailable":  true
+                  },
+                  {
+                      "unifiedId":  "TRENDY_942",
+                      "supplier":  "Trendy",
+                      "productId":  "942",
+                      "reference":  "STN-KAP2505",
+                      "name":  "Kit Accesorios Pelo Luxé Ref KAP2505",
+                      "retailPrice":  20000,
+                      "totalStock":  1,
+                      "isAvailable":  true
+                  },
+                  {
+                      "unifiedId":  "TRENDY_948",
+                      "supplier":  "Trendy",
+                      "productId":  "948",
+                      "reference":  "STN-LCT2387",
+                      "name":  "Luxe Clean Trendy Ref Lct2387",
+                      "retailPrice":  15000,
+                      "totalStock":  119,
+                      "isAvailable":  true
+                  },
+                  {
+                      "unifiedId":  "TRENDY_954",
+                      "supplier":  "Trendy",
+                      "productId":  "954",
+                      "reference":  "STN-DY2336",
+                      "name":  "Pin Woody Y Buzz Dy2336",
+                      "retailPrice":  5000,
+                      "totalStock":  978,
+                      "isAvailable":  true
+                  },
+                  {
+                      "unifiedId":  "TRENDY_956",
+                      "supplier":  "Trendy",
+                      "productId":  "956",
+                      "reference":  "STN-DY2214",
+                      "name":  "Tinta De Labios Princesas Bella Ref Dy2214",
+                      "retailPrice":  15000,
+                      "totalStock":  1,
+                      "isAvailable":  true
+                  },
+                  {
+                      "unifiedId":  "TRENDY_959",
+                      "supplier":  "Trendy",
+                      "productId":  "959",
+                      "reference":  "STN-DBB2485",
+                      "name":  "Desmaquillante Bifasico Bob Esponja Ref DBB2485",
+                      "retailPrice":  25000,
+                      "totalStock":  286,
+                      "isAvailable":  true
+                  },
+                  {
+                      "unifiedId":  "TRENDY_961",
+                      "supplier":  "Trendy",
+                      "productId":  "961",
+                      "reference":  "STN-MRT2388",
+                      "name":  "Mascarilla Romantica Ref MRT2388",
+                      "retailPrice":  15000,
+                      "totalStock":  170,
+                      "isAvailable":  true
+                  },
+                  {
+                      "unifiedId":  "TRENDY_962",
+                      "supplier":  "Trendy",
+                      "productId":  "962",
+                      "reference":  "STN-DY2425",
+                      "name":  "Pin Cara De Papa DY2425",
+                      "retailPrice":  5000,
+                      "totalStock":  5,
+                      "isAvailable":  true
+                  },
+                  {
+                      "unifiedId":  "TRENDY_964",
+                      "supplier":  "Trendy",
+                      "productId":  "964",
+                      "reference":  "STN-TDP1940",
+                      "name":  "Toallas Desmaquillantes Pool Party Ref TDP1940",
+                      "retailPrice":  15000,
+                      "totalStock":  431,
+                      "isAvailable":  true
+                  },
+                  {
+                      "unifiedId":  "TRENDY_965",
+                      "supplier":  "Trendy",
+                      "productId":  "965",
+                      "reference":  "STN-MTT2515",
+                      "name":  "Kit Moños Barbie Dreams Ref MTT2515",
+                      "retailPrice":  4000,
+                      "totalStock":  1,
+                      "isAvailable":  true
+                  },
+                  {
+                      "unifiedId":  "TRENDY_966",
+                      "supplier":  "Trendy",
+                      "productId":  "966",
+                      "reference":  "STN-DYT2514",
+                      "name":  "Tote Bag Aliens Toy Story Dyt2514",
+                      "retailPrice":  15000,
+                      "totalStock":  208,
+                      "isAvailable":  true
+                  },
+                  {
+                      "unifiedId":  "TRENDY_967",
+                      "supplier":  "Trendy",
+                      "productId":  "967",
+                      "reference":  "STN-MTT2516",
+                      "name":  "Kit Cepillo Barbie Dreams Ref MTT2516",
+                      "retailPrice":  8000,
+                      "totalStock":  1382,
+                      "isAvailable":  true
+                  },
+                  {
+                      "unifiedId":  "TRENDY_970",
+                      "supplier":  "Trendy",
+                      "productId":  "970",
+                      "reference":  "STN-DYT2547",
+                      "name":  "Grip Primer Buzz Pequeño Dyt2547",
+                      "retailPrice":  20000,
+                      "totalStock":  102,
+                      "isAvailable":  true
+                  },
+                  {
+                      "unifiedId":  "TRENDY_971",
+                      "supplier":  "Trendy",
+                      "productId":  "971",
+                      "reference":  "STN-DYT2546",
+                      "name":  "Grip Primer Buzz Grande Dyt2546",
+                      "retailPrice":  30000,
+                      "totalStock":  97,
+                      "isAvailable":  true
+                  },
+                  {
+                      "unifiedId":  "TRENDY_972",
+                      "supplier":  "Trendy",
+                      "productId":  "972",
+                      "reference":  "DYT2683 #01",
+                      "name":  "Lip Balm Glitter Ham Ref Dyt2683",
+                      "retailPrice":  15000,
+                      "totalStock":  427,
+                      "isAvailable":  true
+                  },
+                  {
+                      "unifiedId":  "TRENDY_973",
+                      "supplier":  "Trendy",
+                      "productId":  "973",
+                      "reference":  "STN-DYT2678",
+                      "name":  "Kit Pizza Planet Dyt2678",
+                      "retailPrice":  35000,
+                      "totalStock":  24,
+                      "isAvailable":  true
+                  },
+                  {
+                      "unifiedId":  "TRENDY_975",
+                      "supplier":  "Trendy",
+                      "productId":  "975",
+                      "reference":  "DYT2675 #1",
+                      "name":  "Malteada Bronceadora Body Shine Toy Story DYT2675",
+                      "retailPrice":  15000,
+                      "totalStock":  819,
+                      "isAvailable":  true
+                  },
+                  {
+                      "unifiedId":  "TRENDY_976",
+                      "supplier":  "Trendy",
+                      "productId":  "976",
+                      "reference":  "DYT2552 #1",
+                      "name":  "Mini Rubor Lotso Dyt2552",
+                      "retailPrice":  20000,
+                      "totalStock":  1233,
+                      "isAvailable":  true
+                  },
+                  {
+                      "unifiedId":  "TRENDY_979",
+                      "supplier":  "Trendy",
+                      "productId":  "979",
+                      "reference":  "STN-KMR2567",
+                      "name":  "Kit Mini X 6 Rugrats Ref Kmr2567",
+                      "retailPrice":  40000,
+                      "totalStock":  170,
+                      "isAvailable":  true
+                  },
+                  {
+                      "unifiedId":  "TRENDY_980",
+                      "supplier":  "Trendy",
+                      "productId":  "980",
+                      "reference":  "STN-DYT2576",
+                      "name":  "Polvo Compacto Sally Dyt2576",
+                      "retailPrice":  20000,
+                      "totalStock":  1212,
+                      "isAvailable":  true
+                  },
+                  {
+                      "unifiedId":  "TRENDY_981",
+                      "supplier":  "Trendy",
+                      "productId":  "981",
+                      "reference":  "STN-DYT2575",
+                      "name":  "Polvo Compacto Jack Dyt2575",
+                      "retailPrice":  20000,
+                      "totalStock":  985,
+                      "isAvailable":  true
+                  },
+                  {
+                      "unifiedId":  "TRENDY_983",
+                      "supplier":  "Trendy",
+                      "productId":  "983",
+                      "reference":  "STN-DEB2487",
+                      "name":  "Duo Exfoliante Mascarilla de  Labios Bob Esponja Deb2487",
+                      "retailPrice":  10000,
+                      "totalStock":  2077,
+                      "isAvailable":  true
+                  },
+                  {
+                      "unifiedId":  "TRENDY_985",
+                      "supplier":  "Trendy",
+                      "productId":  "985",
+                      "reference":  "STN-TDP2729",
+                      "name":  "Toallas Desmaquillantes Pool Party Pequeñas Ref TDP2729",
+                      "retailPrice":  10000,
+                      "totalStock":  1403,
+                      "isAvailable":  true
+                  },
+                  {
+                      "unifiedId":  "TRENDY_986",
+                      "supplier":  "Trendy",
+                      "productId":  "986",
+                      "reference":  "STN-DYT2501",
+                      "name":  "Kit Papeleria Lotso Dyt2501",
+                      "retailPrice":  10000,
+                      "totalStock":  2,
+                      "isAvailable":  true
+                  },
+                  {
+                      "unifiedId":  "TRENDY_987",
+                      "supplier":  "Trendy",
+                      "productId":  "987",
+                      "reference":  "STN-DYT2513",
+                      "name":  "Kit Accesorios Pelo Lotso DYT2513",
+                      "retailPrice":  8000,
+                      "totalStock":  362,
+                      "isAvailable":  true
+                  },
+                  {
+                      "unifiedId":  "TRENDY_988",
+                      "supplier":  "Trendy",
+                      "productId":  "988",
+                      "reference":  "STN-DYT2512",
+                      "name":  "Monedero Lotso Dyt2512",
+                      "retailPrice":  25000,
+                      "totalStock":  39,
+                      "isAvailable":  true
+                  },
+                  {
+                      "unifiedId":  "TRENDY_989",
+                      "supplier":  "Trendy",
+                      "productId":  "989",
+                      "reference":  "STN-DYT2517",
+                      "name":  "Cartuchera Metálica Toy Story Dyt2517",
+                      "retailPrice":  20000,
+                      "totalStock":  120,
+                      "isAvailable":  true
+                  },
+                  {
+                      "unifiedId":  "TRENDY_990",
+                      "supplier":  "Trendy",
+                      "productId":  "990",
+                      "reference":  "STN-DYT2528",
+                      "name":  "Sombra Toy Story DYT2528",
+                      "retailPrice":  40000,
+                      "totalStock":  102,
+                      "isAvailable":  true
+                  },
+                  {
+                      "unifiedId":  "TRENDY_991",
+                      "supplier":  "Trendy",
+                      "productId":  "991",
+                      "reference":  "DYT2648 #1",
+                      "name":  "Labial Doble Vaquero Toy Story Dyt2648",
+                      "retailPrice":  15000,
+                      "totalStock":  2119,
+                      "isAvailable":  true
+                  },
+                  {
+                      "unifiedId":  "TRENDY_995",
+                      "supplier":  "Trendy",
+                      "productId":  "995",
+                      "reference":  "DYT2654 #1",
+                      "name":  "Lápiz Ojos y Cejas Toy Story Dyt2654",
+                      "retailPrice":  15000,
+                      "totalStock":  3615,
+                      "isAvailable":  true
+                  },
+                  {
+                      "unifiedId":  "TRENDY_996",
+                      "supplier":  "Trendy",
+                      "productId":  "996",
+                      "reference":  "STN-BLT2219",
+                      "name":  "Brillo Gloss Mágico Groovy Ref BLT2219",
+                      "retailPrice":  10000,
+                      "totalStock":  1169,
+                      "isAvailable":  true
+                  },
+                  {
+                      "unifiedId":  "TRENDY_1005",
+                      "supplier":  "Trendy",
+                      "productId":  "1005",
+                      "reference":  "STN-SPT2435",
+                      "name":  "Separador De Pestañas Ref Spt2435",
+                      "retailPrice":  10000,
+                      "totalStock":  265,
+                      "isAvailable":  true
+                  },
+                  {
+                      "unifiedId":  "TRENDY_1006",
+                      "supplier":  "Trendy",
+                      "productId":  "1006",
+                      "reference":  "STN-MDN2578",
+                      "name":  "Morral Matte Negro Tvb Mdn2578",
+                      "retailPrice":  65000,
+                      "totalStock":  9,
+                      "isAvailable":  true
+                  },
+                  {
+                      "unifiedId":  "TRENDY_1007",
+                      "supplier":  "Trendy",
+                      "productId":  "1007",
+                      "reference":  "STN-MVM2579",
+                      "name":  "Morral Viajero Malla Tvb Mvm2579",
+                      "retailPrice":  55000,
+                      "totalStock":  6,
+                      "isAvailable":  true
+                  },
+                  {
+                      "unifiedId":  "TRENDY_1009",
+                      "supplier":  "Trendy",
+                      "productId":  "1009",
+                      "reference":  "STN-PSA2483",
+                      "name":  "Polvo Suelto Arenita Bob Esponja Ref PSA2483",
+                      "retailPrice":  15000,
+                      "totalStock":  652,
+                      "isAvailable":  true
+                  },
+                  {
+                      "unifiedId":  "TRENDY_1010",
+                      "supplier":  "Trendy",
+                      "productId":  "1010",
+                      "reference":  "STN-HLB2482",
+                      "name":  "Hidratante De Labios Bob Esponja Ref HLB2482",
+                      "retailPrice":  15000,
+                      "totalStock":  190,
+                      "isAvailable":  true
+                  },
+                  {
+                      "unifiedId":  "TRENDY_1011",
+                      "supplier":  "Trendy",
+                      "productId":  "1011",
+                      "reference":  "STN-MT2385",
+                      "name":  "Kit Niñas Mejores Amigas Barbie Ref MT2385",
+                      "retailPrice":  10000,
+                      "totalStock":  1037,
+                      "isAvailable":  true
+                  },
+                  {
+                      "unifiedId":  "TRENDY_1013",
+                      "supplier":  "Trendy",
+                      "productId":  "1013",
+                      "reference":  "MRM2730 #1",
+                      "name":  "Mini Rubor Mia Blush Mrm2730",
+                      "retailPrice":  10000,
+                      "totalStock":  5279,
+                      "isAvailable":  true
+                  },
+                  {
+                      "unifiedId":  "TRENDY_1014",
+                      "supplier":  "Trendy",
+                      "productId":  "1014",
+                      "reference":  "STN-DYT2519",
+                      "name":  "Monedero Redondo Stitch Ref Dyt2519",
+                      "retailPrice":  15000,
+                      "totalStock":  1768,
+                      "isAvailable":  true
+                  },
+                  {
+                      "unifiedId":  "TRENDY_1019",
+                      "supplier":  "Trendy",
+                      "productId":  "1019",
+                      "reference":  "STN-MT2418",
+                      "name":  "Kit Brillo Y Monedero Amigas Barbie Ref MT2418",
+                      "retailPrice":  10000,
+                      "totalStock":  243,
+                      "isAvailable":  true
+                  }
+              ]
+}

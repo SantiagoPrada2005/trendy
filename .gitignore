@@ -1,0 +1,8 @@
+# Archivos de sistema Windows
+desktop.ini
+Thumbs.db
+.DS_Store
+
+# Archivo de datos crudos VTEX (>100MB límite estricto de GitHub)
+# La versión comprimida se encuentra en datos/productos_vtex_raw.zip
+datos/productos_vtex_raw.json

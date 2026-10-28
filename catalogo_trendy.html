@@ -1,0 +1,2514 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Catálogo Interactivo - Maquillaje Trendy Shop</title>
+  <style>
+    :root {
+      --primary: #e11d74;
+      --primary-hover: #be1260;
+      --primary-soft: #fdf2f8;
+      --primary-border: #fbcfe8;
+      --secondary: #7c3aed;
+      --bg: #f8fafc;
+      --surface: #ffffff;
+      --text: #0f172a;
+      --text-muted: #64748b;
+      --border: #e2e8f0;
+      --success: #10b981;
+      --success-bg: #ecfdf5;
+      --warning: #f59e0b;
+      --danger: #ef4444;
+      --danger-bg: #fef2f2;
+      --radius: 14px;
+      --shadow-sm: 0 1px 3px rgba(15, 23, 42, 0.06);
+      --shadow-md: 0 8px 24px -4px rgba(15, 23, 42, 0.08);
+      --shadow-lg: 0 20px 40px -8px rgba(15, 23, 42, 0.16);
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Segoe UI', system-ui, -apple-system, BlinkMacSystemFont, Roboto, sans-serif;
+      background-color: var(--bg);
+      color: var(--text);
+      line-height: 1.5;
+      min-height: 100vh;
+    }
+
+    /* Header */
+    .top-header {
+      background: linear-gradient(135deg, #be1260 0%, #e11d74 50%, #9333ea 100%);
+      color: #fff;
+      padding: 1.25rem 1.75rem;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      box-shadow: 0 4px 20px rgba(190, 18, 96, 0.22);
+    }
+
+    .header-inner {
+      max-width: 1600px;
+      margin: 0 auto;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+    }
+
+    .brand-title {
+      display: flex;
+      align-items: center;
+      gap: 0.85rem;
+    }
+
+    .brand-logo {
+      width: 44px;
+      height: 44px;
+      border-radius: 12px;
+      background: rgba(255, 255, 255, 0.2);
+      backdrop-filter: blur(6px);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 800;
+      font-size: 1.4rem;
+      letter-spacing: -0.5px;
+      border: 1px solid rgba(255, 255, 255, 0.35);
+    }
+
+    .brand-title h1 {
+      font-size: 1.35rem;
+      font-weight: 800;
+      letter-spacing: -0.3px;
+    }
+
+    .brand-title p {
+      font-size: 0.82rem;
+      opacity: 0.9;
+    }
+
+    .stats-bar {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.65rem;
+    }
+
+    .stat-pill {
+      background: rgba(255, 255, 255, 0.16);
+      border: 1px solid rgba(255, 255, 255, 0.28);
+      backdrop-filter: blur(8px);
+      padding: 0.4rem 0.9rem;
+      border-radius: 999px;
+      font-size: 0.82rem;
+      display: flex;
+      align-items: center;
+      gap: 0.4rem;
+    }
+
+    .stat-pill strong {
+      font-size: 0.95rem;
+      font-weight: 700;
+    }
+
+    /* Main Layout */
+    .main-container {
+      max-width: 1600px;
+      margin: 1.25rem auto;
+      padding: 0 1.25rem 3rem;
+      display: grid;
+      grid-template-columns: 280px 1fr;
+      gap: 1.5rem;
+      align-items: start;
+    }
+
+    @media (max-width: 1024px) {
+      .main-container {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    /* Sidebar Filters */
+    .sidebar {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 1.25rem;
+      box-shadow: var(--shadow-sm);
+      position: sticky;
+      top: 92px;
+      max-height: calc(100vh - 110px);
+      overflow-y: auto;
+    }
+
+    .sidebar-section {
+      margin-bottom: 1.25rem;
+      padding-bottom: 1.15rem;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .sidebar-section:last-child {
+      margin-bottom: 0;
+      padding-bottom: 0;
+      border-bottom: none;
+    }
+
+    .sidebar-title {
+      font-size: 0.82rem;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      color: var(--text-muted);
+      font-weight: 700;
+      margin-bottom: 0.65rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .category-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 0.25rem;
+    }
+
+    .cat-btn {
+      width: 100%;
+      text-align: left;
+      background: transparent;
+      border: none;
+      padding: 0.45rem 0.65rem;
+      border-radius: 8px;
+      font-size: 0.88rem;
+      color: var(--text);
+      cursor: pointer;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      transition: all 0.15s ease;
+    }
+
+    .cat-btn:hover {
+      background: var(--primary-soft);
+      color: var(--primary);
+    }
+
+    .cat-btn.active {
+      background: var(--primary);
+      color: #fff;
+      font-weight: 600;
+    }
+
+    .cat-count {
+      font-size: 0.74rem;
+      padding: 0.1rem 0.45rem;
+      border-radius: 99px;
+      background: rgba(100, 116, 139, 0.12);
+      color: inherit;
+    }
+
+    .cat-btn.active .cat-count {
+      background: rgba(255, 255, 255, 0.25);
+    }
+
+    .filter-select, .filter-input {
+      width: 100%;
+      padding: 0.55rem 0.75rem;
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      font-size: 0.88rem;
+      color: var(--text);
+      background: #fff;
+      outline: none;
+      transition: border-color 0.15s;
+    }
+
+    .filter-select:focus, .filter-input:focus {
+      border-color: var(--primary);
+      box-shadow: 0 0 0 3px rgba(225, 29, 116, 0.12);
+    }
+
+    .price-inputs {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 0.5rem;
+    }
+
+    .checkbox-label {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-size: 0.88rem;
+      cursor: pointer;
+      margin-bottom: 0.45rem;
+      user-select: none;
+    }
+
+    .checkbox-label input {
+      accent-color: var(--primary);
+      width: 16px;
+      height: 16px;
+    }
+
+    .btn-reset {
+      width: 100%;
+      padding: 0.6rem;
+      border: 1px solid var(--primary-border);
+      background: var(--primary-soft);
+      color: var(--primary);
+      font-weight: 600;
+      border-radius: 8px;
+      cursor: pointer;
+      font-size: 0.86rem;
+      transition: all 0.15s;
+    }
+
+    .btn-reset:hover {
+      background: var(--primary);
+      color: #fff;
+    }
+
+    /* Top Toolbar */
+    .toolbar {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 0.9rem 1.15rem;
+      margin-bottom: 1.25rem;
+      box-shadow: var(--shadow-sm);
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.85rem;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .search-box {
+      flex: 1;
+      min-width: 260px;
+      position: relative;
+    }
+
+    .search-box input {
+      width: 100%;
+      padding: 0.65rem 2.4rem 0.65rem 2.5rem;
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      font-size: 0.92rem;
+      outline: none;
+      transition: all 0.15s;
+    }
+
+    .search-box input:focus {
+      border-color: var(--primary);
+      box-shadow: 0 0 0 3px rgba(225, 29, 116, 0.12);
+    }
+
+    .search-icon {
+      position: absolute;
+      left: 0.85rem;
+      top: 50%;
+      transform: translateY(-50%);
+      color: var(--text-muted);
+      pointer-events: none;
+    }
+
+    .clear-search {
+      position: absolute;
+      right: 0.65rem;
+      top: 50%;
+      transform: translateY(-50%);
+      background: none;
+      border: none;
+      color: var(--text-muted);
+      cursor: pointer;
+      font-size: 1.1rem;
+      display: none;
+    }
+
+    .toolbar-actions {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 0.6rem;
+    }
+
+    .view-toggle {
+      display: flex;
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      overflow: hidden;
+    }
+
+    .view-btn {
+      background: #fff;
+      border: none;
+      padding: 0.5rem 0.75rem;
+      cursor: pointer;
+      font-size: 0.85rem;
+      color: var(--text-muted);
+      font-weight: 600;
+      display: flex;
+      align-items: center;
+      gap: 0.35rem;
+    }
+
+    .view-btn.active {
+      background: var(--primary);
+      color: #fff;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.4rem;
+      padding: 0.55rem 0.95rem;
+      border-radius: 8px;
+      font-size: 0.85rem;
+      font-weight: 600;
+      cursor: pointer;
+      border: 1px solid transparent;
+      transition: all 0.15s ease;
+      text-decoration: none;
+    }
+
+    .btn-primary {
+      background: var(--primary);
+      color: #fff;
+    }
+
+    .btn-primary:hover {
+      background: var(--primary-hover);
+    }
+
+    .btn-outline {
+      background: #fff;
+      border-color: var(--border);
+      color: var(--text);
+    }
+
+    .btn-outline:hover {
+      border-color: var(--primary);
+      color: var(--primary);
+      background: var(--primary-soft);
+    }
+
+    .btn-sm {
+      padding: 0.38rem 0.68rem;
+      font-size: 0.78rem;
+      border-radius: 6px;
+    }
+
+    /* Product Grid */
+    .products-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(275px, 1fr));
+      gap: 1.15rem;
+    }
+
+    .product-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      overflow: hidden;
+      box-shadow: var(--shadow-sm);
+      transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+      display: flex;
+      flex-direction: column;
+      position: relative;
+    }
+
+    .product-card:hover {
+      transform: translateY(-3px);
+      box-shadow: var(--shadow-md);
+      border-color: var(--primary-border);
+    }
+
+    .card-media {
+      position: relative;
+      aspect-ratio: 1 / 1;
+      background: #f1f5f9;
+      overflow: hidden;
+      cursor: pointer;
+    }
+
+    .card-media img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.3s ease;
+    }
+
+    .product-card:hover .card-media img {
+      transform: scale(1.04);
+    }
+
+    .card-badges {
+      position: absolute;
+      top: 0.65rem;
+      left: 0.65rem;
+      right: 0.65rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      pointer-events: none;
+      gap: 0.4rem;
+    }
+
+    .badge-group {
+      display: flex;
+      flex-direction: column;
+      gap: 0.3rem;
+    }
+
+    .badge {
+      display: inline-block;
+      padding: 0.2rem 0.55rem;
+      border-radius: 6px;
+      font-size: 0.7rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.03em;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.12);
+    }
+
+    .badge-stock {
+      background: rgba(16, 185, 129, 0.95);
+      color: #fff;
+    }
+
+    .badge-out {
+      background: rgba(239, 68, 68, 0.95);
+      color: #fff;
+    }
+
+    .badge-new {
+      background: #7c3aed;
+      color: #fff;
+    }
+
+    .badge-discount {
+      background: #f59e0b;
+      color: #fff;
+    }
+
+    .quick-save-btn {
+      position: absolute;
+      bottom: 0.65rem;
+      right: 0.65rem;
+      background: rgba(255, 255, 255, 0.94);
+      border: 1px solid var(--border);
+      color: var(--text);
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+      transition: all 0.15s;
+      z-index: 3;
+    }
+
+    .quick-save-btn:hover {
+      background: var(--primary);
+      color: #fff;
+      border-color: var(--primary);
+      transform: scale(1.08);
+    }
+
+    .card-body {
+      padding: 1rem;
+      display: flex;
+      flex-direction: column;
+      flex: 1;
+      gap: 0.45rem;
+    }
+
+    .card-meta {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 0.74rem;
+      color: var(--text-muted);
+      gap: 0.4rem;
+    }
+
+    .card-ref {
+      font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+      background: #f1f5f9;
+      padding: 0.12rem 0.45rem;
+      border-radius: 4px;
+      font-weight: 600;
+      color: #334155;
+    }
+
+    .card-title {
+      font-size: 0.96rem;
+      font-weight: 700;
+      color: var(--text);
+      line-height: 1.35;
+      cursor: pointer;
+      display: -webkit-box;
+      -webkit-line-clamp: 2;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+    }
+
+    .card-title:hover {
+      color: var(--primary);
+    }
+
+    .card-specs-mini {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.35rem;
+      margin-top: 0.1rem;
+    }
+
+    .spec-chip {
+      font-size: 0.72rem;
+      background: #f8fafc;
+      border: 1px solid #e2e8f0;
+      color: #475569;
+      padding: 0.12rem 0.45rem;
+      border-radius: 5px;
+    }
+
+    /* Variant Swatches on Card */
+    .card-variants {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.35rem;
+      margin-top: 0.25rem;
+      min-height: 26px;
+    }
+
+    .variant-pill {
+      font-size: 0.72rem;
+      padding: 0.15rem 0.5rem;
+      border-radius: 999px;
+      border: 1px solid var(--border);
+      background: #fff;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.3rem;
+      transition: all 0.12s;
+      color: var(--text);
+    }
+
+    .variant-pill:hover, .variant-pill.active {
+      border-color: var(--primary);
+      background: var(--primary-soft);
+      color: var(--primary);
+      font-weight: 600;
+    }
+
+    .variant-pill img {
+      width: 14px;
+      height: 14px;
+      border-radius: 50%;
+      object-fit: cover;
+    }
+
+    .card-footer {
+      margin-top: auto;
+      padding-top: 0.7rem;
+      border-top: 1px solid var(--border);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 0.5rem;
+    }
+
+    .price-block {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .price-current {
+      font-size: 1.12rem;
+      font-weight: 800;
+      color: var(--primary);
+    }
+
+    .price-old {
+      font-size: 0.76rem;
+      color: var(--text-muted);
+      text-decoration: line-through;
+    }
+
+    /* Table View */
+    .table-wrapper {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      overflow-x: auto;
+      box-shadow: var(--shadow-sm);
+    }
+
+    .products-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.85rem;
+    }
+
+    .products-table th {
+      background: #f8fafc;
+      text-align: left;
+      padding: 0.75rem 0.85rem;
+      font-weight: 700;
+      color: var(--text-muted);
+      border-bottom: 1px solid var(--border);
+      white-space: nowrap;
+    }
+
+    .products-table td {
+      padding: 0.65rem 0.85rem;
+      border-bottom: 1px solid var(--border);
+      vertical-align: middle;
+    }
+
+    .products-table tr:hover td {
+      background: var(--primary-soft);
+    }
+
+    .table-thumb {
+      width: 48px;
+      height: 48px;
+      border-radius: 8px;
+      object-fit: cover;
+      border: 1px solid var(--border);
+      cursor: pointer;
+    }
+
+    /* Modal Details */
+    .modal-backdrop {
+      position: fixed;
+      inset: 0;
+      background: rgba(15, 23, 42, 0.65);
+      backdrop-filter: blur(4px);
+      z-index: 1000;
+      display: none;
+      align-items: center;
+      justify-content: center;
+      padding: 1.25rem;
+    }
+
+    .modal-backdrop.open {
+      display: flex;
+    }
+
+    .modal-dialog {
+      background: var(--surface);
+      width: 100%;
+      max-width: 1220px;
+      max-height: 92vh;
+      border-radius: 18px;
+      box-shadow: var(--shadow-lg);
+      display: flex;
+      flex-direction: column;
+      overflow: hidden;
+      animation: modalIn 0.2s ease-out;
+    }
+
+    @keyframes modalIn {
+      from { opacity: 0; transform: scale(0.96) translateY(10px); }
+      to { opacity: 1; transform: scale(1) translateY(0); }
+    }
+
+    .modal-header {
+      padding: 1rem 1.5rem;
+      border-bottom: 1px solid var(--border);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+      background: #f8fafc;
+    }
+
+    .modal-header-left {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      flex-wrap: wrap;
+    }
+
+    .modal-close {
+      background: #fff;
+      border: 1px solid var(--border);
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      font-size: 1.2rem;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--text);
+      transition: all 0.15s;
+    }
+
+    .modal-close:hover {
+      background: var(--danger);
+      color: #fff;
+      border-color: var(--danger);
+    }
+
+    .modal-body {
+      padding: 1.5rem;
+      overflow-y: auto;
+      display: grid;
+      grid-template-columns: 460px 1fr;
+      gap: 2rem;
+    }
+
+    @media (max-width: 960px) {
+      .modal-body {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    /* Gallery in Modal */
+    .gallery-container {
+      display: flex;
+      flex-direction: column;
+      gap: 0.85rem;
+    }
+
+    .main-image-frame {
+      position: relative;
+      width: 100%;
+      aspect-ratio: 1 / 1;
+      background: #f8fafc;
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .main-image-frame img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      cursor: zoom-in;
+    }
+
+    .main-image-frame img.zoomed {
+      object-fit: cover;
+      transform: scale(1.65);
+      cursor: zoom-out;
+    }
+
+    .image-nav-btn {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 38px;
+      height: 38px;
+      border-radius: 50%;
+      background: rgba(255, 255, 255, 0.9);
+      border: 1px solid var(--border);
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: bold;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.12);
+    }
+
+    .image-nav-btn:hover {
+      background: var(--primary);
+      color: #fff;
+    }
+
+    .image-nav-prev { left: 0.65rem; }
+    .image-nav-next { right: 0.65rem; }
+
+    .thumbs-strip {
+      display: flex;
+      gap: 0.5rem;
+      overflow-x: auto;
+      padding-bottom: 0.25rem;
+    }
+
+    .thumb-item {
+      width: 68px;
+      height: 68px;
+      border-radius: 8px;
+      border: 2px solid var(--border);
+      overflow: hidden;
+      cursor: pointer;
+      flex-shrink: 0;
+      opacity: 0.7;
+      transition: all 0.15s;
+    }
+
+    .thumb-item:hover, .thumb-item.active {
+      border-color: var(--primary);
+      opacity: 1;
+    }
+
+    .thumb-item img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .image-download-panel {
+      background: var(--primary-soft);
+      border: 1px solid var(--primary-border);
+      border-radius: 12px;
+      padding: 0.95rem;
+      display: flex;
+      flex-direction: column;
+      gap: 0.6rem;
+    }
+
+    .image-download-panel h4 {
+      font-size: 0.85rem;
+      color: var(--primary);
+      display: flex;
+      align-items: center;
+      gap: 0.4rem;
+    }
+
+    .download-buttons-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 0.5rem;
+    }
+
+    /* Product Details Right Column */
+    .details-column {
+      display: flex;
+      flex-direction: column;
+      gap: 1.25rem;
+    }
+
+    .detail-title {
+      font-size: 1.45rem;
+      font-weight: 800;
+      color: var(--text);
+      line-height: 1.25;
+    }
+
+    .detail-price-box {
+      display: flex;
+      align-items: baseline;
+      gap: 1rem;
+      flex-wrap: wrap;
+      background: #f8fafc;
+      padding: 0.9rem 1.15rem;
+      border-radius: 12px;
+      border: 1px solid var(--border);
+    }
+
+    .detail-price-main {
+      font-size: 1.65rem;
+      font-weight: 800;
+      color: var(--primary);
+    }
+
+    .sku-selector-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(175px, 1fr));
+      gap: 0.6rem;
+    }
+
+    .sku-card-btn {
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+      padding: 0.55rem 0.7rem;
+      border: 2px solid var(--border);
+      border-radius: 10px;
+      background: #fff;
+      cursor: pointer;
+      text-align: left;
+      transition: all 0.15s;
+    }
+
+    .sku-card-btn:hover {
+      border-color: var(--primary-border);
+      background: var(--primary-soft);
+    }
+
+    .sku-card-btn.active {
+      border-color: var(--primary);
+      background: var(--primary-soft);
+    }
+
+    .sku-card-btn img {
+      width: 36px;
+      height: 36px;
+      border-radius: 6px;
+      object-fit: cover;
+      border: 1px solid var(--border);
+      flex-shrink: 0;
+    }
+
+    .sku-card-info {
+      overflow: hidden;
+    }
+
+    .sku-card-name {
+      font-size: 0.82rem;
+      font-weight: 700;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    .sku-card-stock {
+      font-size: 0.72rem;
+      color: var(--text-muted);
+    }
+
+    .specs-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(210px, 1fr));
+      gap: 0.65rem;
+    }
+
+    .spec-box {
+      background: #f8fafc;
+      border: 1px solid var(--border);
+      padding: 0.6rem 0.8rem;
+      border-radius: 8px;
+    }
+
+    .spec-label {
+      font-size: 0.72rem;
+      text-transform: uppercase;
+      color: var(--text-muted);
+      font-weight: 700;
+    }
+
+    .spec-val {
+      font-size: 0.88rem;
+      font-weight: 600;
+      color: var(--text);
+      margin-top: 0.1rem;
+      word-break: break-word;
+    }
+
+    .info-block {
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 0.9rem 1.1rem;
+      background: #fff;
+    }
+
+    .info-block-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 0.45rem;
+    }
+
+    .info-block-header h4 {
+      font-size: 0.88rem;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+      color: var(--text-muted);
+    }
+
+    .info-block-content {
+      font-size: 0.9rem;
+      color: #334155;
+      line-height: 1.6;
+      white-space: pre-line;
+    }
+
+    /* Pagination */
+    .pagination-bar {
+      margin-top: 1.5rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 0.4rem;
+      flex-wrap: wrap;
+    }
+
+    .page-btn {
+      min-width: 36px;
+      height: 36px;
+      padding: 0 0.6rem;
+      border-radius: 8px;
+      border: 1px solid var(--border);
+      background: #fff;
+      font-size: 0.86rem;
+      font-weight: 600;
+      cursor: pointer;
+    }
+
+    .page-btn.active {
+      background: var(--primary);
+      color: #fff;
+      border-color: var(--primary);
+    }
+
+    .page-btn:disabled {
+      opacity: 0.45;
+      cursor: not-allowed;
+    }
+
+    /* Toast Notification */
+    .toast-container {
+      position: fixed;
+      bottom: 1.25rem;
+      right: 1.25rem;
+      z-index: 2000;
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+    }
+
+    .toast {
+      background: #0f172a;
+      color: #fff;
+      padding: 0.75rem 1.1rem;
+      border-radius: 10px;
+      font-size: 0.86rem;
+      box-shadow: var(--shadow-lg);
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+      animation: fadeIn 0.2s ease;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(8px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="top-header">
+    <div class="header-inner">
+      <div class="brand-title">
+        <div class="brand-logo">T</div>
+        <div>
+          <h1>Catálogo Mayorista &amp; Detal — Maquillaje Trendy Shop</h1>
+          <p>Explorador offline/online de productos, variantes, fichas técnicas y descarga de imágenes</p>
+        </div>
+      </div>
+      <div class="stats-bar" id="statsBar">
+        <a href="estudio_mercado.html" style="background:#fff; color:#be1260; padding:0.4rem 0.95rem; border-radius:999px; font-size:0.82rem; font-weight:800; text-decoration:none; box-shadow:0 2px 8px rgba(0,0,0,0.15);">🎯 Ir a Estudio de Mercado (Trendy + Bloomshell) ↗</a>
+        <div class="stat-pill">Productos: <strong id="statTotalProds">0</strong></div>
+        <div class="stat-pill">Variantes (SKUs): <strong id="statTotalSkus">0</strong></div>
+        <div class="stat-pill">En Stock: <strong id="statInStock">0</strong></div>
+        <div class="stat-pill">Unidades Totales: <strong id="statTotalUnits">0</strong></div>
+        <div class="stat-pill">Mostrando: <strong id="statFiltered">0</strong></div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <div class="main-container">
+    <!-- Sidebar Filters -->
+    <aside class="sidebar">
+      <div class="sidebar-section">
+        <div class="sidebar-title">
+          <span>Categorías</span>
+        </div>
+        <ul class="category-list" id="categoryList"></ul>
+      </div>
+
+      <div class="sidebar-section">
+        <div class="sidebar-title">Subcategoría</div>
+        <select id="filterSubcategory" class="filter-select">
+          <option value="">Todas las subcategorías</option>
+        </select>
+      </div>
+
+      <div class="sidebar-section">
+        <div class="sidebar-title">Marca</div>
+        <select id="filterBrand" class="filter-select">
+          <option value="">Todas las marcas</option>
+        </select>
+      </div>
+
+      <div class="sidebar-section">
+        <div class="sidebar-title">Etiqueta / Colección</div>
+        <select id="filterCluster" class="filter-select">
+          <option value="">Todas las etiquetas</option>
+        </select>
+      </div>
+
+      <div class="sidebar-section">
+        <div class="sidebar-title">Disponibilidad</div>
+        <label class="checkbox-label">
+          <input type="checkbox" id="chkOnlyStock" />
+          Solo productos con stock
+        </label>
+        <label class="checkbox-label">
+          <input type="checkbox" id="chkOnlyOut" />
+          Solo productos agotados
+        </label>
+        <label class="checkbox-label">
+          <input type="checkbox" id="chkMultiVariants" />
+          Con múltiples tonos/variantes
+        </label>
+      </div>
+
+      <div class="sidebar-section">
+        <div class="sidebar-title">Rango de Precio (COP)</div>
+        <div class="price-inputs">
+          <input type="number" id="priceMin" class="filter-input" placeholder="Mín $" min="0" step="1000" />
+          <input type="number" id="priceMax" class="filter-input" placeholder="Máx $" min="0" step="1000" />
+        </div>
+      </div>
+
+      <button class="btn-reset" id="btnResetFilters">Limpiar todos los filtros</button>
+    </aside>
+
+    <!-- Catalog Area -->
+    <main>
+      <div class="toolbar">
+        <div class="search-box">
+          <span class="search-icon">🔍</span>
+          <input type="text" id="searchInput" placeholder="Buscar por nombre, referencia (ej. MRM2730), SKU, registro INVIMA, ingrediente..." />
+          <button class="clear-search" id="btnClearSearch" title="Limpiar búsqueda">✕</button>
+        </div>
+
+        <div class="toolbar-actions">
+          <select id="sortSelect" class="filter-select" style="width: auto;">
+            <option value="recent">Más recientes primero</option>
+            <option value="name_asc">Nombre (A - Z)</option>
+            <option value="name_desc">Nombre (Z - A)</option>
+            <option value="price_asc">Precio (Menor a Mayor)</option>
+            <option value="price_desc">Precio (Mayor a Menor)</option>
+            <option value="stock_desc">Mayor Stock disponible</option>
+            <option value="id_asc">ID de Producto</option>
+          </select>
+
+          <select id="pageSizeSelect" class="filter-select" style="width: auto;">
+            <option value="24">24 por página</option>
+            <option value="48" selected>48 por página</option>
+            <option value="96">96 por página</option>
+            <option value="9999">Ver todos</option>
+          </select>
+
+          <div class="view-toggle">
+            <button class="view-btn active" id="btnViewGrid" title="Vista en cuadrícula">⊞ Cuadrícula</button>
+            <button class="view-btn" id="btnViewTable" title="Vista en tabla">☰ Tabla</button>
+          </div>
+
+          <button class="btn btn-outline" id="btnExportFiltered" title="Descargar productos filtrados en CSV Excel">
+            📥 Exportar Filtrados (.CSV)
+          </button>
+        </div>
+      </div>
+
+      <!-- Products Container -->
+      <div id="catalogContainer"></div>
+
+      <!-- Pagination -->
+      <div class="pagination-bar" id="paginationBar"></div>
+    </main>
+  </div>
+
+  <!-- Product Detail Modal -->
+  <div class="modal-backdrop" id="productModal">
+    <div class="modal-dialog">
+      <div class="modal-header">
+        <div class="modal-header-left">
+          <span class="card-ref" id="modalProdId">ID: -</span>
+          <span class="card-ref" id="modalProdRef">REF: -</span>
+          <span class="badge badge-stock" id="modalStockBadge">En Stock</span>
+          <a href="#" target="_blank" rel="noopener" class="btn btn-outline btn-sm" id="modalStoreLink">🔗 Ver en web Trendy</a>
+          <button class="btn btn-outline btn-sm" id="btnCopyFicha">📋 Copiar Ficha Completa</button>
+        </div>
+        <button class="modal-close" id="btnCloseModal" title="Cerrar (Esc)">✕</button>
+      </div>
+
+      <div class="modal-body">
+        <!-- Left: Gallery & Image Saver -->
+        <div class="gallery-container">
+          <div class="main-image-frame">
+            <button class="image-nav-btn image-nav-prev" id="btnPrevImg" title="Imagen anterior">❮</button>
+            <img id="modalMainImg" src="" alt="Imagen de producto" title="Clic para hacer zoom" />
+            <button class="image-nav-btn image-nav-next" id="btnNextImg" title="Siguiente imagen">❯</button>
+          </div>
+
+          <div style="display:flex; justify-content:space-between; align-items:center; font-size:0.78rem; color:var(--text-muted);">
+            <span id="modalImgCounter">Imagen 1 de 1</span>
+            <span>💡 Haz clic en la imagen principal para aplicar Zoom</span>
+          </div>
+
+          <div class="thumbs-strip" id="modalThumbs"></div>
+
+          <!-- Image Saving Controls -->
+          <div class="image-download-panel">
+            <h4>📸 Guardar y Descargar Imágenes</h4>
+            <div class="download-buttons-grid">
+              <button class="btn btn-primary btn-sm" id="btnDownloadCurrentImg">
+                💾 Guardar imagen actual
+              </button>
+              <button class="btn btn-primary btn-sm" id="btnDownloadVariantZip">
+                📦 ZIP de esta variante
+              </button>
+              <button class="btn btn-outline btn-sm" id="btnDownloadProductZip">
+                🗂️ ZIP todas las fotos del producto
+              </button>
+              <button class="btn btn-outline btn-sm" id="btnSaveToFolder" title="Elegir carpeta en tu PC y guardar todas las imágenes directamente">
+                📁 Guardar directo en carpeta...
+              </button>
+            </div>
+            <div style="display:flex; align-items:center; justify-content:space-between; gap:0.5rem; margin-top:0.25rem; font-size:0.76rem; color:var(--text-muted);">
+              <span id="modalLocalFolderText" style="font-family:monospace; overflow:hidden; text-overflow:ellipsis; white-space:nowrap;"></span>
+              <button class="btn btn-outline btn-sm" id="btnCopyFolderPath" style="padding:0.2rem 0.5rem; font-size:0.72rem; flex-shrink:0;">Copiar ruta local</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right: Full Product Info -->
+        <div class="details-column">
+          <div>
+            <div style="font-size:0.8rem; color:var(--text-muted); font-weight:600; margin-bottom:0.25rem;" id="modalCategoryBreadcrumb"></div>
+            <h2 class="detail-title" id="modalTitle">Nombre del Producto</h2>
+          </div>
+
+          <div class="detail-price-box">
+            <div>
+              <div style="font-size:0.72rem; text-transform:uppercase; color:var(--text-muted); font-weight:700;">Precio Variante Seleccionada</div>
+              <div class="detail-price-main" id="modalPrice">$ 0</div>
+            </div>
+            <div id="modalOldPriceBox" style="display:none;">
+              <div style="font-size:0.72rem; text-transform:uppercase; color:var(--text-muted); font-weight:700;">Precio Lista</div>
+              <div class="price-old" id="modalOldPrice" style="font-size:1rem;">$ 0</div>
+            </div>
+            <div style="margin-left:auto; text-align:right;">
+              <div style="font-size:0.72rem; text-transform:uppercase; color:var(--text-muted); font-weight:700;">Stock Variante / Total</div>
+              <div style="font-size:1.05rem; font-weight:800;" id="modalStockDetail">0 uds</div>
+            </div>
+          </div>
+
+          <!-- Variant / Tone Selector -->
+          <div>
+            <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:0.5rem;">
+              <span style="font-size:0.82rem; font-weight:700; text-transform:uppercase; color:var(--text-muted);" id="modalVariantsLabel">Variantes / Tonos (1)</span>
+              <button class="btn btn-outline btn-sm" id="btnShowAllProdImages" style="font-size:0.74rem;">Ver fotos de todos los tonos</button>
+            </div>
+            <div class="sku-selector-grid" id="modalSkuSelector"></div>
+          </div>
+
+          <!-- Specifications Grid -->
+          <div>
+            <div style="font-size:0.82rem; font-weight:700; text-transform:uppercase; color:var(--text-muted); margin-bottom:0.5rem;">Especificaciones Técnicas</div>
+            <div class="specs-grid" id="modalSpecsGrid"></div>
+          </div>
+
+          <!-- Detailed Text Blocks -->
+          <div id="modalTextBlocks" style="display:flex; flex-direction:column; gap:0.85rem;"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Toast Container -->
+  <div class="toast-container" id="toastContainer"></div>
+
+  <!-- Load Catalog Data -->
+  <script src="datos/catalogo_data.js"></script>
+  <script>
+    (function () {
+      const rawData = window.TRENDY_CATALOG_DATA || [];
+
+      // Format currency COP
+      const copFormatter = new Intl.NumberFormat('es-CO', {
+        style: 'currency',
+        currency: 'COP',
+        maximumFractionDigits: 0
+      });
+
+      function formatCOP(val) {
+        return copFormatter.format(Number(val) || 0);
+      }
+
+      function showToast(msg) {
+        const container = document.getElementById('toastContainer');
+        const el = document.createElement('div');
+        el.className = 'toast';
+        el.textContent = msg;
+        container.appendChild(el);
+        setTimeout(() => {
+          el.style.opacity = '0';
+          el.style.transition = 'opacity 0.25s';
+          setTimeout(() => el.remove(), 250);
+        }, 2800);
+      }
+
+      function copyToClipboard(text, label) {
+        navigator.clipboard.writeText(text).then(() => {
+          showToast(`✅ ${label || 'Texto'} copiado al portapapeles`);
+        }).catch(() => {
+          const ta = document.createElement('textarea');
+          ta.value = text;
+          document.body.appendChild(ta);
+          ta.select();
+          document.execCommand('copy');
+          ta.remove();
+          showToast(`✅ ${label || 'Texto'} copiado al portapapeles`);
+        });
+      }
+
+      // Minimalist PKZIP generator (STORE method, no external libraries required)
+      const crcTable = (function () {
+        const table = new Uint32Array(256);
+        for (let i = 0; i < 256; i++) {
+          let c = i;
+          for (let k = 0; k < 8; k++) {
+            c = (c & 1) ? (0xEDB88320 ^ (c >>> 1)) : (c >>> 1);
+          }
+          table[i] = c >>> 0;
+        }
+        return table;
+      })();
+
+      function crc32(bytes) {
+        let crc = 0xFFFFFFFF;
+        for (let i = 0; i < bytes.length; i++) {
+          crc = (crc >>> 8) ^ crcTable[(crc ^ bytes[i]) & 0xFF];
+        }
+        return (crc ^ 0xFFFFFFFF) >>> 0;
+      }
+
+      function createZipBlob(files) {
+        // files: [{ name: string, data: Uint8Array }]
+        const encoder = new TextEncoder();
+        const localParts = [];
+        const centralParts = [];
+        let offset = 0;
+
+        for (const file of files) {
+          const nameBytes = encoder.encode(file.name);
+          const data = file.data;
+          const crc = crc32(data);
+
+          const localHeader = new Uint8Array(30 + nameBytes.length);
+          const lv = new DataView(localHeader.buffer);
+          lv.setUint32(0, 0x04034b50, true);
+          lv.setUint16(4, 20, true);
+          lv.setUint16(6, 0x0800, true); // UTF-8 flag
+          lv.setUint16(8, 0, true); // STORE
+          lv.setUint16(10, 0, true);
+          lv.setUint16(12, 0, true);
+          lv.setUint32(14, crc, true);
+          lv.setUint32(18, data.length, true);
+          lv.setUint32(22, data.length, true);
+          lv.setUint16(26, nameBytes.length, true);
+          lv.setUint16(28, 0, true);
+          localHeader.set(nameBytes, 30);
+
+          localParts.push(localHeader, data);
+
+          const centralHeader = new Uint8Array(46 + nameBytes.length);
+          const cv = new DataView(centralHeader.buffer);
+          cv.setUint32(0, 0x02014b50, true);
+          cv.setUint16(4, 20, true);
+          cv.setUint16(6, 20, true);
+          cv.setUint16(8, 0x0800, true);
+          cv.setUint16(10, 0, true);
+          cv.setUint16(12, 0, true);
+          cv.setUint16(14, 0, true);
+          cv.setUint32(16, crc, true);
+          cv.setUint32(20, data.length, true);
+          cv.setUint32(24, data.length, true);
+          cv.setUint16(28, nameBytes.length, true);
+          cv.setUint16(30, 0, true);
+          cv.setUint16(32, 0, true);
+          cv.setUint16(34, 0, true);
+          cv.setUint16(36, 0, true);
+          cv.setUint32(38, 0, true);
+          cv.setUint32(42, offset, true);
+          centralHeader.set(nameBytes, 46);
+
+          centralParts.push(centralHeader);
+          offset += localHeader.length + data.length;
+        }
+
+        let centralSize = 0;
+        for (const cp of centralParts) centralSize += cp.length;
+
+        const eocd = new Uint8Array(22);
+        const ev = new DataView(eocd.buffer);
+        ev.setUint32(0, 0x06054b50, true);
+        ev.setUint16(4, 0, true);
+        ev.setUint16(6, 0, true);
+        ev.setUint16(8, files.length, true);
+        ev.setUint16(10, files.length, true);
+        ev.setUint32(12, centralSize, true);
+        ev.setUint32(16, offset, true);
+        ev.setUint16(20, 0, true);
+
+        return new Blob([...localParts, ...centralParts, eocd], { type: 'application/zip' });
+      }
+
+      async function fetchImageBytes(remoteUrl, localPath) {
+        // Try remote URL first (VTEX has Access-Control-Allow-Origin: *), fallback to localPath
+        try {
+          const resp = await fetch(remoteUrl);
+          if (resp.ok) {
+            const buf = await resp.arrayBuffer();
+            return new Uint8Array(buf);
+          }
+        } catch (e) {}
+        const resp2 = await fetch(localPath);
+        const buf2 = await resp2.arrayBuffer();
+        return new Uint8Array(buf2);
+      }
+
+      async function downloadSingleImage(imgEntry, customFileName) {
+        const fileName = customFileName || imgEntry.fileName || 'imagen.jpg';
+        try {
+          const bytes = await fetchImageBytes(imgEntry.remoteUrl, imgEntry.localPath);
+          const blob = new Blob([bytes], { type: 'image/jpeg' });
+          const blobUrl = URL.createObjectURL(blob);
+          const a = document.createElement('a');
+          a.href = blobUrl;
+          a.download = fileName;
+          document.body.appendChild(a);
+          a.click();
+          a.remove();
+          setTimeout(() => URL.revokeObjectURL(blobUrl), 3000);
+          showToast(`📸 Imagen guardada: ${fileName}`);
+        } catch (err) {
+          // Direct local link download fallback
+          const a = document.createElement('a');
+          a.href = imgEntry.localPath || imgEntry.remoteUrl;
+          a.download = fileName;
+          a.target = '_blank';
+          document.body.appendChild(a);
+          a.click();
+          a.remove();
+        }
+      }
+
+      async function downloadImagesAsZip(imgEntries, zipFileName) {
+        if (!imgEntries || imgEntries.length === 0) {
+          showToast('⚠️ No hay imágenes para descargar');
+          return;
+        }
+        showToast(`⏳ Preparando archivo ZIP con ${imgEntries.length} imágenes...`);
+        const files = [];
+        const usedNames = new Set();
+
+        for (let i = 0; i < imgEntries.length; i++) {
+          const entry = imgEntries[i];
+          try {
+            const bytes = await fetchImageBytes(entry.remoteUrl, entry.localPath);
+            let name = entry.fileName || `imagen_${i + 1}.jpg`;
+            if (usedNames.has(name)) {
+              name = `${i + 1}_${name}`;
+            }
+            usedNames.add(name);
+            files.push({ name, data: bytes });
+          } catch (e) {
+            console.warn('No se pudo empaquetar imagen:', entry, e);
+          }
+        }
+
+        if (files.length === 0) {
+          showToast('❌ No se pudieron leer los bytes para el ZIP; descargando individualmente...');
+          for (const entry of imgEntries) {
+            await downloadSingleImage(entry, entry.fileName);
+          }
+          return;
+        }
+
+        const zipBlob = createZipBlob(files);
+        const url = URL.createObjectURL(zipBlob);
+        const a = document.createElement('a');
+        a.href = url;
+        a.download = zipFileName;
+        document.body.appendChild(a);
+        a.click();
+        a.remove();
+        setTimeout(() => URL.revokeObjectURL(url), 5000);
+        showToast(`✅ Descargado ${zipFileName} (${files.length} imágenes)`);
+      }
+
+      async function saveImagesToDirectory(imgEntries, folderSuggestion) {
+        if (!window.showDirectoryPicker) {
+          showToast('ℹ️ Tu navegador no soporta selección de carpeta directa; descargando en .ZIP...');
+          return downloadImagesAsZip(imgEntries, `${folderSuggestion}.zip`);
+        }
+        try {
+          const dirHandle = await window.showDirectoryPicker({ mode: 'readwrite' });
+          const subDir = await dirHandle.getDirectoryHandle(folderSuggestion, { create: true });
+          showToast(`⏳ Guardando ${imgEntries.length} imágenes en la carpeta ${folderSuggestion}...`);
+          let savedCount = 0;
+          for (let i = 0; i < imgEntries.length; i++) {
+            const entry = imgEntries[i];
+            const bytes = await fetchImageBytes(entry.remoteUrl, entry.localPath);
+            const fileHandle = await subDir.getFileHandle(entry.fileName || `img_${i + 1}.jpg`, { create: true });
+            const writable = await fileHandle.createWritable();
+            await writable.write(bytes);
+            await writable.close();
+            savedCount++;
+          }
+          showToast(`✅ ¡${savedCount} imágenes guardadas directamente en ${folderSuggestion}!`);
+        } catch (err) {
+          if (err.name !== 'AbortError') {
+            showToast('⚠️ No se pudo escribir en la carpeta; descargando en .ZIP...');
+            downloadImagesAsZip(imgEntries, `${folderSuggestion}.zip`);
+          }
+        }
+      }
+
+      // Normalize products & build helper image structures
+      const products = rawData.map(p => {
+        const variants = Array.isArray(p.variants) ? p.variants : (p.variants ? [p.variants] : []);
+        const normVariants = variants.map(v => {
+          const galleryUrls = Array.isArray(v.galleryImageUrls) ? v.galleryImageUrls : (v.galleryImageUrls ? [v.galleryImageUrls] : []);
+          const localImgs = Array.isArray(v.localImages) ? v.localImages : (v.localImages ? [v.localImages] : []);
+          const imageEntries = [];
+
+          for (let i = 0; i < Math.max(galleryUrls.length, localImgs.length); i++) {
+            const rem = galleryUrls[i] || v.pickerImageUrl || galleryUrls[0] || '';
+            const loc = localImgs[i] || '';
+            if (!rem && !loc) continue;
+            const fileName = loc ? loc.split('/').pop() : (rem.split('/').pop().split('?')[0] || `img_${i + 1}.jpg`);
+            imageEntries.push({
+              remoteUrl: rem,
+              localPath: loc,
+              fileName: fileName
+            });
+          }
+
+          return {
+            ...v,
+            imageEntries
+          };
+        });
+
+        // Collect all unique images across variants
+        const allImageEntries = [];
+        const seenUrls = new Set();
+        normVariants.forEach(v => {
+          v.imageEntries.forEach(img => {
+            const key = img.remoteUrl || img.localPath;
+            if (!seenUrls.has(key)) {
+              seenUrls.add(key);
+              allImageEntries.push(img);
+            }
+          });
+        });
+
+        const clusters = Array.isArray(p.clusters) ? p.clusters : (p.clusters ? [p.clusters] : []);
+        const maxDiscount = normVariants.reduce((max, v) => Math.max(max, Number(v.discountPercent) || 0), 0);
+
+        const searchBlob = [
+          p.productId,
+          p.reference,
+          p.name,
+          p.brand,
+          p.categoryMain,
+          p.subcategory2,
+          p.subcategory3,
+          p.descriptionText,
+          p.specifications?.registroInvima,
+          p.specifications?.ingredientes,
+          p.specifications?.beneficios,
+          ...normVariants.map(v => `${v.skuId} ${v.reference} ${v.name} ${v.color} ${v.tono}`)
+        ].filter(Boolean).join(' ').toLowerCase();
+
+        return {
+          ...p,
+          clusters,
+          variants: normVariants,
+          allImageEntries,
+          maxDiscount,
+          searchBlob
+        };
+      });
+
+      // State
+      let state = {
+        search: '',
+        category: '',
+        subcategory: '',
+        brand: '',
+        cluster: '',
+        onlyStock: false,
+        onlyOut: false,
+        multiVariants: false,
+        priceMin: '',
+        priceMax: '',
+        sort: 'recent',
+        view: 'grid',
+        page: 1,
+        pageSize: 48
+      };
+
+      // Populate global stats & filter dropdowns
+      const totalSkus = products.reduce((acc, p) => acc + p.variants.length, 0);
+      const totalInStock = products.filter(p => p.totalStock > 0).length;
+      const totalUnits = products.reduce((acc, p) => acc + (Number(p.totalStock) || 0), 0);
+
+      document.getElementById('statTotalProds').textContent = products.length.toLocaleString('es-CO');
+      document.getElementById('statTotalSkus').textContent = totalSkus.toLocaleString('es-CO');
+      document.getElementById('statInStock').textContent = totalInStock.toLocaleString('es-CO');
+      document.getElementById('statTotalUnits').textContent = totalUnits.toLocaleString('es-CO');
+
+      function initFilters() {
+        const catCounts = {};
+        const brands = new Set();
+        const clusters = new Set();
+
+        products.forEach(p => {
+          const cat = p.categoryMain || 'Sin categoría';
+          catCounts[cat] = (catCounts[cat] || 0) + 1;
+          if (p.brand) brands.add(p.brand);
+          p.clusters.forEach(c => { if (c) clusters.add(c); });
+        });
+
+        const catListEl = document.getElementById('categoryList');
+        catListEl.innerHTML = '';
+
+        const allLi = document.createElement('li');
+        allLi.innerHTML = `<button class="cat-btn ${state.category === '' ? 'active' : ''}" data-cat="">
+          <span>Todas las categorías</span>
+          <span class="cat-count">${products.length}</span>
+        </button>`;
+        catListEl.appendChild(allLi);
+
+        Object.keys(catCounts).sort().forEach(cat => {
+          const li = document.createElement('li');
+          li.innerHTML = `<button class="cat-btn ${state.category === cat ? 'active' : ''}" data-cat="${cat}">
+            <span>${cat}</span>
+            <span class="cat-count">${catCounts[cat]}</span>
+          </button>`;
+          catListEl.appendChild(li);
+        });
+
+        catListEl.querySelectorAll('.cat-btn').forEach(btn => {
+          btn.addEventListener('click', () => {
+            state.category = btn.getAttribute('data-cat');
+            state.subcategory = '';
+            state.page = 1;
+            updateSubcategoryOptions();
+            initFilters();
+            render();
+          });
+        });
+
+        const brandSelect = document.getElementById('filterBrand');
+        if (brandSelect.options.length <= 1) {
+          Array.from(brands).sort().forEach(b => {
+            const opt = document.createElement('option');
+            opt.value = b;
+            opt.textContent = b;
+            brandSelect.appendChild(opt);
+          });
+        }
+
+        const clusterSelect = document.getElementById('filterCluster');
+        if (clusterSelect.options.length <= 1) {
+          Array.from(clusters).sort().forEach(c => {
+            const opt = document.createElement('option');
+            opt.value = c;
+            opt.textContent = c;
+            clusterSelect.appendChild(opt);
+          });
+        }
+      }
+
+      function updateSubcategoryOptions() {
+        const subSelect = document.getElementById('filterSubcategory');
+        subSelect.innerHTML = '<option value="">Todas las subcategorías</option>';
+        const subs = new Set();
+        products.forEach(p => {
+          if (!state.category || p.categoryMain === state.category) {
+            if (p.subcategory2) subs.add(p.subcategory2);
+          }
+        });
+        Array.from(subs).sort().forEach(s => {
+          const opt = document.createElement('option');
+          opt.value = s;
+          opt.textContent = s;
+          subSelect.appendChild(opt);
+        });
+        subSelect.value = state.subcategory;
+      }
+
+      function getFilteredProducts() {
+        const q = state.search.trim().toLowerCase();
+        const minP = state.priceMin !== '' ? Number(state.priceMin) : null;
+        const maxP = state.priceMax !== '' ? Number(state.priceMax) : null;
+
+        let list = products.filter(p => {
+          if (q && !p.searchBlob.includes(q)) return false;
+          if (state.category && (p.categoryMain || 'Sin categoría') !== state.category) return false;
+          if (state.subcategory && p.subcategory2 !== state.subcategory) return false;
+          if (state.brand && p.brand !== state.brand) return false;
+          if (state.cluster && !p.clusters.includes(state.cluster)) return false;
+          if (state.onlyStock && p.totalStock <= 0) return false;
+          if (state.onlyOut && p.totalStock > 0) return false;
+          if (state.multiVariants && p.variants.length <= 1) return false;
+          if (minP !== null && p.minPrice < minP) return false;
+          if (maxP !== null && p.maxPrice > maxP) return false;
+          return true;
+        });
+
+        list.sort((a, b) => {
+          switch (state.sort) {
+            case 'name_asc': return a.name.localeCompare(b.name, 'es');
+            case 'name_desc': return b.name.localeCompare(a.name, 'es');
+            case 'price_asc': return (a.minPrice || 0) - (b.minPrice || 0);
+            case 'price_desc': return (b.minPrice || 0) - (a.minPrice || 0);
+            case 'stock_desc': return (b.totalStock || 0) - (a.totalStock || 0);
+            case 'id_asc': return Number(a.productId) - Number(b.productId);
+            case 'recent':
+            default:
+              return (b.releaseDate || '').localeCompare(a.releaseDate || '') || (Number(b.productId) - Number(a.productId));
+          }
+        });
+
+        return list;
+      }
+
+      function getImgSrc(entry) {
+        if (!entry) return '';
+        return entry.localPath || entry.remoteUrl || '';
+      }
+
+      function render() {
+        const filtered = getFilteredProducts();
+        document.getElementById('statFiltered').textContent = filtered.length.toLocaleString('es-CO');
+
+        const totalPages = Math.max(1, Math.ceil(filtered.length / state.pageSize));
+        if (state.page > totalPages) state.page = totalPages;
+
+        const startIdx = (state.page - 1) * state.pageSize;
+        const pageItems = filtered.slice(startIdx, startIdx + state.pageSize);
+
+        const container = document.getElementById('catalogContainer');
+        container.innerHTML = '';
+
+        if (pageItems.length === 0) {
+          container.innerHTML = `
+            <div style="background:#fff; border:1px solid var(--border); border-radius:var(--radius); padding:3rem; text-align:center;">
+              <div style="font-size:2.5rem; margin-bottom:0.5rem;">🔍</div>
+              <h3 style="margin-bottom:0.4rem;">No se encontraron productos con estos filtros</h3>
+              <p style="color:var(--text-muted); font-size:0.9rem;">Intenta cambiar los términos de búsqueda o limpiar los filtros laterales.</p>
+            </div>`;
+          document.getElementById('paginationBar').innerHTML = '';
+          return;
+        }
+
+        if (state.view === 'grid') {
+          const grid = document.createElement('div');
+          grid.className = 'products-grid';
+
+          pageItems.forEach(p => {
+            const card = document.createElement('div');
+            card.className = 'product-card';
+
+            const firstImgEntry = p.allImageEntries[0] || null;
+            const imgSrc = getImgSrc(firstImgEntry);
+            const fallbackUrl = firstImgEntry ? firstImgEntry.remoteUrl : '';
+
+            const isNew = p.clusters.some(c => c.toUpperCase().includes('NUEVO'));
+            const hasStock = p.totalStock > 0;
+
+            let variantsHtml = '';
+            if (p.variants.length > 1) {
+              variantsHtml = `<div class="card-variants">` +
+                p.variants.slice(0, 6).map((v, idx) => {
+                  const label = v.color || v.tono || v.name;
+                  const vImg = v.imageEntries[0] || firstImgEntry;
+                  return `<button class="variant-pill ${idx === 0 ? 'active' : ''}" data-v-idx="${idx}" title="Stock: ${v.stock} uds | ${formatCOP(v.price)}">
+                    ${label}
+                  </button>`;
+                }).join('') +
+                (p.variants.length > 6 ? `<span style="font-size:0.72rem; color:var(--text-muted); align-self:center;">+${p.variants.length - 6} más</span>` : '') +
+              `</div>`;
+            } else {
+              variantsHtml = `<div class="card-variants"><span style="font-size:0.75rem; color:var(--text-muted);">Presentación única (${p.variants[0]?.reference || p.reference})</span></div>`;
+            }
+
+            const priceDisplay = p.minPrice === p.maxPrice
+              ? formatCOP(p.minPrice)
+              : `${formatCOP(p.minPrice)} - ${formatCOP(p.maxPrice)}`;
+
+            const firstVar = p.variants[0];
+            const showOldPrice = firstVar && firstVar.listPrice > firstVar.price;
+            const wholesale400k = p.wholesalePrice400k || firstVar?.wholesaleTier1 || 0;
+            const wholesale1M = p.wholesalePrice1M || firstVar?.wholesaleTier2 || 0;
+
+            card.innerHTML = `
+              <div class="card-media">
+                <img src="${imgSrc}" data-fallback="${fallbackUrl}" alt="${p.name}" loading="lazy" onerror="if(this.dataset.fallback && this.src !== this.dataset.fallback){this.src=this.dataset.fallback;}" />
+                <div class="card-badges">
+                  <div class="badge-group">
+                    ${isNew ? '<span class="badge badge-new">Nuevo</span>' : ''}
+                    ${p.maxDiscount > 0 ? `<span class="badge badge-discount">-${p.maxDiscount}%</span>` : ''}
+                  </div>
+                  <span class="badge ${hasStock ? 'badge-stock' : 'badge-out'}">
+                    ${hasStock ? `Stock: ${p.totalStock}` : 'Agotado'}
+                  </span>
+                </div>
+                <button class="quick-save-btn" title="Descargar todas las imágenes de este producto (.ZIP)">💾</button>
+              </div>
+              <div class="card-body">
+                <div class="card-meta">
+                  <span>${p.categoryMain || 'Catálogo'}${p.subcategory2 ? ' › ' + p.subcategory2 : ''}</span>
+                  <span class="card-ref">${p.reference || 'ID ' + p.productId}</span>
+                </div>
+                <h3 class="card-title">${p.name}</h3>
+                <div class="card-specs-mini">
+                  <span class="spec-chip">${p.brand || 'Trendy'}</span>
+                  ${p.specifications?.contenido ? `<span class="spec-chip">📦 ${p.specifications.contenido}</span>` : ''}
+                  ${p.specifications?.unidadMinimaMayoristas ? `<span class="spec-chip">Mayorista mín: ${p.specifications.unidadMinimaMayoristas}</span>` : ''}
+                  <span class="spec-chip">📸 ${p.allImageEntries.length} fotos</span>
+                </div>
+                ${variantsHtml}
+                <div class="card-footer">
+                  <div class="price-block">
+                    ${showOldPrice ? `<span class="price-old">${formatCOP(firstVar.listPrice)}</span>` : ''}
+                    <span class="price-current" title="Precio Detal Sugerido (PVP)">PVP: ${priceDisplay}</span>
+                    ${wholesale400k > 0 ? `<span style="font-size:0.76rem; font-weight:700; color:#7c3aed;">Mayorista $400k: ${formatCOP(wholesale400k)}${wholesale1M > 0 && wholesale1M !== wholesale400k ? ` • $1M: ${formatCOP(wholesale1M)}` : ''}</span>` : ''}
+                  </div>
+                  <button class="btn btn-primary btn-sm btn-open-detail">Ver Detalles</button>
+                </div>
+              </div>
+            `;
+
+            const imgEl = card.querySelector('.card-media img');
+            card.querySelectorAll('.variant-pill').forEach(pill => {
+              pill.addEventListener('click', (e) => {
+                e.stopPropagation();
+                card.querySelectorAll('.variant-pill').forEach(b => b.classList.remove('active'));
+                pill.classList.add('active');
+                const vIdx = Number(pill.getAttribute('data-v-idx'));
+                const targetVar = p.variants[vIdx];
+                if (targetVar && targetVar.imageEntries[0]) {
+                  imgEl.src = getImgSrc(targetVar.imageEntries[0]);
+                  imgEl.dataset.fallback = targetVar.imageEntries[0].remoteUrl;
+                }
+              });
+            });
+
+            card.querySelector('.card-media').addEventListener('click', () => openProductModal(p));
+            card.querySelector('.card-title').addEventListener('click', () => openProductModal(p));
+            card.querySelector('.btn-open-detail').addEventListener('click', () => openProductModal(p));
+            card.querySelector('.quick-save-btn').addEventListener('click', (e) => {
+              e.stopPropagation();
+              downloadImagesAsZip(p.allImageEntries, `${p.reference || p.slug}_imagenes.zip`);
+            });
+
+            grid.appendChild(card);
+          });
+
+          container.appendChild(grid);
+        } else {
+          // Table View
+          const wrapper = document.createElement('div');
+          wrapper.className = 'table-wrapper';
+          const table = document.createElement('table');
+          table.className = 'products-table';
+          table.innerHTML = `
+            <thead>
+              <tr>
+                <th>Foto</th>
+                <th>ID / Ref</th>
+                <th>Producto</th>
+                <th>Categoría</th>
+                <th>Marca</th>
+                <th>Variantes</th>
+                <th>Precio COP</th>
+                <th>Stock Total</th>
+                <th>INVIMA / Mayorista</th>
+                <th>Acciones</th>
+              </tr>
+            </thead>
+            <tbody></tbody>
+          `;
+          const tbody = table.querySelector('tbody');
+
+          pageItems.forEach(p => {
+            const tr = document.createElement('tr');
+            const firstImg = p.allImageEntries[0];
+            const imgSrc = getImgSrc(firstImg);
+            const fallbackUrl = firstImg ? firstImg.remoteUrl : '';
+
+            tr.innerHTML = `
+              <td>
+                <img class="table-thumb" src="${imgSrc}" data-fallback="${fallbackUrl}" alt="${p.name}" onerror="if(this.dataset.fallback && this.src !== this.dataset.fallback){this.src=this.dataset.fallback;}" />
+              </td>
+              <td>
+                <div class="card-ref">${p.reference || '-'}</div>
+                <div style="font-size:0.72rem; color:var(--text-muted); margin-top:2px;">ID: ${p.productId}</div>
+              </td>
+              <td>
+                <div style="font-weight:700; cursor:pointer; color:var(--text);" class="tbl-title">${p.name}</div>
+                <div style="font-size:0.75rem; color:var(--text-muted);">${p.specifications?.contenido || ''}</div>
+              </td>
+              <td>${p.categoryMain || ''}${p.subcategory2 ? '<br><small style="color:var(--text-muted)">' + p.subcategory2 + '</small>' : ''}</td>
+              <td>${p.brand || ''}</td>
+              <td>${p.variants.length} (${p.variants.map(v => v.color || v.tono || v.name).slice(0, 3).join(', ')}${p.variants.length > 3 ? '...' : ''})</td>
+              <td style="white-space:nowrap;">
+                <div style="font-weight:800; color:var(--primary);">PVP: ${formatCOP(p.minPrice)}</div>
+                ${p.wholesalePrice400k ? `<div style="font-size:0.75rem; font-weight:700; color:#7c3aed;">May. $400k: ${formatCOP(p.wholesalePrice400k)}</div>` : ''}
+                ${p.wholesalePrice1M ? `<div style="font-size:0.72rem; color:var(--text-muted);">May. $1M: ${formatCOP(p.wholesalePrice1M)}</div>` : ''}
+              </td>
+              <td>
+                <span class="badge ${p.totalStock > 0 ? 'badge-stock' : 'badge-out'}">${p.totalStock} uds</span>
+              </td>
+              <td style="font-size:0.76rem;">
+                <div>INVIMA: ${p.specifications?.registroInvima || 'N/A'}</div>
+                <div>Mín Mayorista: ${p.specifications?.unidadMinimaMayoristas || 'N/A'}</div>
+              </td>
+              <td style="white-space:nowrap;">
+                <button class="btn btn-primary btn-sm btn-tbl-view">Ver</button>
+                <button class="btn btn-outline btn-sm btn-tbl-zip" title="Descargar imágenes en ZIP">📸 ZIP (${p.allImageEntries.length})</button>
+              </td>
+            `;
+
+            tr.querySelector('.table-thumb').addEventListener('click', () => openProductModal(p));
+            tr.querySelector('.tbl-title').addEventListener('click', () => openProductModal(p));
+            tr.querySelector('.btn-tbl-view').addEventListener('click', () => openProductModal(p));
+            tr.querySelector('.btn-tbl-zip').addEventListener('click', () => {
+              downloadImagesAsZip(p.allImageEntries, `${p.reference || p.slug}_imagenes.zip`);
+            });
+
+            tbody.appendChild(tr);
+          });
+
+          wrapper.appendChild(table);
+          container.appendChild(wrapper);
+        }
+
+        renderPagination(totalPages);
+      }
+
+      function renderPagination(totalPages) {
+        const bar = document.getElementById('paginationBar');
+        bar.innerHTML = '';
+        if (totalPages <= 1) return;
+
+        const prevBtn = document.createElement('button');
+        prevBtn.className = 'page-btn';
+        prevBtn.textContent = '« Anterior';
+        prevBtn.disabled = state.page === 1;
+        prevBtn.onclick = () => { state.page--; render(); window.scrollTo({ top: 0, behavior: 'smooth' }); };
+        bar.appendChild(prevBtn);
+
+        for (let i = 1; i <= totalPages; i++) {
+          if (totalPages > 10 && Math.abs(i - state.page) > 2 && i !== 1 && i !== totalPages) {
+            if (i === 2 || i === totalPages - 1) {
+              const dots = document.createElement('span');
+              dots.textContent = '...';
+              dots.style.padding = '0 0.4rem';
+              bar.appendChild(dots);
+            }
+            continue;
+          }
+          const btn = document.createElement('button');
+          btn.className = `page-btn ${i === state.page ? 'active' : ''}`;
+          btn.textContent = i;
+          btn.onclick = () => { state.page = i; render(); window.scrollTo({ top: 0, behavior: 'smooth' }); };
+          bar.appendChild(btn);
+        }
+
+        const nextBtn = document.createElement('button');
+        nextBtn.className = 'page-btn';
+        nextBtn.textContent = 'Siguiente »';
+        nextBtn.disabled = state.page === totalPages;
+        nextBtn.onclick = () => { state.page++; render(); window.scrollTo({ top: 0, behavior: 'smooth' }); };
+        bar.appendChild(nextBtn);
+      }
+
+      // Modal Logic
+      let currentModalProduct = null;
+      let currentModalVariantIdx = 0;
+      let currentGalleryImages = [];
+      let currentImgIdx = 0;
+
+      function openProductModal(p) {
+        currentModalProduct = p;
+        currentModalVariantIdx = 0;
+
+        document.getElementById('modalProdId').textContent = `ID: ${p.productId}`;
+        document.getElementById('modalProdRef').textContent = `REF: ${p.reference || '-'}`;
+        document.getElementById('modalStoreLink').href = p.url;
+        document.getElementById('modalCategoryBreadcrumb').textContent = (p.categories && p.categories[0]) ? p.categories[0] : (p.categoryMain || '');
+        document.getElementById('modalTitle').textContent = p.name;
+
+        const absFolder = `c:\\Users\\Usuario\\Documents\\trendy\\${(p.imageFolderLocal || '').replace(/\//g, '\\')}`;
+        document.getElementById('modalLocalFolderText').textContent = absFolder;
+        document.getElementById('modalLocalFolderText').title = absFolder;
+
+        renderModalVariants();
+        selectModalVariant(0);
+        renderModalSpecs(p);
+        renderModalTextBlocks(p);
+
+        document.getElementById('productModal').classList.add('open');
+        document.body.style.overflow = 'hidden';
+      }
+
+      function closeProductModal() {
+        document.getElementById('productModal').classList.remove('open');
+        document.body.style.overflow = '';
+      }
+
+      function renderModalVariants() {
+        const p = currentModalProduct;
+        document.getElementById('modalVariantsLabel').textContent = `Variantes / Tonos (${p.variants.length})`;
+        const container = document.getElementById('modalSkuSelector');
+        container.innerHTML = '';
+
+        p.variants.forEach((v, idx) => {
+          const btn = document.createElement('button');
+          btn.className = `sku-card-btn ${idx === currentModalVariantIdx ? 'active' : ''}`;
+          const thumbEntry = v.imageEntries[0] || p.allImageEntries[0];
+          const thumbSrc = getImgSrc(thumbEntry);
+          const fallbackUrl = thumbEntry ? thumbEntry.remoteUrl : '';
+          const label = v.color || v.tono || v.name || `SKU ${v.skuId}`;
+
+          btn.innerHTML = `
+            <img src="${thumbSrc}" data-fallback="${fallbackUrl}" alt="${label}" onerror="if(this.dataset.fallback && this.src !== this.dataset.fallback){this.src=this.dataset.fallback;}" />
+            <div class="sku-card-info">
+              <div class="sku-card-name" title="${label}">${label}</div>
+              <div class="sku-card-stock">Ref: ${v.reference || v.skuId} • <strong>${v.stock} uds</strong></div>
+            </div>
+          `;
+          btn.onclick = () => selectModalVariant(idx);
+          container.appendChild(btn);
+        });
+      }
+
+      function selectModalVariant(idx) {
+        const p = currentModalProduct;
+        currentModalVariantIdx = idx;
+        const v = p.variants[idx] || p.variants[0];
+
+        document.querySelectorAll('#modalSkuSelector .sku-card-btn').forEach((b, i) => {
+          b.classList.toggle('active', i === idx);
+        });
+
+        const vMay400 = v.wholesaleTier1 || p.wholesalePrice400k || 0;
+        const vMay1M = v.wholesaleTier2 || p.wholesalePrice1M || 0;
+        document.getElementById('modalPrice').innerHTML = `PVP: ${formatCOP(v.price)}` +
+          (vMay400 > 0 ? `<div style="font-size:0.9rem; font-weight:700; color:#7c3aed; margin-top:2px;">Mayorista $400k: ${formatCOP(vMay400)}${vMay1M > 0 ? ` • $1M: ${formatCOP(vMay1M)}` : ''}</div>` : '');
+        const oldBox = document.getElementById('modalOldPriceBox');
+        if (v.listPrice > v.price) {
+          oldBox.style.display = 'block';
+          document.getElementById('modalOldPrice').textContent = formatCOP(v.listPrice);
+        } else {
+          oldBox.style.display = 'none';
+        }
+
+        const stockBadge = document.getElementById('modalStockBadge');
+        stockBadge.className = `badge ${v.stock > 0 ? 'badge-stock' : 'badge-out'}`;
+        stockBadge.textContent = v.stock > 0 ? `Disponible (${v.stock} uds)` : 'Variante Agotada';
+
+        document.getElementById('modalStockDetail').textContent = `${v.stock.toLocaleString('es-CO')} uds (Total prod: ${p.totalStock.toLocaleString('es-CO')})`;
+
+        currentGalleryImages = v.imageEntries.length > 0 ? v.imageEntries : p.allImageEntries;
+        currentImgIdx = 0;
+        renderModalGallery();
+      }
+
+      function renderModalGallery() {
+        const mainImg = document.getElementById('modalMainImg');
+        mainImg.classList.remove('zoomed');
+        const currentEntry = currentGalleryImages[currentImgIdx];
+
+        if (currentEntry) {
+          mainImg.src = getImgSrc(currentEntry);
+          mainImg.dataset.fallback = currentEntry.remoteUrl || '';
+          mainImg.onerror = function () {
+            if (this.dataset.fallback && this.src !== this.dataset.fallback) {
+              this.src = this.dataset.fallback;
+            }
+          };
+        } else {
+          mainImg.src = '';
+        }
+
+        document.getElementById('modalImgCounter').textContent =
+          `Imagen ${currentGalleryImages.length ? currentImgIdx + 1 : 0} de ${currentGalleryImages.length} (${currentEntry?.fileName || ''})`;
+
+        const thumbsContainer = document.getElementById('modalThumbs');
+        thumbsContainer.innerHTML = '';
+        currentGalleryImages.forEach((entry, i) => {
+          const div = document.createElement('div');
+          div.className = `thumb-item ${i === currentImgIdx ? 'active' : ''}`;
+          div.innerHTML = `<img src="${getImgSrc(entry)}" data-fallback="${entry.remoteUrl || ''}" alt="Miniatura ${i + 1}" onerror="if(this.dataset.fallback && this.src !== this.dataset.fallback){this.src=this.dataset.fallback;}" />`;
+          div.onclick = () => {
+            currentImgIdx = i;
+            renderModalGallery();
+          };
+          thumbsContainer.appendChild(div);
+        });
+      }
+
+      function renderModalSpecs(p) {
+        const s = p.specifications || {};
+        const items = [
+          { label: 'Marca', val: p.brand },
+          { label: 'Referencia General', val: p.reference },
+          { label: 'Registro INVIMA', val: s.registroInvima },
+          { label: 'Unidad Mín. Mayoristas', val: s.unidadMinimaMayoristas },
+          { label: 'Contenido', val: s.contenido },
+          { label: 'PUM (Medida / Unidad)', val: [s.pumMedida, s.pumUnidad].filter(Boolean).join(' ') },
+          { label: 'Tipo de Piel', val: s.tipoDePiel },
+          { label: 'Acabado', val: s.acabado },
+          { label: 'Fórmula Cosmética', val: s.formulaCosmetica },
+          { label: 'Garantía', val: s.garantia },
+          { label: 'Lanzamiento', val: p.releaseDate ? p.releaseDate.split('T')[0] : '' },
+          { label: 'Etiquetas / Clusters', val: p.clusters.join(', ') }
+        ];
+
+        const grid = document.getElementById('modalSpecsGrid');
+        grid.innerHTML = items.map(it => `
+          <div class="spec-box">
+            <div class="spec-label">${it.label}</div>
+            <div class="spec-val">${it.val || '—'}</div>
+          </div>
+        `).join('');
+      }
+
+      function renderModalTextBlocks(p) {
+        const s = p.specifications || {};
+        const blocks = [
+          { title: '📝 Descripción del Producto', text: p.descriptionText },
+          { title: '✨ Beneficios', text: s.beneficios },
+          { title: '🧪 Ingredientes', text: s.ingredientes },
+          { title: '🛡️ Cuidados y Recomendaciones', text: s.cuidados },
+          { title: 'ℹ️ Información Adicional', text: s.informacionAdicional }
+        ].filter(b => b.text && b.text.trim() !== '');
+
+        const container = document.getElementById('modalTextBlocks');
+        container.innerHTML = '';
+
+        blocks.forEach(b => {
+          const div = document.createElement('div');
+          div.className = 'info-block';
+          div.innerHTML = `
+            <div class="info-block-header">
+              <h4>${b.title}</h4>
+              <button class="btn btn-outline btn-sm btn-copy-sec" style="padding:0.2rem 0.55rem; font-size:0.72rem;">Copiar</button>
+            </div>
+            <div class="info-block-content">${b.text}</div>
+          `;
+          div.querySelector('.btn-copy-sec').onclick = () => copyToClipboard(b.text, b.title);
+          container.appendChild(div);
+        });
+      }
+
+      // Export filtered products to CSV
+      function exportFilteredToCsv() {
+        const filtered = getFilteredProducts();
+        if (!filtered.length) {
+          showToast('⚠️ No hay productos filtrados para exportar');
+          return;
+        }
+        const headers = [
+          'Producto_ID', 'SKU_ID', 'Referencia_Producto', 'Referencia_SKU', 'Nombre_Producto',
+          'Color_Tono', 'Marca', 'Categoria', 'Subcategoria', 'Precio_Venta_COP', 'Precio_Lista_COP',
+          'Stock_SKU', 'Stock_Total_Producto', 'Unidad_Min_Mayoristas', 'Contenido', 'Registro_Invima',
+          'Descripcion', 'URL_Producto', 'Imagen_Principal_URL', 'Carpeta_Imagenes_Local'
+        ];
+
+        const escapeCsv = (val) => {
+          const str = String(val ?? '').replace(/\r?\n/g, ' ');
+          return `"${str.replace(/"/g, '""')}"`;
+        };
+
+        const rows = [headers.map(escapeCsv).join(';')];
+        filtered.forEach(p => {
+          p.variants.forEach(v => {
+            rows.push([
+              p.productId,
+              v.skuId,
+              p.reference,
+              v.reference,
+              p.name,
+              v.color || v.tono || v.name,
+              p.brand,
+              p.categoryMain,
+              p.subcategory2,
+              v.price,
+              v.listPrice,
+              v.stock,
+              p.totalStock,
+              p.specifications?.unidadMinimaMayoristas || '',
+              p.specifications?.contenido || '',
+              p.specifications?.registroInvima || '',
+              p.descriptionText,
+              p.url,
+              v.mainImageUrl,
+              p.imageFolderLocal
+            ].map(escapeCsv).join(';'));
+          });
+        });
+
+        const bom = '\uFEFF';
+        const blob = new Blob([bom + rows.join('\r\n')], { type: 'text/csv;charset=utf-8;' });
+        const url = URL.createObjectURL(blob);
+        const a = document.createElement('a');
+        a.href = url;
+        a.download = `trendy_filtrados_${filtered.length}_productos.csv`;
+        document.body.appendChild(a);
+        a.click();
+        a.remove();
+        setTimeout(() => URL.revokeObjectURL(url), 3000);
+        showToast(`✅ Exportados ${filtered.length} productos a CSV compatible con Excel`);
+      }
+
+      // Event Listeners
+      const searchInput = document.getElementById('searchInput');
+      const clearBtn = document.getElementById('btnClearSearch');
+      searchInput.addEventListener('input', () => {
+        state.search = searchInput.value;
+        clearBtn.style.display = state.search ? 'block' : 'none';
+        state.page = 1;
+        render();
+      });
+
+      clearBtn.addEventListener('click', () => {
+        searchInput.value = '';
+        state.search = '';
+        clearBtn.style.display = 'none';
+        state.page = 1;
+        render();
+      });
+
+      document.getElementById('filterSubcategory').addEventListener('change', (e) => {
+        state.subcategory = e.target.value;
+        state.page = 1;
+        render();
+      });
+
+      document.getElementById('filterBrand').addEventListener('change', (e) => {
+        state.brand = e.target.value;
+        state.page = 1;
+        render();
+      });
+
+      document.getElementById('filterCluster').addEventListener('change', (e) => {
+        state.cluster = e.target.value;
+        state.page = 1;
+        render();
+      });
+
+      document.getElementById('chkOnlyStock').addEventListener('change', (e) => {
+        state.onlyStock = e.target.checked;
+        if (state.onlyStock) {
+          state.onlyOut = false;
+          document.getElementById('chkOnlyOut').checked = false;
+        }
+        state.page = 1;
+        render();
+      });
+
+      document.getElementById('chkOnlyOut').addEventListener('change', (e) => {
+        state.onlyOut = e.target.checked;
+        if (state.onlyOut) {
+          state.onlyStock = false;
+          document.getElementById('chkOnlyStock').checked = false;
+        }
+        state.page = 1;
+        render();
+      });
+
+      document.getElementById('chkMultiVariants').addEventListener('change', (e) => {
+        state.multiVariants = e.target.checked;
+        state.page = 1;
+        render();
+      });
+
+      document.getElementById('priceMin').addEventListener('input', (e) => {
+        state.priceMin = e.target.value;
+        state.page = 1;
+        render();
+      });
+
+      document.getElementById('priceMax').addEventListener('input', (e) => {
+        state.priceMax = e.target.value;
+        state.page = 1;
+        render();
+      });
+
+      document.getElementById('sortSelect').addEventListener('change', (e) => {
+        state.sort = e.target.value;
+        state.page = 1;
+        render();
+      });
+
+      document.getElementById('pageSizeSelect').addEventListener('change', (e) => {
+        state.pageSize = Number(e.target.value);
+        state.page = 1;
+        render();
+      });
+
+      document.getElementById('btnViewGrid').addEventListener('click', () => {
+        state.view = 'grid';
+        document.getElementById('btnViewGrid').classList.add('active');
+        document.getElementById('btnViewTable').classList.remove('active');
+        render();
+      });
+
+      document.getElementById('btnViewTable').addEventListener('click', () => {
+        state.view = 'table';
+        document.getElementById('btnViewTable').classList.add('active');
+        document.getElementById('btnViewGrid').classList.remove('active');
+        render();
+      });
+
+      document.getElementById('btnResetFilters').addEventListener('click', () => {
+        state.search = '';
+        state.category = '';
+        state.subcategory = '';
+        state.brand = '';
+        state.cluster = '';
+        state.onlyStock = false;
+        state.onlyOut = false;
+        state.multiVariants = false;
+        state.priceMin = '';
+        state.priceMax = '';
+        state.page = 1;
+
+        searchInput.value = '';
+        clearBtn.style.display = 'none';
+        document.getElementById('filterBrand').value = '';
+        document.getElementById('filterCluster').value = '';
+        document.getElementById('chkOnlyStock').checked = false;
+        document.getElementById('chkOnlyOut').checked = false;
+        document.getElementById('chkMultiVariants').checked = false;
+        document.getElementById('priceMin').value = '';
+        document.getElementById('priceMax').value = '';
+
+        updateSubcategoryOptions();
+        initFilters();
+        render();
+      });
+
+      document.getElementById('btnExportFiltered').addEventListener('click', exportFilteredToCsv);
+
+      // Modal events
+      document.getElementById('btnCloseModal').addEventListener('click', closeProductModal);
+      document.getElementById('productModal').addEventListener('click', (e) => {
+        if (e.target.id === 'productModal') closeProductModal();
+      });
+      document.addEventListener('keydown', (e) => {
+        const modalOpen = document.getElementById('productModal').classList.contains('open');
+        if (!modalOpen) return;
+        if (e.key === 'Escape') closeProductModal();
+        if (e.key === 'ArrowLeft') document.getElementById('btnPrevImg').click();
+        if (e.key === 'ArrowRight') document.getElementById('btnNextImg').click();
+      });
+
+      document.getElementById('modalMainImg').addEventListener('click', function () {
+        this.classList.toggle('zoomed');
+      });
+
+      document.getElementById('btnPrevImg').addEventListener('click', () => {
+        if (!currentGalleryImages.length) return;
+        currentImgIdx = (currentImgIdx - 1 + currentGalleryImages.length) % currentGalleryImages.length;
+        renderModalGallery();
+      });
+
+      document.getElementById('btnNextImg').addEventListener('click', () => {
+        if (!currentGalleryImages.length) return;
+        currentImgIdx = (currentImgIdx + 1) % currentGalleryImages.length;
+        renderModalGallery();
+      });
+
+      document.getElementById('btnShowAllProdImages').addEventListener('click', () => {
+        if (!currentModalProduct) return;
+        currentGalleryImages = currentModalProduct.allImageEntries;
+        currentImgIdx = 0;
+        renderModalGallery();
+        showToast(`📸 Mostrando las ${currentGalleryImages.length} imágenes de todos los tonos`);
+      });
+
+      document.getElementById('btnDownloadCurrentImg').addEventListener('click', () => {
+        const entry = currentGalleryImages[currentImgIdx];
+        if (!entry) return;
+        downloadSingleImage(entry, entry.fileName);
+      });
+
+      document.getElementById('btnDownloadVariantZip').addEventListener('click', () => {
+        if (!currentModalProduct) return;
+        const v = currentModalProduct.variants[currentModalVariantIdx];
+        const entries = v?.imageEntries?.length ? v.imageEntries : currentGalleryImages;
+        const zipName = `${v?.reference || currentModalProduct.reference || 'variante'}_imagenes.zip`.replace(/\s+/g, '_');
+        downloadImagesAsZip(entries, zipName);
+      });
+
+      document.getElementById('btnDownloadProductZip').addEventListener('click', () => {
+        if (!currentModalProduct) return;
+        const zipName = `${currentModalProduct.reference || currentModalProduct.slug}_todas_las_imagenes.zip`.replace(/\s+/g, '_');
+        downloadImagesAsZip(currentModalProduct.allImageEntries, zipName);
+      });
+
+      document.getElementById('btnSaveToFolder').addEventListener('click', () => {
+        if (!currentModalProduct) return;
+        const folderName = `${currentModalProduct.productId}_${currentModalProduct.slug}`.replace(/[^a-zA-Z0-9_-]/g, '_');
+        saveImagesToDirectory(currentModalProduct.allImageEntries, folderName);
+      });
+
+      document.getElementById('btnCopyFolderPath').addEventListener('click', () => {
+        const path = document.getElementById('modalLocalFolderText').textContent;
+        copyToClipboard(path, 'Ruta de carpeta local');
+      });
+
+      document.getElementById('btnCopyFicha').addEventListener('click', () => {
+        if (!currentModalProduct) return;
+        const p = currentModalProduct;
+        const s = p.specifications || {};
+        const ficha = [
+          `PRODUCTO: ${p.name}`,
+          `REFERENCIA: ${p.reference || '-'} | ID: ${p.productId}`,
+          `MARCA: ${p.brand || 'Trendy'}`,
+          `CATEGORÍA: ${p.categoryMain} ${p.subcategory2 ? '> ' + p.subcategory2 : ''}`,
+          `PRECIO: ${formatCOP(p.minPrice)}`,
+          `STOCK TOTAL: ${p.totalStock} unidades`,
+          `UNIDAD MÍNIMA MAYORISTA: ${s.unidadMinimaMayoristas || '-'}`,
+          `CONTENIDO: ${s.contenido || '-'}`,
+          `REGISTRO INVIMA: ${s.registroInvima || '-'}`,
+          `VARIANTES (${p.variants.length}): ${p.variants.map(v => `${v.color || v.tono || v.name} (Stock: ${v.stock})`).join(' | ')}`,
+          ``,
+          `DESCRIPCIÓN:`,
+          p.descriptionText || '',
+          ``,
+          `BENEFICIOS:`,
+          s.beneficios || '',
+          ``,
+          `INGREDIENTES:`,
+          s.ingredientes || '',
+          ``,
+          `URL: ${p.url}`
+        ].join('\n');
+        copyToClipboard(ficha, 'Ficha completa del producto');
+      });
+
+      // Initialize
+      initFilters();
+      updateSubcategoryOptions();
+      render();
+    })();
+  </script>
+</body>
+</html>
